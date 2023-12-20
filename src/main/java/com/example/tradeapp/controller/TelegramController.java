@@ -1,8 +1,10 @@
 package com.example.tradeapp.controller;
 
 import com.example.tradeapp.configs.TelegramBotConfiguration;
+import com.example.tradeapp.entities.session.UserSession;
+import com.example.tradeapp.services.session.SessionService;
+import com.example.tradeapp.services.statemanager.StateService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.objects.Update;
@@ -11,6 +13,10 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 @RequiredArgsConstructor
 public class TelegramController extends TelegramLongPollingBot {
     private final TelegramBotConfiguration telegramBotConfiguration;
+
+    private final SessionService sessionService;
+
+    private final StateService stateService;
 
     @Override
     public String getBotUsername() {
@@ -24,6 +30,7 @@ public class TelegramController extends TelegramLongPollingBot {
 
     @Override
     public void onUpdateReceived(Update update) {
-
+        UserSession session = sessionService.getSession(update.getMessage().getChatId());
+        stateService.handle(session, update);
     }
 }

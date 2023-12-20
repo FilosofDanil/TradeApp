@@ -1,6 +1,6 @@
-package com.example.tradeapp.entities;
+package com.example.tradeapp.entities.session;
 
-import com.example.tradeapp.services.Handler;
+import com.example.tradeapp.services.handlers.Handler;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -17,5 +17,5 @@ import java.util.Map;
 public class UserSession {
     private Long id;
     private Map<String, String> userData;
-    private Handler handler;
+    private String handler;
 }

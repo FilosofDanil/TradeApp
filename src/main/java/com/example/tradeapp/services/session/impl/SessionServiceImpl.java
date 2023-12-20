@@ -1,10 +1,10 @@
 package com.example.tradeapp.services.session.impl;
 
-import com.example.tradeapp.entities.UserSession;
+import com.example.tradeapp.entities.session.UserSession;
+import com.example.tradeapp.services.handlers.emptyhandler.EmptyHandlerService;
 import com.example.tradeapp.services.session.SessionService;
 import com.example.tradeapp.sessionrepo.UserSessionRepo;
 import lombok.RequiredArgsConstructor;
-import org.apache.catalina.SessionIdGenerator;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
@@ -20,6 +20,7 @@ public class SessionServiceImpl implements SessionService {
         return userSessionRepo.findById(chatId)
                 .orElse(userSessionRepo.save(UserSession.builder()
                         .userData(new HashMap<>())
+                        .handler("emptyHandler")
                         .id(chatId)
                         .build()));
     }
@@ -27,7 +28,7 @@ public class SessionServiceImpl implements SessionService {
     @Override
     public void updateSession(Long chatId, UserSession session) {
         Optional<UserSession> toUpdate = userSessionRepo.findById(chatId);
-        if(toUpdate.isEmpty()){
+        if (toUpdate.isEmpty()) {
             userSessionRepo.save(session);
         } else {
             UserSession updateSession = toUpdate.get();

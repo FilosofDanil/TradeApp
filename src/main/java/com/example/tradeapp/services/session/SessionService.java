@@ -1,6 +1,6 @@
 package com.example.tradeapp.services.session;
 
-import com.example.tradeapp.entities.UserSession;
+import com.example.tradeapp.entities.session.UserSession;
 
 public interface SessionService {
     UserSession getSession(Long chatId);
