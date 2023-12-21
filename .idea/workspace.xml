@@ -5,7 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15cf0a42-af7b-46a0-abe5-ecc36fbe6d04" name="Changes" comment="RestTemplate">
-      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/builder/director/MessageDirector.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/builder/director/MessageDirector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/controllers/AttachmentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/controllers/BidController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/controllers/ItemController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/controllers/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/dtos/BidDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/dtos/ItemDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/dtos/TelegramUserDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/dtos/UpdateItemDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/entites/Attachment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/entites/Bid.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/entites/Entity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/entites/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/entites/TelegramUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/crud/CRUDAttachmentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/crud/CRUDBidService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/crud/CRUDItemService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/crud/CRUDService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/crud/CRUDUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/itemservice/ItemService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/userservice/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RestAPI/src/main/resources/db.migrations/V1_migration.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestAPI/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestAPI/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +70,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="17" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/RestAPI" />
@@ -105,6 +130,7 @@
       <workItem from="1703098217730" duration="5367000" />
       <workItem from="1703105639633" duration="237000" />
       <workItem from="1703143036666" duration="1090000" />
+      <workItem from="1703179419031" duration="5946000" />
     </task>
     <task id="LOCAL-00001" summary="Initialized an empty project with basic configurations">
       <created>1703012913445</created>
