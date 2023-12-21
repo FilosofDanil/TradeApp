@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="15cf0a42-af7b-46a0-abe5-ecc36fbe6d04" name="Changes" comment="RestTemplate">
+      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/builder/director/MessageDirector.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/builder/director/MessageDirector.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/TradeAppApplication.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2ZjKXS0UGfxNTwMaCmBObwvsKH3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="jdk.selected.JAVA_MODULE" value="17" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/RestAPI" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.RestApiApplication (1)">
+    <configuration name="RestApiApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="RestAPI" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.restapi.RestApiApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RestApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="restAPI" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.restapi.RestApiApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TradeAppApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="TradeApp" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.tradeapp.TradeAppApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="15cf0a42-af7b-46a0-abe5-ecc36fbe6d04" name="Changes" comment="" />
+      <created>1702930087833</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1702930087833</updated>
+      <workItem from="1702930089427" duration="305000" />
+      <workItem from="1702966129991" duration="1126000" />
+      <workItem from="1702999462528" duration="589000" />
+      <workItem from="1703009050319" duration="2862000" />
+      <workItem from="1703012783594" duration="4073000" />
+      <workItem from="1703076008345" duration="1865000" />
+      <workItem from="1703077904200" duration="3078000" />
+      <workItem from="1703084741688" duration="5902000" />
+      <workItem from="1703094815359" duration="2385000" />
+      <workItem from="1703098217730" duration="5367000" />
+      <workItem from="1703105639633" duration="237000" />
+      <workItem from="1703143036666" duration="1090000" />
+    </task>
+    <task id="LOCAL-00001" summary="Initialized an empty project with basic configurations">
+      <created>1703012913445</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1703012913445</updated>
+    </task>
+    <task id="LOCAL-00002" summary="gitignore">
+      <created>1703012939971</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1703012939971</updated>
+    </task>
+    <task id="LOCAL-00003" summary="ReadMe part 1">
+      <created>1703017655730</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1703017655730</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added Redis. Created UserSession entity, in order to provide efficient communication">
+      <created>1703080065610</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1703080065610</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Established SessionService">
+      <created>1703085470266</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1703085470266</updated>
+    </task>
+    <task id="LOCAL-00006" summary="implemented StateService, which provides stateful request handling and their further processing. Also added handlers for unknown messages and for start command.">
+      <created>1703096363734</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1703096363734</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added TextHandler interface.">
+      <created>1703100110696</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1703100110696</updated>
+    </task>
+    <task id="LOCAL-00008" summary="added support text handler">
+      <created>1703143909266</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1703143909266</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Created Rest template. TradeApp moved in other directory">
+      <created>1703144000080</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1703144000080</updated>
+    </task>
+    <task id="LOCAL-00010" summary="RestTemplate">
+      <created>1703144029284</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1703144029284</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/TradeApp" />
+    </ignored-roots>
+    <MESSAGE value="Initialized an empty project with basic configurations" />
+    <MESSAGE value="gitignore" />
+    <MESSAGE value="ReadMe part 1" />
+    <MESSAGE value="Added Redis. Created UserSession entity, in order to provide efficient communication" />
+    <MESSAGE value="Established SessionService" />
+    <MESSAGE value="implemented StateService, which provides stateful request handling and their further processing. Also added handlers for unknown messages and for start command." />
+    <MESSAGE value="Added TextHandler interface." />
+    <MESSAGE value="added support text handler" />
+    <MESSAGE value="Created Rest template. TradeApp moved in other directory" />
+    <MESSAGE value="RestTemplate" />
+    <option name="LAST_COMMIT_MESSAGE" value="RestTemplate" />
+  </component>
+</project>
