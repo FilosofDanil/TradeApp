@@ -8,18 +8,20 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="RestAPI" />
-        <module name="TradeApp" />
+        <module name="Trade" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="RestAPI" target="17" />
       <module name="restAPI" target="21" />
-      <module name="TradeApp" target="${java.version}" />
+      <module name="Trade" target="17" />
+      <module name="TradeApp" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="RestAPI" options="-parameters" />
+      <module name="Trade" options="-parameters" />
       <module name="TradeApp" options="-parameters" />
       <module name="restAPI" options="-parameters" />
     </option>

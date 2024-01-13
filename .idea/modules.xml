@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/RestAPI/RestAPI.iml" filepath="$PROJECT_DIR$/RestAPI/RestAPI.iml" />
-      <module fileurl="file://$PROJECT_DIR$/TradeApp/TradeApp.iml" filepath="$PROJECT_DIR$/TradeApp/TradeApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TradeApp/Trade.iml" filepath="$PROJECT_DIR$/TradeApp/Trade.iml" />
     </modules>
   </component>
 </project>
