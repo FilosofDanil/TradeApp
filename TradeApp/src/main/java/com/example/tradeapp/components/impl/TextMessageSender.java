@@ -28,6 +28,9 @@ public class TextMessageSender implements MessageSender<TextMessage> {
         if (message.getReplyKeyboard()!=null){
             sendMessage.setReplyMarkup(message.getReplyKeyboard());
         }
+        if (message.getInlineKeyboardMarkup()!=null){
+            sendMessage.setReplyMarkup(message.getInlineKeyboardMarkup());
+        }
         execute(sendMessage);
     }
 

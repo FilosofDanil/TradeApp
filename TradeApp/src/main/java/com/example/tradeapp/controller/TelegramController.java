@@ -7,6 +7,7 @@ import com.example.tradeapp.services.statemanager.StateService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
+import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
 @Controller
@@ -30,7 +31,13 @@ public class TelegramController extends TelegramLongPollingBot {
 
     @Override
     public void onUpdateReceived(Update update) {
-        UserSession session = sessionService.getSession(update.getMessage().getChatId());
+        Message message;
+        if (update.hasCallbackQuery()){
+            message = update.getCallbackQuery().getMessage();
+        } else {
+            message = update.getMessage();
+        }
+        UserSession session = sessionService.getSession(message.getChatId());
         stateService.handle(session, update);
     }
 }

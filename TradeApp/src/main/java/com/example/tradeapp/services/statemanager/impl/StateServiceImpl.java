@@ -21,7 +21,10 @@ public class StateServiceImpl implements StateService {
 
     @Override
     public void handle(UserSession session, Update update) {
-        if (update.getMessage().isCommand()) {
+        if (update.hasCallbackQuery()){
+
+        }
+        else if (update.getMessage().isCommand()) {
             String command = update.getMessage().getText();
             for (CommandHandler commandHandler : commandHandlers) {
                 if (commandHandler.getCommand().equals(command)) {
@@ -29,7 +32,8 @@ public class StateServiceImpl implements StateService {
                     break;
                 }
             }
-        } else if (update.getMessage().hasPhoto()) {
+        }
+        else if (update.getMessage().hasPhoto()) {
 
         } else {
             Handler handler = context.getBean(session.getHandler(), Handler.class);
