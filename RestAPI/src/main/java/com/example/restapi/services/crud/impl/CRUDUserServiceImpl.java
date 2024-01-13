@@ -44,12 +44,6 @@ public class CRUDUserServiceImpl implements CRUDUserService {
             telegramUserRepo.updateUser(telegramUserDTO.getUsername(),
                     telegramUserDTO.getTgName(), telegramUserDTO.getTgSurname(),
                     telegramUserDTO.getChatId(), id);
-//            TelegramUser updatedUser = user.get();
-//            updatedUser.setChatId(telegramUserDTO.getChatId());
-//            updatedUser.setTgName(telegramUserDTO.getTgName());
-//            updatedUser.setTgSurname(telegramUserDTO.getTgSurname());
-//            updatedUser.setUsername(telegramUserDTO.getUsername());
-//            telegramUserRepo.save(updatedUser);
         }
     }
 
