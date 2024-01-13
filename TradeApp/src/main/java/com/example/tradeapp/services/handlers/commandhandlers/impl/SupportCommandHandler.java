@@ -6,7 +6,6 @@ import com.example.tradeapp.entities.messages.impl.TextMessage;
 import com.example.tradeapp.entities.session.UserSession;
 import com.example.tradeapp.services.handlers.commandhandlers.CommandHandler;
 import com.example.tradeapp.services.session.SessionService;
-import io.lettuce.core.dynamic.annotation.CommandNaming;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.objects.Update;

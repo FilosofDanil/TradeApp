@@ -1,6 +1,5 @@
 package com.example.tradeapp.entities.session;
 
-import com.example.tradeapp.services.handlers.Handler;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

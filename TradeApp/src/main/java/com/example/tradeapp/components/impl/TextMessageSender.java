@@ -2,16 +2,13 @@ package com.example.tradeapp.components.impl;
 
 import com.example.tradeapp.components.BotSender;
 import com.example.tradeapp.components.MessageSender;
-import com.example.tradeapp.entities.messages.Message;
 import com.example.tradeapp.entities.messages.impl.TextMessage;
-import com.example.tradeapp.entities.session.UserSession;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.methods.BotApiMethod;
 import org.telegram.telegrambots.meta.api.methods.ParseMode;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
-import org.telegram.telegrambots.meta.api.objects.replykeyboard.ReplyKeyboard;
 
 @Component("textMessageSender")
 @Slf4j

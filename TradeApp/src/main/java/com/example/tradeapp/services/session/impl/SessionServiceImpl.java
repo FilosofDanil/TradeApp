@@ -1,7 +1,6 @@
 package com.example.tradeapp.services.session.impl;
 
 import com.example.tradeapp.entities.session.UserSession;
-import com.example.tradeapp.services.handlers.emptyhandler.EmptyHandlerService;
 import com.example.tradeapp.services.session.SessionService;
 import com.example.tradeapp.sessionrepo.UserSessionRepo;
 import lombok.RequiredArgsConstructor;

@@ -1,7 +1,6 @@
 package com.example.tradeapp.entities.messages.impl;
 
 import com.example.tradeapp.entities.messages.Message;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.ReplyKeyboardMarkup;
