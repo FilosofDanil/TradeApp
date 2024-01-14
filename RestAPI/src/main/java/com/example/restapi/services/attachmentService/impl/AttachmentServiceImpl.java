@@ -1,8 +1,6 @@
 package com.example.restapi.services.attachmentService.impl;
 
-import com.example.restapi.dtos.AttachmentDTO;
 import com.example.restapi.entites.Attachment;
-import com.example.restapi.mappers.AttachmentMapper;
 import com.example.restapi.repositories.AttachmentRepository;
 import com.example.restapi.services.attachmentService.AttachmentService;
 import lombok.RequiredArgsConstructor;
@@ -18,19 +16,13 @@ public class AttachmentServiceImpl implements AttachmentService {
 
     @Override
     @Transactional
-    public List<AttachmentDTO> getAllByItem(Long itemId) {
-        return attachmentRepo.findByItem(itemId)
-                .stream()
-                .map(AttachmentMapper::toModel)
-                .toList();
+    public List<Attachment> getAllByItem(Long itemId) {
+        return attachmentRepo.findByItem(itemId);
     }
 
     @Override
     @Transactional
-    public List<AttachmentDTO> createAttachmentList(List<Attachment> attachments) {
-        attachmentRepo.saveAll(attachments);
-        return attachments.stream()
-                .map(AttachmentMapper::toModel)
-                .toList();
+    public List<Attachment> createAttachmentList(List<Attachment> attachments) {
+        return (List<Attachment>) attachmentRepo.saveAll(attachments);
     }
 }

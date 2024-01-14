@@ -2,11 +2,8 @@ package com.example.restapi.services.crud.impl;
 
 import com.example.restapi.dtos.ItemDTO;
 import com.example.restapi.entites.Item;
-import com.example.restapi.mappers.ItemMapper;
-import com.example.restapi.mappers.UserMapper;
 import com.example.restapi.repositories.ItemRepository;
 import com.example.restapi.services.crud.CRUDItemService;
-import com.example.restapi.services.crud.CRUDService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -18,33 +15,29 @@ public class CRUDItemServiceImpl implements CRUDItemService {
     private final ItemRepository itemRepo;
 
     @Override
-    public List<ItemDTO> getAll() {
-        return itemRepo.findAll()
-                .stream()
-                .map(ItemMapper::toModel)
-                .toList();
+    public List<Item> getAll() {
+        return itemRepo.findAll();
     }
 
     @Override
-    public ItemDTO getById(Long id) {
-        return itemRepo.findById(id)
-                .map(ItemMapper::toModel).get();
+    public Item getById(Long id) {
+        return itemRepo.findById(id).get();
     }
 
     @Override
-    public ItemDTO create(ItemDTO itemDTO) {
-        return ItemMapper.toModel(newItem(itemDTO));
+    public Item create(Item item) {
+        return itemRepo.save(item);
     }
 
     @Override
-    public void update(Long id, ItemDTO itemDTO) {
-        if (itemRepo.findById(id).isEmpty()) {
-            newItem(itemDTO);
+    public void update(Long id, Item item) {
+        if (itemRepo.existsById(id)) {
+            itemRepo.save(item);
         } else {
-            itemRepo.updateItem(itemDTO.getItemName(),
-                    itemDTO.getDescription(),
-                    itemDTO.getExpirationDate(),
-                    itemDTO.getPlacementDate(), id);
+            itemRepo.updateItem(item.getItemName(),
+                    item.getDescription(),
+                    item.getExpirationDate(),
+                    item.getPlacementDate(), id);
         }
     }
 

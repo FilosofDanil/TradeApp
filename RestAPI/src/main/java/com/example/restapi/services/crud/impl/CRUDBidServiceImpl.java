@@ -2,7 +2,6 @@ package com.example.restapi.services.crud.impl;
 
 import com.example.restapi.dtos.BidDTO;
 import com.example.restapi.entites.Bid;
-import com.example.restapi.mappers.BidMapper;
 import com.example.restapi.repositories.BidRepository;
 import com.example.restapi.services.crud.CRUDBidService;
 import lombok.RequiredArgsConstructor;
@@ -16,28 +15,26 @@ public class CRUDBidServiceImpl implements CRUDBidService {
     private final BidRepository bidRepo;
 
     @Override
-    public List<BidDTO> getAll() {
-        return bidRepo.findAll()
-                .stream()
-                .map(BidMapper::toModel)
-                .toList();
+    public List<Bid> getAll() {
+        return bidRepo.findAll();
     }
 
     @Override
-    public BidDTO getById(Long id) {
-        return bidRepo.findById(id)
-                .map(BidMapper::toModel).get();
+    public Bid getById(Long id) {
+        return bidRepo.findById(id).get();
     }
 
     @Override
-    public BidDTO create(BidDTO bidDTO) {
-        return BidMapper.toModel(newBid(bidDTO));
+    public Bid create(Bid bid) {
+        return bidRepo.save(bid);
     }
 
     @Override
-    public void update(Long id, BidDTO bidDTO) {
-        if(bidRepo.findById(id).isEmpty()){
-            newBid(bidDTO);
+    public void update(Long id, Bid bid) {
+        if (bidRepo.existsById(id)) {
+            bidRepo.save(bid);
+        } else {
+            bidRepo.updateBid(bid.getBidPrice(), bid.getComment());
         }
     }
 

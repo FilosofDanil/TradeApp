@@ -1,9 +1,10 @@
 package com.example.restapi.services.userservice;
 
 import com.example.restapi.dtos.TelegramUserDTO;
+import com.example.restapi.entites.TelegramUser;
 
 public interface UserService {
-    TelegramUserDTO getByUsername(String username);
+    TelegramUser getByUsername(String username);
 
-    TelegramUserDTO getByTelegramName(String tgName);
+    TelegramUser getByTelegramName(String tgName);
 }

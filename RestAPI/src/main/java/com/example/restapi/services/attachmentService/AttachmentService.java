@@ -6,7 +6,7 @@ import com.example.restapi.entites.Attachment;
 import java.util.List;
 
 public interface AttachmentService {
-    List<AttachmentDTO> getAllByItem(Long itemId);
+    List<Attachment> getAllByItem(Long itemId);
 
-    List<AttachmentDTO> createAttachmentList(List<Attachment> attachments);
+    List<Attachment> createAttachmentList(List<Attachment> attachments);
 }
