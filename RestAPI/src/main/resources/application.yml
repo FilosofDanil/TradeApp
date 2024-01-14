@@ -4,13 +4,15 @@ spring:
   mvc:
     pathmatch:
       matching-strategy: ANT_PATH_MATCHER
+#  jpa:
+#    hibernate:
+#      ddl-auto: create
+#    show-sql: true
   datasource:
     url: jdbc:postgresql://localhost:5432/postgres
     username: postgres
     password: postgres
-    jpa:
-      hibernate:
-        ddl-auto: create
+
 springfox:
   documentation:
     swagger-ui:
