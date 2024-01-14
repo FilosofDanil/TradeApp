@@ -31,9 +31,9 @@ public class TelegramUserDTO {
     @JsonProperty("chatId")
     private Long chatId;
 
-    @JsonProperty("items")
-    private List<ItemDTO> items;
-
-    @JsonProperty("bids")
-    private List<BidDTO> bids;
+//    @JsonProperty("items")
+//    private List<ItemDTO> items;
+//
+//    @JsonProperty("bids")
+//    private List<BidDTO> bids;
 }

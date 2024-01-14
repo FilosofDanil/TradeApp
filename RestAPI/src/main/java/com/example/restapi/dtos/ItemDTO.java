@@ -2,6 +2,7 @@ package com.example.restapi.dtos;
 
 import com.example.restapi.entites.Bid;
 import com.example.restapi.entites.Item;
+import com.example.restapi.entites.ItemType;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Column;
 import lombok.AllArgsConstructor;
@@ -32,15 +33,18 @@ public class ItemDTO {
     @JsonProperty("userId")
     private Long userId;
 
+    @JsonProperty("itemTypeId")
+    private Long itemTypeId;
+
     @JsonProperty("placementDate")
     private Date placementDate;
 
     @JsonProperty("expirationDate")
     private Date expirationDate;
 
-    @JsonProperty("bids")
-    private List<BidDTO> bids;
-
-    @JsonProperty("attachments")
-    private List<AttachmentDTO> attachments;
+//    @JsonProperty("bids")
+//    private List<BidDTO> bids;
+//
+//    @JsonProperty("attachments")
+//    private List<AttachmentDTO> attachments;
 }
