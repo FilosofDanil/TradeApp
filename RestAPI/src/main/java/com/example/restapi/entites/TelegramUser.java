@@ -37,4 +37,14 @@ public class TelegramUser  {
 
     @OneToMany(mappedBy = "user", orphanRemoval = true, cascade = CascadeType.REMOVE)
     private Set<Bid> bids;
+
+    public void setBids(Set<Bid> bids) {
+        this.bids.retainAll(bids);
+        this.bids.addAll(bids);
+    }
+
+    public void setItems(Set<Item> items) {
+        this.items.retainAll(items);
+        this.items.addAll(items);
+    }
 }

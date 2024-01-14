@@ -1,10 +1,14 @@
 package com.example.restapi.entites;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
 
 import java.util.Date;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -38,12 +42,28 @@ public class Item {
     private Date expirationDate;
 
     @ManyToOne(optional = false)
+    @JoinColumn(name = "item_type", referencedColumnName = "id", nullable = false)
+    private ItemType itemType;
+
+    @ManyToOne(optional = false)
     @JoinColumn(name = "user_id", referencedColumnName = "id", nullable = false)
     private TelegramUser user;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "item", orphanRemoval = true, cascade = CascadeType.REMOVE)
-    private Set<Bid> bids;
+    private Set<Bid> bids = new HashSet<>();
 
+    @JsonIgnore
     @OneToMany(mappedBy = "item", orphanRemoval = true, cascade = CascadeType.REMOVE)
-    private Set<Attachment> attachments;
+    private Set<Attachment> attachments = new HashSet<>();
+
+    public void setBids(Set<Bid> bids) {
+        this.bids.retainAll(bids);
+        this.bids.addAll(bids);
+    }
+
+    public void setAttachments(Set<Attachment> attachments) {
+        this.attachments.retainAll(attachments);
+        this.attachments.addAll(attachments);
+    }
 }
