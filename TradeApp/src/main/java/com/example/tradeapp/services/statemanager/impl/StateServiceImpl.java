@@ -3,6 +3,7 @@ package com.example.tradeapp.services.statemanager.impl;
 import com.example.tradeapp.entities.session.UserSession;
 import com.example.tradeapp.services.handlers.Handler;
 import com.example.tradeapp.services.handlers.commandhandlers.CommandHandler;
+import com.example.tradeapp.services.handlers.queryhandler.QueryHandler;
 import com.example.tradeapp.services.statemanager.StateService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.ApplicationContext;
@@ -17,12 +18,20 @@ public class StateServiceImpl implements StateService {
 
     private final List<CommandHandler> commandHandlers;
 
+    private final List<QueryHandler> queryHandlers;
+
     private final ApplicationContext context;
 
     @Override
     public void handle(UserSession session, Update update) {
         if (update.hasCallbackQuery()){
-
+            String query = update.getCallbackQuery().getData();
+            for(QueryHandler queryHandler: queryHandlers){
+                if(queryHandler.getCallbackQuery().equals(query)){
+                    queryHandler.handle(session, update);
+                    break;
+                }
+            }
         }
         else if (update.getMessage().isCommand()) {
             String command = update.getMessage().getText();
