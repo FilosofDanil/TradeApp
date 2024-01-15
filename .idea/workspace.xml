@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15cf0a42-af7b-46a0-abe5-ecc36fbe6d04" name="Changes" comment="">
+    <list default="true" id="15cf0a42-af7b-46a0-abe5-ecc36fbe6d04" name="Changes" comment="SettingsController finished">
       <change afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/repositories/ItemTypeRepository.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/settingsservice/SettingsService.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/settingsservice/impl/SettingsServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/controllers/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/controllers/SettingsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/repositories/SettingsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/repositories/SettingsRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +156,7 @@
       <workItem from="1705223616000" duration="11764000" />
       <workItem from="1705247844658" duration="8825000" />
       <workItem from="1705320670139" duration="8299000" />
-      <workItem from="1705332581450" duration="6558000" />
+      <workItem from="1705332581450" duration="7267000" />
     </task>
     <task id="LOCAL-00001" summary="Initialized an empty project with basic configurations">
       <created>1703012913445</created>
@@ -396,7 +396,14 @@
       <option name="project" value="LOCAL" />
       <updated>1705338925449</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="SettingsController finished">
+      <created>1705340725588</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1705340725588</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -407,7 +414,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/TradeApp" />
     </ignored-roots>
-    <MESSAGE value="RestTemplate" />
     <MESSAGE value="Defined empty controllers. Added all required dependencies in pom.xml" />
     <MESSAGE value="created and mapped entities" />
     <MESSAGE value="Trade app changed Directory" />
@@ -432,6 +438,7 @@
     <MESSAGE value="Added ManyToMany relationship between Settings and ItemType(table categories)" />
     <MESSAGE value="Prepared entities and DTOs. Small changes in CRUD services" />
     <MESSAGE value="Created SettingsRepository and CRUD service for Settings" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created SettingsRepository and CRUD service for Settings" />
+    <MESSAGE value="SettingsController finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="SettingsController finished" />
   </component>
 </project>
