@@ -17,6 +17,12 @@ public interface UserClient {
     @GetMapping("/tgName/{tgName}")
     Users getUserByTgName(@PathVariable String tgName);
 
+    @GetMapping("/check/username/{username}")
+    Boolean checkUserByUsername(@PathVariable String username);
+
+    @GetMapping("/check/tgName/{tgName}")
+    Boolean checkUserByTgName(@PathVariable String tgName);
+
     @GetMapping("/{id}")
     Users getUserById(@PathVariable Long id);
 
