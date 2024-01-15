@@ -17,11 +17,9 @@ public class SessionServiceImpl implements SessionService {
 
     @Override
     public UserSession getSession(Long chatId) {
-        Map<String, String> map = new HashMap<>();
-        map.put("1", "1");
         return userSessionRepo.findById(chatId)
                 .orElse(userSessionRepo.save(UserSession.builder()
-                        .userData(map)
+                        .userData(new HashMap<>(Map.of("", "")))
                         .handler("emptyHandler")
                         .id(chatId)
                         .build()));

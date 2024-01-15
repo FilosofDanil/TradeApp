@@ -31,9 +31,12 @@ public class SettingsCategoriesTextHandler implements TextHandler {
         Map<String, String> data = session.getUserData();
         if (message.equals("Це все, завершити.") && !data.isEmpty()) {
             // here is data insertion in DB
-            session.setUserData(new HashMap<>());
             session.setHandler("settingsCity");
             text += "Добре! Ваші обрані категорії: "; // add the list of categories
+            for (String category : session.getUserData().values()) {
+                text += category;
+                text += " ";
+            }
             sessionService.updateSession(update.getMessage().getChatId(), session);
         } else if (Categories.getCategories().contains(message)) {
             int size = data.size();
