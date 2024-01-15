@@ -21,4 +21,9 @@ public class ItemType {
     private String name;
     @ManyToMany(mappedBy = "itemTypes")
     private Set<Settings> settings = new HashSet<>();
+
+    @Override
+    public String toString() {
+        return name;
+    }
 }
