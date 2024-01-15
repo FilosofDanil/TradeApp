@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15cf0a42-af7b-46a0-abe5-ecc36fbe6d04" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/controllers/SettingsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/dtos/SettingsDTO.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/repositories/SettingsRepository.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/crud/CRUDSettingsService.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/crud/impl/CRUDSettingsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/crud/impl/CRUDAttachmentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/crud/impl/CRUDAttachmentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/crud/impl/CRUDBidServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/crud/impl/CRUDBidServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/crud/impl/CRUDItemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/crud/impl/CRUDItemServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/crud/impl/CRUDUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/crud/impl/CRUDUserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +154,7 @@
       <workItem from="1705223616000" duration="11764000" />
       <workItem from="1705247844658" duration="8825000" />
       <workItem from="1705320670139" duration="8299000" />
-      <workItem from="1705332581450" duration="4462000" />
+      <workItem from="1705332581450" duration="4767000" />
     </task>
     <task id="LOCAL-00001" summary="Initialized an empty project with basic configurations">
       <created>1703012913445</created>
@@ -387,7 +380,14 @@
       <option name="project" value="LOCAL" />
       <updated>1705336062861</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Prepared entities and DTOs. Small changes in CRUD services">
+      <created>1705338895796</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1705338895796</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -398,7 +398,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/TradeApp" />
     </ignored-roots>
-    <MESSAGE value="added support text handler" />
     <MESSAGE value="Created Rest template. TradeApp moved in other directory" />
     <MESSAGE value="RestTemplate" />
     <MESSAGE value="Defined empty controllers. Added all required dependencies in pom.xml" />
@@ -423,6 +422,7 @@
     <MESSAGE value="Added Categories static class" />
     <MESSAGE value="small fixes. added SettingsCity handler" />
     <MESSAGE value="Added ManyToMany relationship between Settings and ItemType(table categories)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added ManyToMany relationship between Settings and ItemType(table categories)" />
+    <MESSAGE value="Prepared entities and DTOs. Small changes in CRUD services" />
+    <option name="LAST_COMMIT_MESSAGE" value="Prepared entities and DTOs. Small changes in CRUD services" />
   </component>
 </project>
