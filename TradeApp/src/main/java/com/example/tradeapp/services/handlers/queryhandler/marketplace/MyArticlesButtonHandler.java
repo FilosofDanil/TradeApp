@@ -34,6 +34,6 @@ public class MyArticlesButtonHandler implements QueryHandler {
 
     @Override
     public String getCallbackQuery() {
-        return null;
+        return query;
     }
 }
