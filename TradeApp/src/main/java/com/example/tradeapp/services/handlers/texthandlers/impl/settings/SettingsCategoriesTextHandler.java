@@ -3,6 +3,7 @@ package com.example.tradeapp.services.handlers.texthandlers.impl.settings;
 import com.example.tradeapp.builder.director.MessageDirector;
 import com.example.tradeapp.components.impl.TextMessageSender;
 import com.example.tradeapp.entities.constant.Categories;
+import com.example.tradeapp.entities.constant.Cities;
 import com.example.tradeapp.entities.session.UserSession;
 import com.example.tradeapp.services.handlers.texthandlers.TextHandler;
 import com.example.tradeapp.services.session.SessionService;
@@ -37,7 +38,13 @@ public class SettingsCategoriesTextHandler implements TextHandler {
                 text += category;
                 text += " ";
             }
+            text+="\n Далі виберіть ваше місто(або обл. центр) зі списку:";
+            List<String> rows = Cities.getCities();
+            session.setHandler("settingsCity");
             sessionService.updateSession(update.getMessage().getChatId(), session);
+            textMessageSender.sendMessage(messageDirector
+                    .buildTextMessageWithReplyKeyboard(update.getMessage().getChatId(), text, rows));
+            return;
         } else if (Categories.getCategories().contains(message)) {
             int size = data.size();
             data.put("category" + size, message);
