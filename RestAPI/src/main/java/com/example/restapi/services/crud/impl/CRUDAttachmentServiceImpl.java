@@ -31,7 +31,7 @@ public class CRUDAttachmentServiceImpl implements CRUDAttachmentService {
 
     @Override
     public void update(Long id, Attachment attachment) {
-        if (attachmentRepo.existsById(id)) {
+        if (!attachmentRepo.existsById(id)) {
             attachmentRepo.save(attachment);
         } else {
             attachmentRepo.updateAttachment(attachment.getItemType(),

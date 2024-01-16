@@ -31,7 +31,7 @@ public class CRUDItemServiceImpl implements CRUDItemService {
 
     @Override
     public void update(Long id, Item item) {
-        if (itemRepo.existsById(id)) {
+        if (!itemRepo.existsById(id)) {
             itemRepo.save(item);
         } else {
             itemRepo.updateItem(item.getItemName(),

@@ -31,7 +31,7 @@ public class CRUDBidServiceImpl implements CRUDBidService {
 
     @Override
     public void update(Long id, Bid bid) {
-        if (bidRepo.existsById(id)) {
+        if (!bidRepo.existsById(id)) {
             bidRepo.save(bid);
         } else {
             bidRepo.updateBid(bid.getBidPrice(), bid.getComment());

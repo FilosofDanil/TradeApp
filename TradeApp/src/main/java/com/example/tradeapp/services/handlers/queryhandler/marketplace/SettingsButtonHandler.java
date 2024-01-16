@@ -11,7 +11,9 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Component
 @RequiredArgsConstructor
@@ -27,6 +29,7 @@ public class SettingsButtonHandler implements QueryHandler {
     @Override
     public void handle(UserSession session, Update update) {
         if (session.getHandler().equals("market")) {
+            session.setUserData(new HashMap<>(Map.of("", "")));
             session.setHandler("settingsCategories");
             String text = "Спершу оберіть категорії товарів нижче (для пошуку товарів на маркетплейсі):";
             List<String> rows = Categories.getCategories();
