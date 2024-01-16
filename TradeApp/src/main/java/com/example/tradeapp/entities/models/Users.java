@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class Users {
+    private Long id;
     private String username;
     private String tgName;
     private String tgSurname;
