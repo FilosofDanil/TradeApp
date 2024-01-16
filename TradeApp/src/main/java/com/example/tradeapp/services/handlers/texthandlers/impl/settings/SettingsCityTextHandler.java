@@ -33,6 +33,8 @@ public class SettingsCityTextHandler implements TextHandler {
             text+="Ви обрали: " + msg;
             text+="\n Ви все ввели правильно?!";
             List<String> rows = List.of("Так", "Ні");
+            session.setHandler("settings");
+            sessionService.updateSession(update.getMessage().getChatId(), session);
             textMessageSender.sendMessage(messageDirector
                     .buildTextMessageWithReplyKeyboard(update.getMessage().getChatId(), text, rows));
         } else {
