@@ -15,5 +15,5 @@ import java.util.List;
 public class Settings {
     private String city;
     private Long userId;
-    private List<String> itemTypes;
+    private List<String> categories;
 }

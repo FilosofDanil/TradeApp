@@ -22,5 +22,5 @@ public class SettingsDTO {
     private Long userId;
 
     @JsonProperty("categories")
-    private List<String> itemTypes;
+    private List<String> categories;
 }

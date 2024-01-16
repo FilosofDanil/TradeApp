@@ -31,7 +31,7 @@ public class SettingsCityTextHandler implements TextHandler {
             Map<String, String> data = session.getUserData();
             data.put("city", msg);
             text+="Ви обрали: " + msg;
-            text+="\n Ви все ввели правильно?!";
+            text+="\nВи все ввели правильно?!";
             List<String> rows = List.of("Так", "Ні");
             session.setHandler("settings");
             sessionService.updateSession(update.getMessage().getChatId(), session);

@@ -1,6 +1,7 @@
 package com.example.tradeapp.services.handlers.texthandlers.impl.settings;
 
 import com.example.tradeapp.builder.director.MessageDirector;
+import com.example.tradeapp.components.SettingsComponent;
 import com.example.tradeapp.components.impl.TextMessageSender;
 import com.example.tradeapp.entities.constant.Categories;
 import com.example.tradeapp.entities.session.UserSession;
@@ -23,13 +24,26 @@ public class SettingsTextHandler implements TextHandler {
 
     private final SessionService sessionService;
 
+    private final SettingsComponent settingsComponent;
+
     @Override
     public void handle(UserSession session, Update update) {
         String text = "";
         String msg = update.getMessage().getText();
-        if(msg.equals("Так")){
+        if (msg.equals("Так")) {
             //inserting data into database
-        } else if(msg.equals("Ні")){
+            String username = update.getMessage().getChat().getUserName();
+            if (username.isBlank()) {
+                username = update.getMessage().getChat().getFirstName();
+            }
+
+            settingsComponent.saveSettings(username, session.getUserData());
+            text += "Ваші налаштування збережено!";
+            session.setUserData(new HashMap<>(Map.of("", "")));
+            sessionService.updateSession(update.getMessage().getChatId(), session);
+            textMessageSender.sendMessage(messageDirector
+                    .buildTextMessage(update.getMessage().getChatId(), text));
+        } else if (msg.equals("Ні")) {
             //restart settings
             session.setUserData(new HashMap<>(Map.of("", "")));
             session.setHandler("settingsCategories");

@@ -34,7 +34,7 @@ public class SettingsServiceImpl implements SettingsService {
     @Override
     public Settings toEntity(SettingsDTO settingsDTO) {
         Set<ItemType> itemTypes = new HashSet<>();
-        settingsDTO.getItemTypes().forEach(itemType -> {
+        settingsDTO.getCategories().forEach(itemType -> {
             itemTypes.add(itemTypeRepo.findByName(itemType));
         });
         return Settings

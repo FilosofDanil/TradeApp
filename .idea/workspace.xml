@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15cf0a42-af7b-46a0-abe5-ecc36fbe6d04" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/components/SettingsComponent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/components/impl/SettingsComponentImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/dtos/SettingsDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/dtos/SettingsDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/settingsservice/impl/SettingsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/settingsservice/impl/SettingsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/components/impl/SettingsComponentImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/components/impl/SettingsComponentImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/entities/models/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/entities/models/Settings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/settings/SettingsCategoriesTextHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/settings/SettingsCategoriesTextHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/settings/SettingsCityTextHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/settings/SettingsCityTextHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/settings/SettingsTextHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/settings/SettingsTextHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +90,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.RestApiApplication (1)">
+  <component name="RunManager" selected="Spring Boot.TradeApplication">
     <configuration name="RestApiApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="RestAPI" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.restapi.RestApiApplication" />
@@ -116,9 +121,9 @@
     </configuration>
     <list>
       <item itemvalue="Spring Boot.RestApiApplication" />
+      <item itemvalue="Spring Boot.TradeApplication" />
       <item itemvalue="Spring Boot.TradeAppApplication" />
       <item itemvalue="Spring Boot.RestApiApplication (1)" />
-      <item itemvalue="Spring Boot.TradeApplication" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -157,7 +162,8 @@
       <workItem from="1705332581450" duration="7267000" />
       <workItem from="1705342630150" duration="1602000" />
       <workItem from="1705394287073" duration="405000" />
-      <workItem from="1705398012765" duration="5985000" />
+      <workItem from="1705398012765" duration="7451000" />
+      <workItem from="1705407853617" duration="1052000" />
     </task>
     <task id="LOCAL-00001" summary="Initialized an empty project with basic configurations">
       <created>1703012913445</created>
@@ -432,7 +438,14 @@
       <option name="project" value="LOCAL" />
       <updated>1705405835254</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Created SettingsComponent">
+      <created>1705406643460</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1705406643460</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -443,7 +456,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/TradeApp" />
     </ignored-roots>
-    <MESSAGE value="Created repositories" />
     <MESSAGE value="Created mappers" />
     <MESSAGE value="Created controllers" />
     <MESSAGE value="Message director completely implemented. Added new field into TextMessage class" />
@@ -468,6 +480,7 @@
     <MESSAGE value="Small fixes. Created last settings handler" />
     <MESSAGE value="Created SettingsClient" />
     <MESSAGE value="Changed UserDTO class(added field for id)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed UserDTO class(added field for id)" />
+    <MESSAGE value="Created SettingsComponent" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created SettingsComponent" />
   </component>
 </project>

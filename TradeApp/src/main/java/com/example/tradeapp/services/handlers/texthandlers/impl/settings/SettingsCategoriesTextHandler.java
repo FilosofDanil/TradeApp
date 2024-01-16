@@ -38,7 +38,7 @@ public class SettingsCategoriesTextHandler implements TextHandler {
                 text += category;
                 text += " ";
             }
-            text+="\n Далі виберіть ваше місто(або обл. центр) зі списку:";
+            text += "\n Далі виберіть ваше місто(або обл. центр) зі списку:";
             List<String> rows = Cities.getCities();
             session.setHandler("settingsCity");
             sessionService.updateSession(update.getMessage().getChatId(), session);
@@ -46,10 +46,9 @@ public class SettingsCategoriesTextHandler implements TextHandler {
                     .buildTextMessageWithReplyKeyboard(update.getMessage().getChatId(), text, rows));
             return;
         } else if (Categories.getCategories().contains(message)) {
-            int size = data.size();
-            data.put("category" + size, message);
+            text = checkData(session, update, text);
+            session.setHandler("settingsCategories");
             sessionService.updateSession(update.getMessage().getChatId(), session);
-            text += "Ви обрали варіант: " + message;
         } else {
             text += "Нема такого варіанту відповіді!";
         }
@@ -57,5 +56,21 @@ public class SettingsCategoriesTextHandler implements TextHandler {
         rows.add("Це все, завершити.");
         textMessageSender.sendMessage(messageDirector
                 .buildTextMessageWithReplyKeyboard(update.getMessage().getChatId(), text, rows));
+    }
+
+    private String checkData(UserSession session, Update update, String text) {
+        String message = update.getMessage().getText();
+        Map<String, String> data = session.getUserData();
+        int size = data.size();
+        for (String category : data.values()) {
+            if (category.equals(message)) {
+                text += "Ви вже обирали цю категорію ";
+                return text;
+            }
+        }
+        data.put("category" + size, message);
+        sessionService.updateSession(update.getMessage().getChatId(), session);
+        text += "Ви обрали варіант: " + message;
+        return text;
     }
 }

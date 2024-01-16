@@ -32,7 +32,7 @@ public class SettingsComponentImpl implements SettingsComponent {
         Settings settings = Settings.builder()
                 .userId(user.getId())
                 .city(city)
-                .itemTypes(categories)
+                .categories(categories)
                 .build();
         return settingsClient.createSettings(settings);
     }
