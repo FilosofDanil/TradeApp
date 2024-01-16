@@ -2,6 +2,7 @@ package com.example.tradeapp.services.handlers.texthandlers.impl.settings;
 
 import com.example.tradeapp.builder.director.MessageDirector;
 import com.example.tradeapp.components.SettingsComponent;
+import com.example.tradeapp.components.UserComponent;
 import com.example.tradeapp.components.impl.TextMessageSender;
 import com.example.tradeapp.entities.constant.Categories;
 import com.example.tradeapp.entities.session.UserSession;
@@ -26,17 +27,15 @@ public class SettingsTextHandler implements TextHandler {
 
     private final SettingsComponent settingsComponent;
 
+    private final UserComponent userComponent;
+
     @Override
     public void handle(UserSession session, Update update) {
         String text = "";
         String msg = update.getMessage().getText();
         if (msg.equals("Так")) {
             //inserting data into database
-            String username = update.getMessage().getChat().getUserName();
-            if (username.isBlank()) {
-                username = update.getMessage().getChat().getFirstName();
-            }
-
+            String username = userComponent.getUsernameFromMessage(update);
             settingsComponent.saveSettings(username, session.getUserData());
             text += "Ваші налаштування збережено!";
             session.setUserData(new HashMap<>(Map.of("", "")));
