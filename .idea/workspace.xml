@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15cf0a42-af7b-46a0-abe5-ecc36fbe6d04" name="Changes" comment="Implemented photo input stream">
-      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/components/ItemFormer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/components/impl/ItemFormerImpl.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleExpirationDateTextHandler.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleTextHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/components/DateParser.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +166,7 @@
       <workItem from="1705423344067" duration="3276000" />
       <workItem from="1705431477116" duration="324000" />
       <workItem from="1705493931266" duration="1226000" />
-      <workItem from="1705582055540" duration="16307000" />
+      <workItem from="1705582055540" duration="16645000" />
     </task>
     <task id="LOCAL-00001" summary="Initialized an empty project with basic configurations">
       <created>1703012913445</created>
@@ -458,7 +455,14 @@
       <option name="project" value="LOCAL" />
       <updated>1705598810949</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="ItemFormer">
+      <created>1705598856343</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1705598856343</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -469,7 +473,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/TradeApp" />
     </ignored-roots>
-    <MESSAGE value="Deleted custom mappers. Injected ModelMapper from library." />
     <MESSAGE value="Changed dtos" />
     <MESSAGE value="Changed entities" />
     <MESSAGE value="Service layer now returns entities, instead of DTOs" />
@@ -494,6 +497,7 @@
     <MESSAGE value="Implemented photo input stream" />
     <MESSAGE value="Added API endpoints for ItemTypes resource" />
     <MESSAGE value="Added ItemType client. Added text handling in AddArticlePhotoHandler, in order to make ease of finishing photo adding process." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added ItemType client. Added text handling in AddArticlePhotoHandler, in order to make ease of finishing photo adding process." />
+    <MESSAGE value="ItemFormer" />
+    <option name="LAST_COMMIT_MESSAGE" value="ItemFormer" />
   </component>
 </project>
