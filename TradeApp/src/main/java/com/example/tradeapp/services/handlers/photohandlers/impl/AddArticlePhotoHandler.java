@@ -5,6 +5,7 @@ import com.example.tradeapp.components.ChatIdFromUpdateComponent;
 import com.example.tradeapp.components.impl.TextMessageSender;
 import com.example.tradeapp.entities.session.UserSession;
 import com.example.tradeapp.services.handlers.photohandlers.PhotoHandler;
+import com.example.tradeapp.services.handlers.texthandlers.TextHandler;
 import com.example.tradeapp.services.session.SessionService;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
@@ -27,7 +28,7 @@ import java.util.Map;
 
 @Component("articleAddPhotos")
 @RequiredArgsConstructor
-public class AddArticlePhotoHandler implements PhotoHandler {
+public class AddArticlePhotoHandler implements PhotoHandler, TextHandler {
     private final TextMessageSender textMessageSender;
 
     private final MessageDirector messageDirector;
@@ -48,8 +49,26 @@ public class AddArticlePhotoHandler implements PhotoHandler {
     @Override
     @SneakyThrows
     public void handle(UserSession session, Update update) {
-        String text = "";
         Long chatId = updateComponent.getChatIdFromUpdate(update);
+        String text = "";
+        if (update.getMessage().hasText()){
+            if(update.getMessage().getText().equals("\uD83D\uDC4D\uD83C\uDFFB")){
+                session.setHandler("articleAddDate");
+                text+="Добре! Ваші фото збережені! Тепер введіть будь-ласка дату до якої бажаєте продати товар(дата експірації аукціону)" +
+                        "\nБудьте уважні із форматом вводу дати, вводьте її наступним чином: dd-mm-yyyy";
+                sessionService.updateSession(chatId, session);
+                textMessageSender.sendMessage(messageDirector
+                        .buildTextMessage(chatId, text));
+                return;
+            } else {
+                session.setHandler("articleAddPhotos");
+                text+="Нема такого варіанту відповіді";
+                sessionService.updateSession(chatId, session);
+                textMessageSender.sendMessage(messageDirector
+                        .buildTextMessageWithReplyKeyboard(chatId, text, List.of("\uD83D\uDC4D\uD83C\uDFFB")));
+                return;
+            }
+        }
         Map<String, String> data = session.getUserData();
         List<PhotoSize> photoSizes = update.getMessage().getPhoto();
         String response = photoSizes.get(photoSizes.size() - 1).getFileId();
@@ -69,7 +88,7 @@ public class AddArticlePhotoHandler implements PhotoHandler {
             outputStream.close();
             session.setUserData(count(data, path));
             session.setHandler("articleAddPhotos");
-            text += "Фото успішно додане";
+            text += "Фото успішно додане! Якщо це все натисни \uD83D\uDC4D\uD83C\uDFFB внизу";
         } catch (IOException e) {
             e.printStackTrace();
             session.setHandler("articleAddPhotos");
@@ -77,7 +96,7 @@ public class AddArticlePhotoHandler implements PhotoHandler {
         }
         sessionService.updateSession(chatId, session);
         textMessageSender.sendMessage(messageDirector
-                .buildTextMessage(chatId, text));
+                .buildTextMessageWithReplyKeyboard(chatId, text, List.of("\uD83D\uDC4D\uD83C\uDFFB")));
     }
 
     private Map<String, String> count(Map<String, String> data, String path) throws IllegalArgumentException {

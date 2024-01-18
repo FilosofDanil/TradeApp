@@ -5,21 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15cf0a42-af7b-46a0-abe5-ecc36fbe6d04" name="Changes" comment="Implemented photo input stream">
-      <change afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/controllers/ItemTypeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/dtos/ItemTypeDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/crud/CRUDItemTypeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/crud/impl/CRUDItemTypeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/client/ItemTypeClient.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/components/ItemFormer.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/components/impl/ItemFormerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/entities/models/ItemType.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleExpirationDateTextHandler.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleTextHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/repositories/ItemTypeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/repositories/ItemTypeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/crud/impl/CRUDSettingsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/crud/impl/CRUDSettingsServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TradeApp/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/components/DateParser.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/photohandlers/impl/AddArticlePhotoHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/photohandlers/impl/AddArticlePhotoHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/queryhandler/marketplace/MyArticlesButtonHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/queryhandler/marketplace/MyArticlesButtonHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleCategoryTextHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleCategoryTextHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +101,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.RestApiApplication (1)">
+  <component name="RunManager" selected="Spring Boot.TradeApplication">
     <configuration name="RestApiApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="RestAPI" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.restapi.RestApiApplication" />
@@ -179,7 +175,7 @@
       <workItem from="1705423344067" duration="3276000" />
       <workItem from="1705431477116" duration="324000" />
       <workItem from="1705493931266" duration="1226000" />
-      <workItem from="1705582055540" duration="14534000" />
+      <workItem from="1705582055540" duration="15926000" />
     </task>
     <task id="LOCAL-00001" summary="Initialized an empty project with basic configurations">
       <created>1703012913445</created>
@@ -454,7 +450,14 @@
       <option name="project" value="LOCAL" />
       <updated>1705594142057</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Added API endpoints for ItemTypes resource">
+      <created>1705597372249</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1705597372249</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -465,7 +468,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/TradeApp" />
     </ignored-roots>
-    <MESSAGE value="Created controllers" />
     <MESSAGE value="Message director completely implemented. Added new field into TextMessage class" />
     <MESSAGE value="Deleted custom mappers. Injected ModelMapper from library." />
     <MESSAGE value="Changed dtos" />
@@ -490,6 +492,7 @@
     <MESSAGE value="Minor fixes. Added DateParser interface" />
     <MESSAGE value="Added PhotoHandler interface. Created 1st PhotoHandler implementation which responds on photos if it didn't need. Minor fixes. Added photo handling in State Service" />
     <MESSAGE value="Implemented photo input stream" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented photo input stream" />
+    <MESSAGE value="Added API endpoints for ItemTypes resource" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added API endpoints for ItemTypes resource" />
   </component>
 </project>
