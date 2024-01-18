@@ -37,7 +37,7 @@ public class CRUDSettingsServiceImpl implements CRUDSettingsService {
             toUpdate.setCity(settings.getCity());
             toUpdate.setUser(settings.getUser());
             toUpdate.setItemTypes(settings.getItemTypes());
-            settingsRepository.save(settings);
+            settingsRepository.save(toUpdate);
         }
     }
 
