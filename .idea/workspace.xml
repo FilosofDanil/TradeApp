@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15cf0a42-af7b-46a0-abe5-ecc36fbe6d04" name="Changes" comment="Implemented photo input stream">
-      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleExpirationDateTextHandler.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleTextHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/components/impl/ItemFormerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/components/impl/ItemFormerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleExpirationDateTextHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleExpirationDateTextHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +168,7 @@
       <workItem from="1705423344067" duration="3276000" />
       <workItem from="1705431477116" duration="324000" />
       <workItem from="1705493931266" duration="1226000" />
-      <workItem from="1705582055540" duration="16645000" />
+      <workItem from="1705582055540" duration="17748000" />
     </task>
     <task id="LOCAL-00001" summary="Initialized an empty project with basic configurations">
       <created>1703012913445</created>
@@ -462,7 +464,14 @@
       <option name="project" value="LOCAL" />
       <updated>1705598856343</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Date former">
+      <created>1705599285288</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1705599285288</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -473,7 +482,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/TradeApp" />
     </ignored-roots>
-    <MESSAGE value="Changed dtos" />
     <MESSAGE value="Changed entities" />
     <MESSAGE value="Service layer now returns entities, instead of DTOs" />
     <MESSAGE value="Added mapping in controllers" />
@@ -498,6 +506,7 @@
     <MESSAGE value="Added API endpoints for ItemTypes resource" />
     <MESSAGE value="Added ItemType client. Added text handling in AddArticlePhotoHandler, in order to make ease of finishing photo adding process." />
     <MESSAGE value="ItemFormer" />
-    <option name="LAST_COMMIT_MESSAGE" value="ItemFormer" />
+    <MESSAGE value="Date former" />
+    <option name="LAST_COMMIT_MESSAGE" value="Date former" />
   </component>
 </project>

@@ -43,7 +43,7 @@ public class ItemFormerImpl implements ItemFormer {
                 .placementDate(new Date())
                 .description(description)
                 .expirationDate(formatter.parse(date))
-                .bidPrice(bidPrice)
+                .startPrice(bidPrice)
                 .build();
     }
 }
