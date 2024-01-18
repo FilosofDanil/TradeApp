@@ -33,10 +33,12 @@ public class AddArticleNameTextHandler implements TextHandler {
             session.setHandler("addArticleDescription");
             data.put("articleName", message);
             session.setUserData(data);
-            sessionService.updateSession(chatId, session);
+            text+="Добре! Далі коротко опишіть товар!";
         } else {
+            session.setHandler("addArticleName");
             text += "Назва закоротка! Введіть ще раз";
         }
+        sessionService.updateSession(chatId, session);
         textMessageSender.sendMessage(messageDirector
                 .buildTextMessage(chatId, text));
     }

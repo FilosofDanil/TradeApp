@@ -12,7 +12,7 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 
 import java.util.Map;
 
-@Component("addArticleDescription")
+@Component("addArticlePrice")
 @RequiredArgsConstructor
 public class AddArticleStartPriceTextHandler implements TextHandler {
     private final TextMessageSender textMessageSender;
@@ -35,11 +35,12 @@ public class AddArticleStartPriceTextHandler implements TextHandler {
             data.put("articlePhotos", "0");
             session.setHandler("articleAddPhotos");
             session.setUserData(data);
-            sessionService.updateSession(chatId, session);
             text += "Надішліть фото(не більше 3-х) вашого товару";
         } catch (NumberFormatException e) {
+            session.setHandler("addArticlePrice");
             text += "Неправильно введена ціна. Вкажіть ціну товару в цілому числі(в гривнях)";
         }
+        sessionService.updateSession(chatId, session);
         textMessageSender.sendMessage(messageDirector
                 .buildTextMessage(chatId, text));
     }

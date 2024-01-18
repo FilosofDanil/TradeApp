@@ -34,10 +34,12 @@ public class AddArticleDescriptionTextHandler implements TextHandler {
             session.setHandler("addArticlePrice");
             data.put("articleDescription", message);
             session.setUserData(data);
-            sessionService.updateSession(chatId, session);
+            text += "Добре! Далі введіть ціну вашого товару!";
         } else {
+            session.setHandler("addArticleDescription");
             text += "Опис закороткий! Введіть ще раз";
         }
+        sessionService.updateSession(chatId, session);
         textMessageSender.sendMessage(messageDirector
                 .buildTextMessage(chatId, text));
     }

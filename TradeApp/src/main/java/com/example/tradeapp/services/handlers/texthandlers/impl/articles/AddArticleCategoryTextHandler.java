@@ -34,11 +34,12 @@ public class AddArticleCategoryTextHandler implements TextHandler {
             session.setHandler("addArticleName");
             data.put("articleCategory", message);
             session.setUserData(data);
-            sessionService.updateSession(chatId, session);
             text += "Добре! Тепер введіть коротку назву вашого товару.";
         } else {
+            session.setHandler("addArticleCategory");
             text += "Нема такого варіанту відповіді!";
         }
+        sessionService.updateSession(chatId, session);
         textMessageSender.sendMessage(messageDirector
                 .buildTextMessage(chatId, text));
 
