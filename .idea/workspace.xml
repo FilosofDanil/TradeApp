@@ -6,13 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="15cf0a42-af7b-46a0-abe5-ecc36fbe6d04" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/components/impl/DateParserImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/photohandlers/PhotoHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/photohandlers/impl/AddArticlePhotoHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/photohandlers/impl/EmptyPhotoHandler.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleExpirationDateTextHandler.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleTextHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleCategoryTextHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleCategoryTextHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleDescriptionTextHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleDescriptionTextHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleNameTextHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleNameTextHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleStartPriceTextHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleStartPriceTextHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/emptyhandler/EmptyHandlerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/emptyhandler/EmptyHandlerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/statemanager/impl/StateServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/statemanager/impl/StateServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +173,7 @@
       <workItem from="1705423344067" duration="3276000" />
       <workItem from="1705431477116" duration="324000" />
       <workItem from="1705493931266" duration="1226000" />
-      <workItem from="1705582055540" duration="5235000" />
+      <workItem from="1705582055540" duration="8202000" />
     </task>
     <task id="LOCAL-00001" summary="Initialized an empty project with basic configurations">
       <created>1703012913445</created>
@@ -426,7 +427,14 @@
       <option name="project" value="LOCAL" />
       <updated>1705586538622</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Minor fixes. Added DateParser interface">
+      <created>1705587462705</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1705587462705</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -437,7 +445,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/TradeApp" />
     </ignored-roots>
-    <MESSAGE value="Created DTOs" />
     <MESSAGE value="Created repositories" />
     <MESSAGE value="Created mappers" />
     <MESSAGE value="Created controllers" />
@@ -462,6 +469,7 @@
     <MESSAGE value="Added handler for adding article button" />
     <MESSAGE value="Created components for all text data required in placing items in service" />
     <MESSAGE value="Created components for all text data required in placing items on marketplace" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created components for all text data required in placing items on marketplace" />
+    <MESSAGE value="Minor fixes. Added DateParser interface" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor fixes. Added DateParser interface" />
   </component>
 </project>

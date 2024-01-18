@@ -1,18 +1,17 @@
-package com.example.tradeapp.services.handlers.emptyhandler;
+package com.example.tradeapp.services.handlers.photohandlers.impl;
 
 import com.example.tradeapp.builder.director.MessageDirector;
 import com.example.tradeapp.components.ChatIdFromUpdateComponent;
 import com.example.tradeapp.components.impl.TextMessageSender;
 import com.example.tradeapp.entities.session.UserSession;
-import com.example.tradeapp.services.handlers.Handler;
 import com.example.tradeapp.services.handlers.photohandlers.PhotoHandler;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
-@Service("emptyHandler")
+@Component("emptyPhotoHandler")
 @RequiredArgsConstructor
-public class EmptyHandlerService implements Handler {
+public class EmptyPhotoHandler implements PhotoHandler {
     private final TextMessageSender textMessageSender;
 
     private final MessageDirector messageDirector;
@@ -23,6 +22,6 @@ public class EmptyHandlerService implements Handler {
     public void handle(UserSession session, Update update) {
         Long chatId = updateComponent.getChatIdFromUpdate(update);
         textMessageSender.sendMessage(messageDirector
-                .buildTextMessage(chatId, "Нема такого варіанту відповіді!"));
+                .buildTextMessage(chatId, "Нема такого варіанту відповіді! В надсиланні фото зараз немає необхідності."));
     }
 }
