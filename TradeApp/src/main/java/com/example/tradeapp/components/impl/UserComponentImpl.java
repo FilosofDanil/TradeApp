@@ -21,7 +21,7 @@ public class UserComponentImpl implements UserComponent {
     @Override
     public String getUsernameFromQuery(Update update) {
         String username = update.getCallbackQuery().getMessage().getChat().getUserName();
-        if (username.isBlank()) {
+        if (username==null) {
             username = update.getCallbackQuery().getMessage().getChat().getFirstName();
         }
         return username;
