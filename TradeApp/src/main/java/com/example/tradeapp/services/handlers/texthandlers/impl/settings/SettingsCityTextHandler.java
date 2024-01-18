@@ -1,6 +1,7 @@
 package com.example.tradeapp.services.handlers.texthandlers.impl.settings;
 
 import com.example.tradeapp.builder.director.MessageDirector;
+import com.example.tradeapp.components.ChatIdFromUpdateComponent;
 import com.example.tradeapp.components.impl.TextMessageSender;
 import com.example.tradeapp.entities.constant.Cities;
 import com.example.tradeapp.entities.session.UserSession;
@@ -22,10 +23,13 @@ public class SettingsCityTextHandler implements TextHandler {
 
     private final SessionService sessionService;
 
+    private final ChatIdFromUpdateComponent updateComponent;
+
     @Override
     public void handle(UserSession session, Update update) {
         String text = "";
         String msg = update.getMessage().getText();
+        Long chatId = updateComponent.getChatIdFromUpdate(update);
         List<String> cities = Cities.getCities();
         if (cities.contains(msg)) {
             Map<String, String> data = session.getUserData();
@@ -34,13 +38,13 @@ public class SettingsCityTextHandler implements TextHandler {
             text+="\nВи все ввели правильно?!";
             List<String> rows = List.of("Так", "Ні");
             session.setHandler("settings");
-            sessionService.updateSession(update.getMessage().getChatId(), session);
+            sessionService.updateSession(chatId, session);
             textMessageSender.sendMessage(messageDirector
-                    .buildTextMessageWithReplyKeyboard(update.getMessage().getChatId(), text, rows));
+                    .buildTextMessageWithReplyKeyboard(chatId, text, rows));
         } else {
             text += "Нема такого варіанту відповіді!";
             textMessageSender.sendMessage(messageDirector
-                    .buildTextMessage(update.getMessage().getChatId(), text));
+                    .buildTextMessage(chatId, text));
         }
     }
 }

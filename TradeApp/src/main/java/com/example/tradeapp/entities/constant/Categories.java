@@ -10,10 +10,10 @@ public final class Categories {
     private Categories() {
     }
 
-    private final static List<String> categories = List.of("Авто", "Нерухомість",
+    private final static List<String> CATEGORIES = List.of("Авто", "Нерухомість",
             "Музичні інструменти", "Побут", "Одяг", "Меблі", "Техніка", "Тварини", "Інше");
 
     public static List<String> getCategories() {
-        return categories;
+        return CATEGORIES;
     }
 }

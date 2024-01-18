@@ -1,6 +1,7 @@
 package com.example.tradeapp.services.handlers.texthandlers.impl.settings;
 
 import com.example.tradeapp.builder.director.MessageDirector;
+import com.example.tradeapp.components.ChatIdFromUpdateComponent;
 import com.example.tradeapp.components.SettingsComponent;
 import com.example.tradeapp.components.UserComponent;
 import com.example.tradeapp.components.impl.TextMessageSender;
@@ -29,19 +30,22 @@ public class SettingsTextHandler implements TextHandler {
 
     private final UserComponent userComponent;
 
+    private final ChatIdFromUpdateComponent updateComponent;
+
     @Override
     public void handle(UserSession session, Update update) {
         String text = "";
         String msg = update.getMessage().getText();
+        Long chatId = updateComponent.getChatIdFromUpdate(update);
         if (msg.equals("Так")) {
             //inserting data into database
             String username = userComponent.getUsernameFromMessage(update);
             settingsComponent.saveSettings(username, session.getUserData());
             text += "Ваші налаштування збережено!";
             session.setUserData(new HashMap<>(Map.of("", "")));
-            sessionService.updateSession(update.getMessage().getChatId(), session);
+            sessionService.updateSession(chatId, session);
             textMessageSender.sendMessage(messageDirector
-                    .buildTextMessage(update.getMessage().getChatId(), text));
+                    .buildTextMessage(chatId, text));
         } else if (msg.equals("Ні")) {
             //restart settings
             session.setUserData(new HashMap<>(Map.of("", "")));
@@ -49,13 +53,13 @@ public class SettingsTextHandler implements TextHandler {
             text += "Добре, тоді налаштуємо все заново!";
             text += "\n Оберіть категорії товарів нижче (для пошуку товарів на маркетплейсі):";
             List<String> rows = Categories.getCategories();
-            sessionService.updateSession(update.getCallbackQuery().getMessage().getChatId(), session);
+            sessionService.updateSession(chatId, session);
             textMessageSender.sendMessage(messageDirector
-                    .buildTextMessageWithReplyKeyboard(update.getCallbackQuery().getMessage().getChatId(), text, rows));
+                    .buildTextMessageWithReplyKeyboard(chatId, text, rows));
         } else {
             text += "Нема такого варіанту відповіді!";
             textMessageSender.sendMessage(messageDirector
-                    .buildTextMessage(update.getMessage().getChatId(), text));
+                    .buildTextMessage(chatId, text));
         }
     }
 }
