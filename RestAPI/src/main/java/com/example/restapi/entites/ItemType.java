@@ -19,7 +19,7 @@ public class ItemType {
     private Long id;
     @Column(name = "name", nullable = false)
     private String name;
-    @ManyToMany(mappedBy = "itemTypes")
+    @ManyToMany(mappedBy = "categories")
     private Set<Settings> settings = new HashSet<>();
 
     @Override

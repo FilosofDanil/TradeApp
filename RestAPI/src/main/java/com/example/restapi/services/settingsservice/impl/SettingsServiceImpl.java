@@ -41,7 +41,7 @@ public class SettingsServiceImpl implements SettingsService {
                 .builder()
                 .city(settingsDTO.getCity())
                 .user(userCRUDService.getById(settingsDTO.getUserId()))
-                .itemTypes(itemTypes)
+                .categories(itemTypes)
                 .build();
     }
 }

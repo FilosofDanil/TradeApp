@@ -42,7 +42,7 @@ public class ItemController {
                 .toList());
     }
 
-    @GetMapping("/{name}")
+    @GetMapping("/name/{name}")
     public ResponseEntity<List<ItemDTO>> getItemByName(@PathVariable String name) {
         return ResponseEntity.ok(itemService.getAllByName(name).stream()
                 .map(this::toDto)

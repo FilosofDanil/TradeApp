@@ -32,10 +32,10 @@ public class Settings {
             joinColumns = {@JoinColumn(name = "settings_id")},
             inverseJoinColumns = {@JoinColumn(name = "itemtype_id")}
     )
-    Set<ItemType> itemTypes = new HashSet<>();
+    Set<ItemType> categories = new HashSet<>();
 
     public void setItemTypes(Set<ItemType> itemTypes) {
-        this.itemTypes.retainAll(itemTypes);
-        this.itemTypes.addAll(itemTypes);
+        this.categories.retainAll(itemTypes);
+        this.categories.addAll(itemTypes);
     }
 }
