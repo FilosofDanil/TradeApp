@@ -13,6 +13,7 @@ import java.util.Date;
 @NoArgsConstructor
 @Builder
 public class Items {
+    private Long id;
     private String itemName;
     private String description;
     private Integer startPrice;
