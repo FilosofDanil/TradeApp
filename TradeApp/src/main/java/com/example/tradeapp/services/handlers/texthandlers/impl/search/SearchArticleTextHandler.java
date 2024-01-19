@@ -52,6 +52,34 @@ public class SearchArticleTextHandler implements TextHandler {
             data.put("currentId", "0");
             sessionService.updateSession(chatId, session);
         }
+        if (!isStarted(data) && !message.equals("\uD83D\uDE80")) {
+            textMessageSender.sendMessage(messageDirector
+                    .buildTextMessage(chatId, "Нема такого варіанту відповіді!"));
+            session.setHandler("searching");
+            sessionService.updateSession(chatId, session);
+            return;
+        } else if (!isStarted(data) && message.equals("\uD83D\uDE80")) {
+            data.put("isStarted", "true");
+            session.setUserData(data);
+            sessionService.updateSession(chatId, session);
+            textMessageSender.sendMessage(messageDirector
+                    .buildTextMessage(chatId, "Починаємо пошук!"));
+        } else if (isStarted(data) && message.equals("\uD83D\uDC4D\uD83C\uDFFB")) {
+            textMessageSender.sendMessage(messageDirector
+                    .buildTextMessage(chatId, "Добре, введіть тоді будь-ласка бажану ціну ставки(не менше xxx грн)"));
+            session.setHandler("bidPrice");
+            sessionService.updateSession(chatId, session);
+            return;
+        } else if (isStarted(data) && message.equals("\uD83D\uDC4E\uD83C\uDFFB")) {
+            session.setHandler("searching");
+            sessionService.updateSession(chatId, session);
+        } else {
+            textMessageSender.sendMessage(messageDirector
+                    .buildTextMessage(chatId, "Нема такого варіанту відповіді!"));
+            session.setHandler("searching");
+            sessionService.updateSession(chatId, session);
+            return;
+        }
         List<Long> itemIds = Arrays.stream(data.get("itemList")
                         .split(" "))
                 .map(Long::parseLong)
@@ -59,15 +87,19 @@ public class SearchArticleTextHandler implements TextHandler {
         int currentId = getCurrentId(data);
         Items item = itemClient.getItemById(itemIds.get(currentId));
         currentId++;
+        List<String> rows = List.of("\uD83D\uDC4D\uD83C\uDFFB", "\uD83D\uDC4E\uD83C\uDFFB");
         photoMessageSender.sendMessage(photoMessageDirector
-                .buildPhotoMessage(chatId, item));
+                .buildPhotoMessage(chatId, item, rows));
         if (itemIds.size() <= currentId) {
             session.setUserData(new HashMap<>(Map.of("", "")));
         }
-
     }
 
     private Integer getCurrentId(Map<String, String> data) {
         return Integer.parseInt(data.get("currentId"));
+    }
+
+    private Boolean isStarted(Map<String, String> data) {
+        return Boolean.parseBoolean(data.get("isStarted"));
     }
 }
