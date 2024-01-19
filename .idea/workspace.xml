@@ -8,9 +8,9 @@
       <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/search/SearchArticleBidCommentHandler.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/search/SearchArticleBidHandler.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/search/SearchArticleBidPriceHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/search/SearchArticleTextHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/client/ItemClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/client/ItemClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/components/impl/SendArticlesImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/components/impl/SendArticlesImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/commandhandlers/impl/SearchCommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/commandhandlers/impl/SearchCommandHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/search/SearchArticleTextHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/search/SearchArticleTextHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,14 +171,7 @@
       <workItem from="1705431477116" duration="324000" />
       <workItem from="1705493931266" duration="1226000" />
       <workItem from="1705582055540" duration="17748000" />
-      <workItem from="1705658615156" duration="12461000" />
-    </task>
-    <task id="LOCAL-00001" summary="Initialized an empty project with basic configurations">
-      <created>1703012913445</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1703012913445</updated>
+      <workItem from="1705658615156" duration="15746000" />
     </task>
     <task id="LOCAL-00002" summary="gitignore">
       <created>1703012939971</created>
@@ -516,7 +509,14 @@
       <option name="project" value="LOCAL" />
       <updated>1705675368635</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Fixed client endpoint. Added Text handler for searching process.">
+      <created>1705675776727</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1705675776728</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -527,7 +527,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/TradeApp" />
     </ignored-roots>
-    <MESSAGE value="Extended UserService in REST API. Added new methods for user existing checkout" />
     <MESSAGE value="Added new methods in client" />
     <MESSAGE value="Implemented user savage after the conversation started" />
     <MESSAGE value="Added Categories static class" />
@@ -552,6 +551,7 @@
     <MESSAGE value="Created SendArticles interface, which get the list of items, which will be sent to user then." />
     <MESSAGE value="Added id field in models" />
     <MESSAGE value="REST API minor fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="REST API minor fixes" />
+    <MESSAGE value="Fixed client endpoint. Added Text handler for searching process." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed client endpoint. Added Text handler for searching process." />
   </component>
 </project>
