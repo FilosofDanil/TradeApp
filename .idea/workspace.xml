@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15cf0a42-af7b-46a0-abe5-ecc36fbe6d04" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/commandhandlers/impl/SearchCommandHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/components/SendArticles.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/components/impl/SendArticlesImpl.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/search/SearchArticleBidCommentHandler.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/search/SearchArticleBidHandler.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/search/SearchArticleBidPriceHandler.java" afterDir="false" />
@@ -170,7 +171,7 @@
       <workItem from="1705431477116" duration="324000" />
       <workItem from="1705493931266" duration="1226000" />
       <workItem from="1705582055540" duration="17748000" />
-      <workItem from="1705658615156" duration="5070000" />
+      <workItem from="1705658615156" duration="7213000" />
     </task>
     <task id="LOCAL-00001" summary="Initialized an empty project with basic configurations">
       <created>1703012913445</created>
@@ -487,7 +488,14 @@
       <option name="project" value="LOCAL" />
       <updated>1705662664396</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Created Searching command handler">
+      <created>1705666852836</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1705666852836</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -498,7 +506,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/TradeApp" />
     </ignored-roots>
-    <MESSAGE value="Added mapping in controllers" />
     <MESSAGE value="Created empty query handlers" />
     <MESSAGE value="Connected feign client" />
     <MESSAGE value="Implemented clients" />
@@ -523,6 +530,7 @@
     <MESSAGE value="Date former" />
     <MESSAGE value="Created PhotoMessage model. Implemented PhotoSender" />
     <MESSAGE value="Created KeyboardBuilder. Added PhotoMessageDirector. Added photo sending after creating. Minor fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created KeyboardBuilder. Added PhotoMessageDirector. Added photo sending after creating. Minor fixes" />
+    <MESSAGE value="Created Searching command handler" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created Searching command handler" />
   </component>
 </project>
