@@ -30,7 +30,7 @@ public class StartSearchingComponentImpl implements StartSearchingComponent {
         String text = "Починаємо пошук товарів, відповідно ваших налаштувань... Щоб почати натисніть \uD83D\uDE80";
         Long chatId = updateComponent.getChatIdFromUpdate(update);
         Map<String, String> data = session.getUserData();
-        data.put("startedSearch", "false");
+        data.put("isStarted", "false");
         session.setUserData(data);
         List<String> rows = List.of("\uD83D\uDE80");
         textMessageMessageSender.sendMessage(messageDirector
