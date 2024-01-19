@@ -18,6 +18,7 @@ import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
 import java.util.List;
+import java.util.Map;
 
 @Component
 @RequiredArgsConstructor
@@ -57,7 +58,19 @@ public class SendArticlesImpl implements SendArticles {
                         .isEmpty() && isSameCityWithItem(settings, item))
                 .toList();
         //here is data insertion
+        session.setUserData(insertItems(session, items));
         sessionService.updateSession(chatId, session);
+    }
+
+    private Map<String, String> insertItems(UserSession session, List<Items> items){
+        Map<String, String> data = session.getUserData();
+        StringBuilder stringBuilder = new StringBuilder();
+        items.forEach(item -> {
+            stringBuilder.append(item.getId());
+            stringBuilder.append(" ");
+        });
+        data.put("itemList", stringBuilder.toString());
+        return data;
     }
 
     private boolean isSameCityWithItem(Settings settings, Items item) {

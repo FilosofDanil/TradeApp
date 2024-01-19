@@ -17,7 +17,7 @@ public interface ItemClient {
     @GetMapping("/user/{username}")
     List<Items> getAllItemsByUser(@PathVariable String username);
 
-    @GetMapping("/{name}")
+    @GetMapping("name/{name}")
     List<Items> getItemByName(@PathVariable String name);
 
     @PostMapping("")
