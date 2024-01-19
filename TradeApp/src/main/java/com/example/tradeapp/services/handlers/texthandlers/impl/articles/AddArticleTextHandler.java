@@ -43,12 +43,12 @@ public class AddArticleTextHandler implements TextHandler {
         Map<String, String> data = session.getUserData();
         if (message.equals("\uD83D\uDC4D\uD83C\uDFFB")) {
             Items item = itemFormer.formItem(data, username);
-            session.setUserData(new HashMap<>());
+            session.setUserData(new HashMap<>(Map.of("", "")));
             session.setHandler("market");
             itemClient.createItem(item);
             text += "Ваш товар успішно додано!";
         } else if (message.equals("\uD83D\uDC4E\uD83C\uDFFB")) {
-            session.setUserData(new HashMap<>());
+            session.setUserData(new HashMap<>(Map.of("", "")));
             session.setHandler("market");
             text += "Назад до маркетплейсу...";
         } else {

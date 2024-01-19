@@ -40,6 +40,8 @@ public class AddArticlePhotoHandler implements PhotoHandler, TextHandler {
     @Value("${bot.token}")
     private String token;
 
+    private final static String LOCAL_STORAGE_PATH = "TradeApp/src/main/resources/";
+
     private final static String PATH = "https://api.telegram.org/bot";
 
     private final static String END_PATH = "/getFile?file_id=";
@@ -51,10 +53,10 @@ public class AddArticlePhotoHandler implements PhotoHandler, TextHandler {
     public void handle(UserSession session, Update update) {
         Long chatId = updateComponent.getChatIdFromUpdate(update);
         String text = "";
-        if (update.getMessage().hasText()){
-            if(update.getMessage().getText().equals("\uD83D\uDC4D\uD83C\uDFFB")){
+        if (update.getMessage().hasText()) {
+            if (update.getMessage().getText().equals("\uD83D\uDC4D\uD83C\uDFFB")) {
                 session.setHandler("articleAddDate");
-                text+="Добре! Ваші фото збережені! Тепер введіть будь-ласка дату до якої бажаєте продати товар(дата експірації аукціону)" +
+                text += "Добре! Ваші фото збережені! Тепер введіть будь-ласка дату до якої бажаєте продати товар(дата експірації аукціону)" +
                         "\nБудьте уважні із форматом вводу дати, вводьте її наступним чином: dd-mm-yyyy";
                 sessionService.updateSession(chatId, session);
                 textMessageSender.sendMessage(messageDirector
@@ -62,7 +64,7 @@ public class AddArticlePhotoHandler implements PhotoHandler, TextHandler {
                 return;
             } else {
                 session.setHandler("articleAddPhotos");
-                text+="Нема такого варіанту відповіді";
+                text += "Нема такого варіанту відповіді";
                 sessionService.updateSession(chatId, session);
                 textMessageSender.sendMessage(messageDirector
                         .buildTextMessageWithReplyKeyboard(chatId, text, List.of("\uD83D\uDC4D\uD83C\uDFFB")));
@@ -83,7 +85,7 @@ public class AddArticlePhotoHandler implements PhotoHandler, TextHandler {
         URL urlObj = new URL(source);
         try (InputStream is = urlObj.openStream()) {
             byte[] stream = is.readAllBytes();
-            FileOutputStream outputStream = new FileOutputStream("TradeApp/src/main/resources/" + path);
+            FileOutputStream outputStream = new FileOutputStream(LOCAL_STORAGE_PATH + path);
             outputStream.write(stream);
             outputStream.close();
             session.setUserData(count(data, path));

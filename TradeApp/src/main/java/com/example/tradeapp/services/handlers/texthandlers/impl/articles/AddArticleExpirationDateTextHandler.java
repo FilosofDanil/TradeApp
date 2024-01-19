@@ -1,10 +1,17 @@
 package com.example.tradeapp.services.handlers.texthandlers.impl.articles;
 
 import com.example.tradeapp.builder.director.MessageDirector;
+import com.example.tradeapp.builder.director.PhotoMessageDirector;
+import com.example.tradeapp.client.ItemClient;
+import com.example.tradeapp.client.ItemTypeClient;
 import com.example.tradeapp.components.ChatIdFromUpdateComponent;
 import com.example.tradeapp.components.ItemFormer;
+import com.example.tradeapp.components.MessageSender;
 import com.example.tradeapp.components.UserComponent;
 import com.example.tradeapp.components.impl.TextMessageSender;
+import com.example.tradeapp.entities.messages.impl.PhotoMessage;
+import com.example.tradeapp.entities.models.ItemType;
+import com.example.tradeapp.entities.models.Items;
 import com.example.tradeapp.entities.session.UserSession;
 import com.example.tradeapp.services.handlers.texthandlers.TextHandler;
 import com.example.tradeapp.services.session.SessionService;
@@ -20,13 +27,17 @@ import java.util.Map;
 public class AddArticleExpirationDateTextHandler implements TextHandler {
     private final TextMessageSender textMessageSender;
 
+    private final MessageSender<PhotoMessage> photoMessageSender;
+
     private final MessageDirector messageDirector;
+
+    private final PhotoMessageDirector photoMessageDirector;
+
+    private final ItemFormer itemFormer;
 
     private final SessionService sessionService;
 
     private final ChatIdFromUpdateComponent updateComponent;
-
-    private final ItemFormer itemFormer;
 
     private final UserComponent userComponent;
 
@@ -42,10 +53,12 @@ public class AddArticleExpirationDateTextHandler implements TextHandler {
         textMessageSender.sendMessage(messageDirector
                 .buildTextMessage(chatId, "Добре! Ось ваш товар:"));
         //here send item with photo
+        Items item = itemFormer.formItem(data, username);
+        photoMessageSender.sendMessage(photoMessageDirector
+                .buildPhotoMessage(chatId, item));
         session.setHandler("addArticle");
         sessionService.updateSession(chatId, session);
         textMessageSender.sendMessage(messageDirector
                 .buildTextMessageWithReplyKeyboard(chatId, "Додати товар?", rows));
-
     }
 }

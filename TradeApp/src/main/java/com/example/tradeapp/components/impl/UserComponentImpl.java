@@ -12,7 +12,7 @@ public class UserComponentImpl implements UserComponent {
     @Override
     public String getUsernameFromMessage(Update update) {
         String username = update.getMessage().getChat().getUserName();
-        if (username.isBlank()) {
+        if (username == null) {
             username = update.getMessage().getChat().getFirstName();
         }
         return username;

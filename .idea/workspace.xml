@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15cf0a42-af7b-46a0-abe5-ecc36fbe6d04" name="Changes" comment="Implemented photo input stream">
-      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/components/impl/PhotoSenderImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/entities/messages/impl/PhotoMessage.java" afterDir="false" />
+    <list default="true" id="15cf0a42-af7b-46a0-abe5-ecc36fbe6d04" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/builder/director/KeyboardBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/builder/director/PhotoMessageDirector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/builder/director/impl/KeyboardBuilderImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/builder/director/impl/PhotoMessageDirectorImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/components/impl/UserComponentImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/components/impl/UserComponentImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/photohandlers/impl/AddArticlePhotoHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/photohandlers/impl/AddArticlePhotoHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleExpirationDateTextHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleExpirationDateTextHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleTextHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleTextHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +174,7 @@
       <workItem from="1705431477116" duration="324000" />
       <workItem from="1705493931266" duration="1226000" />
       <workItem from="1705582055540" duration="17748000" />
-      <workItem from="1705658615156" duration="898000" />
+      <workItem from="1705658615156" duration="3962000" />
     </task>
     <task id="LOCAL-00001" summary="Initialized an empty project with basic configurations">
       <created>1703012913445</created>
@@ -471,7 +477,14 @@
       <option name="project" value="LOCAL" />
       <updated>1705599285288</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Created PhotoMessage model. Implemented PhotoSender">
+      <created>1705659560138</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1705659560138</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -482,7 +495,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/TradeApp" />
     </ignored-roots>
-    <MESSAGE value="Changed entities" />
     <MESSAGE value="Service layer now returns entities, instead of DTOs" />
     <MESSAGE value="Added mapping in controllers" />
     <MESSAGE value="Created empty query handlers" />
@@ -507,6 +519,7 @@
     <MESSAGE value="Added ItemType client. Added text handling in AddArticlePhotoHandler, in order to make ease of finishing photo adding process." />
     <MESSAGE value="ItemFormer" />
     <MESSAGE value="Date former" />
-    <option name="LAST_COMMIT_MESSAGE" value="Date former" />
+    <MESSAGE value="Created PhotoMessage model. Implemented PhotoSender" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created PhotoMessage model. Implemented PhotoSender" />
   </component>
 </project>
