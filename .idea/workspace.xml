@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15cf0a42-af7b-46a0-abe5-ecc36fbe6d04" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/search/SearchArticleBidCommentHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/search/SearchArticleBidHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/search/SearchArticleBidPriceHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/components/BidFormer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/components/impl/BidFormerImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/components/impl/StartSearchingComponentImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/components/impl/StartSearchingComponentImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/search/SearchArticleBidHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/search/SearchArticleBidHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/search/SearchArticleTextHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/search/SearchArticleTextHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,14 +170,8 @@
       <workItem from="1705431477116" duration="324000" />
       <workItem from="1705493931266" duration="1226000" />
       <workItem from="1705582055540" duration="17748000" />
-      <workItem from="1705658615156" duration="17496000" />
-    </task>
-    <task id="LOCAL-00004" summary="Added Redis. Created UserSession entity, in order to provide efficient communication">
-      <created>1703080065610</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1703080065610</updated>
+      <workItem from="1705658615156" duration="18341000" />
+      <workItem from="1705854228034" duration="1499000" />
     </task>
     <task id="LOCAL-00005" summary="Established SessionService">
       <created>1703085470266</created>
@@ -515,7 +509,14 @@
       <option name="project" value="LOCAL" />
       <updated>1705680407946</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Added bid handling. Minor fixes">
+      <created>1705681327593</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1705681327593</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -526,7 +527,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/TradeApp" />
     </ignored-roots>
-    <MESSAGE value="Added Categories static class" />
     <MESSAGE value="Created UserComponent" />
     <MESSAGE value="Implemented handler for articles(show list)" />
     <MESSAGE value="Minor fixes(naming refactor). Added independent bean for getting chatId from updtae" />
@@ -551,6 +551,7 @@
     <MESSAGE value="Fixed client endpoint. Added Text handler for searching process." />
     <MESSAGE value="Added handling of search process for query" />
     <MESSAGE value="Improved Searching process(fixed bugs, added like/dislike options)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improved Searching process(fixed bugs, added like/dislike options)" />
+    <MESSAGE value="Added bid handling. Minor fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added bid handling. Minor fixes" />
   </component>
 </project>
