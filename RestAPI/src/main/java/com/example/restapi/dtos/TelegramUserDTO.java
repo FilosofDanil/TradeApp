@@ -19,6 +19,9 @@ import java.util.Set;
 @NoArgsConstructor
 @Builder
 public class TelegramUserDTO {
+    @JsonProperty("id")
+    private Long id;
+
     @JsonProperty("username")
     private String username;
 

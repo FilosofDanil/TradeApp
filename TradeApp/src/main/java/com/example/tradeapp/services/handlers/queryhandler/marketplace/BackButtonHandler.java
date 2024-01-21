@@ -26,7 +26,7 @@ public class BackButtonHandler implements QueryHandler {
         if (session.getHandler().equals("market")){
             String text = "Повернення назад";
             session.setHandler("started");
-            sessionService.updateSession(update.getMessage().getChatId(), session);
+            sessionService.updateSession(update.getCallbackQuery().getMessage().getChatId(), session);
             textMessageMessageSender.sendMessage(messageDirector
                     .buildTextMessage(update.getMessage().getChatId(), text));
         } else {

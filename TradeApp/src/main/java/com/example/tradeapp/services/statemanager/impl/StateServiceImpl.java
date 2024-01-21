@@ -3,6 +3,7 @@ package com.example.tradeapp.services.statemanager.impl;
 import com.example.tradeapp.entities.session.UserSession;
 import com.example.tradeapp.services.handlers.Handler;
 import com.example.tradeapp.services.handlers.commandhandlers.CommandHandler;
+import com.example.tradeapp.services.handlers.photohandlers.PhotoHandler;
 import com.example.tradeapp.services.handlers.queryhandler.QueryHandler;
 import com.example.tradeapp.services.statemanager.StateService;
 import lombok.RequiredArgsConstructor;
@@ -43,7 +44,13 @@ public class StateServiceImpl implements StateService {
             }
         }
         else if (update.getMessage().hasPhoto()) {
-
+            Handler handler;
+            if(context.isTypeMatch(session.getHandler(), PhotoHandler.class)){
+                handler = context.getBean(session.getHandler(), PhotoHandler.class);
+            } else {
+                handler = context.getBean("emptyPhotoHandler", PhotoHandler.class);
+            }
+            handler.handle(session, update);
         } else {
             Handler handler = context.getBean(session.getHandler(), Handler.class);
             handler.handle(session, update);

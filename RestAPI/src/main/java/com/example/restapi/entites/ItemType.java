@@ -3,6 +3,9 @@ package com.example.restapi.entites;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.HashSet;
+import java.util.Set;
+
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
@@ -16,4 +19,11 @@ public class ItemType {
     private Long id;
     @Column(name = "name", nullable = false)
     private String name;
+    @ManyToMany(mappedBy = "categories")
+    private Set<Settings> settings = new HashSet<>();
+
+    @Override
+    public String toString() {
+        return name;
+    }
 }

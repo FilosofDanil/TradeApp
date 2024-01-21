@@ -26,12 +26,13 @@ public class CRUDItemServiceImpl implements CRUDItemService {
 
     @Override
     public Item create(Item item) {
+        item.setBidPrice(0);
         return itemRepo.save(item);
     }
 
     @Override
     public void update(Long id, Item item) {
-        if (itemRepo.existsById(id)) {
+        if (!itemRepo.existsById(id)) {
             itemRepo.save(item);
         } else {
             itemRepo.updateItem(item.getItemName(),

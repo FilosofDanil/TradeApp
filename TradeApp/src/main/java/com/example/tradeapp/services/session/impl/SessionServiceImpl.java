@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 
 @Service
@@ -18,7 +19,7 @@ public class SessionServiceImpl implements SessionService {
     public UserSession getSession(Long chatId) {
         return userSessionRepo.findById(chatId)
                 .orElse(userSessionRepo.save(UserSession.builder()
-                        .userData(new HashMap<>())
+                        .userData(new HashMap<>(Map.of("", "")))
                         .handler("emptyHandler")
                         .id(chatId)
                         .build()));
