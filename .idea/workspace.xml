@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15cf0a42-af7b-46a0-abe5-ecc36fbe6d04" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/components/BidFormer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/components/impl/BidFormerImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/search/SearchArticleBidHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/search/SearchArticleBidHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/crud/impl/CRUDBidServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/crud/impl/CRUDBidServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/search/SearchArticleTextHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/search/SearchArticleTextHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +93,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.TradeApplication">
+  <component name="RunManager" selected="Spring Boot.RestApiApplication (1)">
     <configuration name="RestApiApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="RestAPI" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.restapi.RestApiApplication" />
@@ -171,14 +169,7 @@
       <workItem from="1705493931266" duration="1226000" />
       <workItem from="1705582055540" duration="17748000" />
       <workItem from="1705658615156" duration="18341000" />
-      <workItem from="1705854228034" duration="1499000" />
-    </task>
-    <task id="LOCAL-00005" summary="Established SessionService">
-      <created>1703085470266</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1703085470266</updated>
+      <workItem from="1705854228034" duration="2999000" />
     </task>
     <task id="LOCAL-00006" summary="implemented StateService, which provides stateful request handling and their further processing. Also added handlers for unknown messages and for start command.">
       <created>1703096363734</created>
@@ -516,7 +507,14 @@
       <option name="project" value="LOCAL" />
       <updated>1705681327593</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Implemented bidding">
+      <created>1705856026704</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1705856026704</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -527,7 +525,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/TradeApp" />
     </ignored-roots>
-    <MESSAGE value="Created UserComponent" />
     <MESSAGE value="Implemented handler for articles(show list)" />
     <MESSAGE value="Minor fixes(naming refactor). Added independent bean for getting chatId from updtae" />
     <MESSAGE value="Minor fixes(naming refactor). Added independent bean for getting chatId from update" />
@@ -552,6 +549,7 @@
     <MESSAGE value="Added handling of search process for query" />
     <MESSAGE value="Improved Searching process(fixed bugs, added like/dislike options)" />
     <MESSAGE value="Added bid handling. Minor fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added bid handling. Minor fixes" />
+    <MESSAGE value="Implemented bidding" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented bidding" />
   </component>
 </project>

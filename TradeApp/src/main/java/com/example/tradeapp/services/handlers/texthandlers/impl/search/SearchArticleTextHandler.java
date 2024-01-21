@@ -93,7 +93,7 @@ public class SearchArticleTextHandler implements TextHandler {
         photoMessageSender.sendMessage(photoMessageDirector
                 .buildPhotoMessage(chatId, item, rows));
         if (itemIds.size() <= currentId) {
-            session.setUserData(new HashMap<>(Map.of("", "")));
+            session.setUserData(new HashMap<>(Map.of("", "", "isStarted", "true")));
         }
         sessionService.updateSession(chatId, session);
     }
