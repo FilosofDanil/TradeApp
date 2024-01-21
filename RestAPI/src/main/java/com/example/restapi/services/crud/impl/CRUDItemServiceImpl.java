@@ -26,6 +26,7 @@ public class CRUDItemServiceImpl implements CRUDItemService {
 
     @Override
     public Item create(Item item) {
+        item.setBidPrice(0);
         return itemRepo.save(item);
     }
 
