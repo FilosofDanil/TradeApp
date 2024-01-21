@@ -41,6 +41,16 @@ public class UserController {
         return ResponseEntity.ok(toDto(userService.getByTelegramName(tgName)));
     }
 
+    @GetMapping("/check/username/{username}")
+    public ResponseEntity<Boolean> checkUserByUsername(@PathVariable String username) {
+        return ResponseEntity.ok(userService.checkByUsername(username));
+    }
+
+    @GetMapping("/check/tgName/{tgName}")
+    public ResponseEntity<Boolean> checkUserByTgName(@PathVariable String tgName) {
+        return ResponseEntity.ok(userService.checkByTgName(tgName));
+    }
+
     @GetMapping("/{id}")
     public ResponseEntity<TelegramUserDTO> getUserById(@PathVariable Long id) {
         return ResponseEntity.ok(toDto(crudService.getById(id)));

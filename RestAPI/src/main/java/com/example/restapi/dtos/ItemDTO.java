@@ -18,6 +18,9 @@ import java.util.List;
 @NoArgsConstructor
 @Builder
 public class ItemDTO {
+    @JsonProperty("id")
+    private Long id;
+
     @JsonProperty("itemName")
     private String itemName;
 

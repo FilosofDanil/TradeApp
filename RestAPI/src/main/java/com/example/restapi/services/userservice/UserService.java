@@ -7,4 +7,8 @@ public interface UserService {
     TelegramUser getByUsername(String username);
 
     TelegramUser getByTelegramName(String tgName);
+
+    Boolean checkByUsername(String username);
+
+    Boolean checkByTgName(String tgName);
 }

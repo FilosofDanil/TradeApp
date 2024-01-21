@@ -20,4 +20,14 @@ public class UserServiceImpl implements UserService {
     public TelegramUser getByTelegramName(String tgName) {
         return userRepo.findByTgName(tgName).get();
     }
+
+    @Override
+    public Boolean checkByUsername(String username) {
+        return userRepo.findByTgName(username).isPresent();
+    }
+
+    @Override
+    public Boolean checkByTgName(String tgName) {
+        return userRepo.findByTgName(tgName).isPresent();
+    }
 }

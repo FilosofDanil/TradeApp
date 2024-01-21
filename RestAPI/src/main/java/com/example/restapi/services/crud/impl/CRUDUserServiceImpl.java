@@ -31,7 +31,7 @@ public class CRUDUserServiceImpl implements CRUDUserService {
 
     @Override
     public void update(Long id, TelegramUser telegramUser) {
-        if (telegramUserRepo.existsById(id)) {
+        if (!telegramUserRepo.existsById(id)) {
             telegramUserRepo.save(telegramUser);
         } else {
             telegramUserRepo.updateUser(telegramUser.getUsername(),

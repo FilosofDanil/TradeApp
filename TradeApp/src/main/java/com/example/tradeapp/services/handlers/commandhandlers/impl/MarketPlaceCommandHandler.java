@@ -1,6 +1,7 @@
 package com.example.tradeapp.services.handlers.commandhandlers.impl;
 
 import com.example.tradeapp.builder.director.MessageDirector;
+import com.example.tradeapp.components.ChatIdFromUpdateComponent;
 import com.example.tradeapp.components.MessageSender;
 import com.example.tradeapp.entities.messages.impl.TextMessage;
 import com.example.tradeapp.entities.session.UserSession;
@@ -23,8 +24,11 @@ public class MarketPlaceCommandHandler implements CommandHandler {
 
     private final SessionService sessionService;
 
+    private final ChatIdFromUpdateComponent updateComponent;
+
     @Override
     public void handle(UserSession session, Update update) {
+        Long chatId = updateComponent.getChatIdFromUpdate(update);
         String text = "Вітаємо вас на маркетплейсі! \uD83C\uDF81\uD83C\uDF81\uD83C\uDF81  \n\n" +
                 "Для подальшого користування оберіть будь-ласка ваше місто, та вкажіть категорії товарів які бажаєте купувати! \n\n" +
                 "Ви можете змінити ці параметри в будь-який час. ⚙️\n" +
@@ -37,9 +41,9 @@ public class MarketPlaceCommandHandler implements CommandHandler {
                 "\uD83D\uDCC8 Мої ставки", "\uD83D\uDCD4 Історія покупок/продажів",
                 "\uD83D\uDD19 Повернутись назад");
         textMessageMessageSender.sendMessage(messageDirector
-                .buildTextMessageWithInlineKeyboard(update.getMessage().getChatId(), text, rows));
+                .buildTextMessageWithInlineKeyboard(chatId, text, rows));
         session.setHandler("market");
-        sessionService.updateSession(update.getMessage().getChatId(), session);
+        sessionService.updateSession(chatId, session);
     }
 
     @Override

@@ -5,17 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15cf0a42-af7b-46a0-abe5-ecc36fbe6d04" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_modelmapper_modelmapper_3_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/queryhandler/marketplace/BackButtonHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/queryhandler/marketplace/HistoryButtonHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/queryhandler/marketplace/MyArticlesButtonHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/queryhandler/marketplace/MyBidsButtonHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/queryhandler/marketplace/SettingsButtonHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/queryhandler/marketplace/StartSearchingHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/queryhandler/QueryHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/queryhandler/QueryHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/statemanager/impl/StateServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/statemanager/impl/StateServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/crud/impl/CRUDItemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/crud/impl/CRUDItemServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/search/SearchArticleBidPriceHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/search/SearchArticleBidPriceHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +23,20 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="marketplace" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/TradeApp/pom.xml" root0="FORCE_HIGHLIGHTING" />
@@ -69,7 +74,6 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="17" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/RestAPI" />
@@ -118,6 +122,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Spring Boot.RestApiApplication" />
+      <item itemvalue="Spring Boot.TradeApplication" />
+      <item itemvalue="Spring Boot.TradeAppApplication" />
+      <item itemvalue="Spring Boot.RestApiApplication (1)" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -150,49 +160,16 @@
       <workItem from="1705139870814" duration="629000" />
       <workItem from="1705166184848" duration="8129000" />
       <workItem from="1705223616000" duration="11764000" />
-      <workItem from="1705247844658" duration="2169000" />
-    </task>
-    <task id="LOCAL-00001" summary="Initialized an empty project with basic configurations">
-      <created>1703012913445</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1703012913445</updated>
-    </task>
-    <task id="LOCAL-00002" summary="gitignore">
-      <created>1703012939971</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1703012939971</updated>
-    </task>
-    <task id="LOCAL-00003" summary="ReadMe part 1">
-      <created>1703017655730</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1703017655730</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Added Redis. Created UserSession entity, in order to provide efficient communication">
-      <created>1703080065610</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1703080065610</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Established SessionService">
-      <created>1703085470266</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1703085470266</updated>
-    </task>
-    <task id="LOCAL-00006" summary="implemented StateService, which provides stateful request handling and their further processing. Also added handlers for unknown messages and for start command.">
-      <created>1703096363734</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1703096363734</updated>
+      <workItem from="1705247844658" duration="8825000" />
+      <workItem from="1705320670139" duration="8299000" />
+      <workItem from="1705332581450" duration="1695000" />
+      <workItem from="1705420275390" duration="703000" />
+      <workItem from="1705423344067" duration="3276000" />
+      <workItem from="1705431477116" duration="324000" />
+      <workItem from="1705493931266" duration="1226000" />
+      <workItem from="1705582055540" duration="17748000" />
+      <workItem from="1705658615156" duration="18341000" />
+      <workItem from="1705854228034" duration="3730000" />
     </task>
     <task id="LOCAL-00007" summary="Added TextHandler interface.">
       <created>1703100110696</created>
@@ -313,7 +290,231 @@
       <option name="project" value="LOCAL" />
       <updated>1705235748304</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Created empty query handlers">
+      <created>1705250114207</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1705250114207</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Connected feign client">
+      <created>1705255487058</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1705255487058</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Implemented clients">
+      <created>1705256175224</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1705256175224</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Extended UserService in REST API. Added new methods for user existing checkout">
+      <created>1705324475150</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1705324475150</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Added new methods in client">
+      <created>1705324552839</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1705324552839</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Implemented user savage after the conversation started">
+      <created>1705325391859</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1705325391859</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Added Categories static class">
+      <created>1705328192186</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1705328192186</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Created UserComponent">
+      <created>1705424920907</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1705424920907</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Implemented handler for articles(show list)">
+      <created>1705426694535</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1705426694535</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Minor fixes(naming refactor). Added independent bean for getting chatId from update">
+      <created>1705584790332</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1705584790332</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Minor fix">
+      <created>1705584878563</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1705584878563</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Added handler for adding article button">
+      <created>1705585274661</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1705585274661</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Created components for all text data required in placing items on marketplace">
+      <created>1705586538622</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1705586538622</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Minor fixes. Added DateParser interface">
+      <created>1705587462705</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1705587462705</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Added PhotoHandler interface. Created 1st PhotoHandler implementation which responds on photos if it didn't need. Minor fixes. Added photo handling in State Service">
+      <created>1705590794127</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1705590794127</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Implemented photo input stream">
+      <created>1705594142057</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1705594142057</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Added API endpoints for ItemTypes resource">
+      <created>1705597372249</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1705597372249</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Added ItemType client. Added text handling in AddArticlePhotoHandler, in order to make ease of finishing photo adding process.">
+      <created>1705598810949</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1705598810949</updated>
+    </task>
+    <task id="LOCAL-00042" summary="ItemFormer">
+      <created>1705598856343</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1705598856343</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Date former">
+      <created>1705599285288</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1705599285288</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Created PhotoMessage model. Implemented PhotoSender">
+      <created>1705659560138</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1705659560138</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Created KeyboardBuilder. Added PhotoMessageDirector. Added photo sending after creating. Minor fixes">
+      <created>1705662664396</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1705662664396</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Created Searching command handler">
+      <created>1705666852836</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1705666852836</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Created SendArticles interface, which get the list of items, which will be sent to user then.">
+      <created>1705669116247</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1705669116247</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Added id field in models">
+      <created>1705671484422</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1705671484422</updated>
+    </task>
+    <task id="LOCAL-00049" summary="REST API minor fixes">
+      <created>1705675368635</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1705675368635</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Fixed client endpoint. Added Text handler for searching process.">
+      <created>1705675776727</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1705675776728</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Added handling of search process for query">
+      <created>1705679740033</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1705679740033</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Improved Searching process(fixed bugs, added like/dislike options)">
+      <created>1705680407946</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1705680407946</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Added bid handling. Minor fixes">
+      <created>1705681327593</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1705681327593</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Implemented bidding">
+      <created>1705856026704</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1705856026704</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Minor fixes">
+      <created>1705857551737</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1705857551737</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -324,29 +525,31 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/TradeApp" />
     </ignored-roots>
-    <MESSAGE value="Initialized an empty project with basic configurations" />
-    <MESSAGE value="gitignore" />
-    <MESSAGE value="ReadMe part 1" />
-    <MESSAGE value="Added Redis. Created UserSession entity, in order to provide efficient communication" />
-    <MESSAGE value="Established SessionService" />
-    <MESSAGE value="implemented StateService, which provides stateful request handling and their further processing. Also added handlers for unknown messages and for start command." />
-    <MESSAGE value="Added TextHandler interface." />
-    <MESSAGE value="added support text handler" />
-    <MESSAGE value="Created Rest template. TradeApp moved in other directory" />
-    <MESSAGE value="RestTemplate" />
-    <MESSAGE value="Defined empty controllers. Added all required dependencies in pom.xml" />
-    <MESSAGE value="created and mapped entities" />
-    <MESSAGE value="Trade app changed Directory" />
-    <MESSAGE value="Created DTOs" />
-    <MESSAGE value="Created repositories" />
-    <MESSAGE value="Created mappers" />
-    <MESSAGE value="Created controllers" />
-    <MESSAGE value="Message director completely implemented. Added new field into TextMessage class" />
-    <MESSAGE value="Deleted custom mappers. Injected ModelMapper from library." />
-    <MESSAGE value="Changed dtos" />
-    <MESSAGE value="Changed entities" />
-    <MESSAGE value="Service layer now returns entities, instead of DTOs" />
-    <MESSAGE value="Added mapping in controllers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added mapping in controllers" />
+    <MESSAGE value="Minor fixes(naming refactor). Added independent bean for getting chatId from updtae" />
+    <MESSAGE value="Minor fixes(naming refactor). Added independent bean for getting chatId from update" />
+    <MESSAGE value="Minor fix" />
+    <MESSAGE value="Added handler for adding article button" />
+    <MESSAGE value="Created components for all text data required in placing items in service" />
+    <MESSAGE value="Created components for all text data required in placing items on marketplace" />
+    <MESSAGE value="Minor fixes. Added DateParser interface" />
+    <MESSAGE value="Added PhotoHandler interface. Created 1st PhotoHandler implementation which responds on photos if it didn't need. Minor fixes. Added photo handling in State Service" />
+    <MESSAGE value="Implemented photo input stream" />
+    <MESSAGE value="Added API endpoints for ItemTypes resource" />
+    <MESSAGE value="Added ItemType client. Added text handling in AddArticlePhotoHandler, in order to make ease of finishing photo adding process." />
+    <MESSAGE value="ItemFormer" />
+    <MESSAGE value="Date former" />
+    <MESSAGE value="Created PhotoMessage model. Implemented PhotoSender" />
+    <MESSAGE value="Created KeyboardBuilder. Added PhotoMessageDirector. Added photo sending after creating. Minor fixes" />
+    <MESSAGE value="Created Searching command handler" />
+    <MESSAGE value="Created SendArticles interface, which get the list of items, which will be sent to user then." />
+    <MESSAGE value="Added id field in models" />
+    <MESSAGE value="REST API minor fixes" />
+    <MESSAGE value="Fixed client endpoint. Added Text handler for searching process." />
+    <MESSAGE value="Added handling of search process for query" />
+    <MESSAGE value="Improved Searching process(fixed bugs, added like/dislike options)" />
+    <MESSAGE value="Added bid handling. Minor fixes" />
+    <MESSAGE value="Implemented bidding" />
+    <MESSAGE value="Minor fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor fixes" />
   </component>
 </project>
