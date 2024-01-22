@@ -2,6 +2,7 @@ package com.example.restapi.services.crud.impl;
 
 import com.example.restapi.dtos.ItemDTO;
 import com.example.restapi.entites.Item;
+import com.example.restapi.exceptions.ResourceNotFoundException;
 import com.example.restapi.repositories.ItemRepository;
 import com.example.restapi.services.crud.CRUDItemService;
 import lombok.RequiredArgsConstructor;
@@ -21,6 +22,9 @@ public class CRUDItemServiceImpl implements CRUDItemService {
 
     @Override
     public Item getById(Long id) {
+        if (!itemRepo.existsById(id)) {
+            throw new ResourceNotFoundException("Resource is not available");
+        }
         return itemRepo.findById(id).get();
     }
 
