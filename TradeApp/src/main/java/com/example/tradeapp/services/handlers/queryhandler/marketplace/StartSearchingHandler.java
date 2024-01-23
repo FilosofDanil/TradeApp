@@ -34,7 +34,7 @@ public class StartSearchingHandler implements QueryHandler {
         } else {
             String text = "Не актуально. Натисніть /marketplace";
             textMessageMessageSender.sendMessage(messageDirector
-                    .buildTextMessage(update.getMessage().getChatId(), text));
+                    .buildTextMessage(update.getCallbackQuery().getMessage().getChatId(), text));
         }
     }
 

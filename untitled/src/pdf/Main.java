@@ -6,29 +6,33 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
-        int[] a = {2, 1, 3};
-        int[] b = {8, 10, 12, -7, 26, 6};
-
-        System.out.println(find(a));
-        System.out.println(find(b));
+        int seconds = 0;
+        int seconds2 = 4935;
+        int seconds3 = 60;
+        System.out.println(makeReadable(seconds));
+        System.out.println(makeReadable(seconds2));
+        System.out.println(makeReadable(seconds3));
     }
 
-    static int find(int[] integers) {
-        int pivot = integers.length / 2;
-        for (int i = 0; i < pivot; i++) {
-            int max = integers.length - 1 - i;
-            if (Math.abs(integers[max] % 2) != Math.abs(integers[i] % 2)) {
-                int num = 1;
-                if (i == pivot - 1 && (pivot > 1)) {
-                    num = -1;
-                }
-                if (Math.abs(integers[max] % 2) != Math.abs(integers[i + num] % 2)) {
-                    return integers[max];
-                } else {
-                    return integers[i];
-                }
-            }
+    public static String makeReadable(int seconds) {
+        int hours = (seconds - seconds % 3600) / 3600;
+        int minutes = (seconds - hours * 3600 -  seconds % 60) / 60;
+        int endSeconds = seconds - hours * 3600 - minutes * 60;
+        String readableTime = "";
+        if (hours < 10) {
+            readableTime += "0";
         }
-        return integers[pivot];
+        readableTime += hours;
+        readableTime += (":");
+        if (minutes < 10) {
+            readableTime += "0";
+        }
+        readableTime += minutes;
+        readableTime += (":");
+        if (endSeconds < 10) {
+            readableTime += "0";
+        }
+        readableTime += endSeconds;
+        return readableTime;
     }
 }

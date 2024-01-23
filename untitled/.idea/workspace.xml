@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca87fe52-393a-4d18-bdbc-2880e2d4aa52" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/description.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/project-template.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pdf/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TradeApp/src/main/java/com/example/tradeapp/services/handlers/queryhandler/marketplace/StartSearchingHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TradeApp/src/main/java/com/example/tradeapp/services/handlers/queryhandler/marketplace/StartSearchingHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pdf/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pdf/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,6 +108,9 @@
       <workItem from="1705858480615" duration="1964000" />
       <workItem from="1705943064296" duration="4942000" />
       <workItem from="1705950675743" duration="591000" />
+      <workItem from="1706012016237" duration="2275000" />
+      <workItem from="1706021619884" duration="1410000" />
+      <workItem from="1706030215575" duration="5000" />
     </task>
     <servers />
   </component>
