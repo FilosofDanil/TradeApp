@@ -37,7 +37,6 @@ public class TelegramController extends TelegramLongPollingBot {
 
     @Override
     public void onUpdateReceived(Update update) {
-        producer.produce("TEXT_MESSAGES_QUEUE", update);
         Message message;
         if (update.hasCallbackQuery()) {
             message = update.getCallbackQuery().getMessage();
