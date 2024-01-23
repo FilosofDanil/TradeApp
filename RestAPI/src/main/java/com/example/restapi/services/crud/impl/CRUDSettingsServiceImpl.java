@@ -1,6 +1,7 @@
 package com.example.restapi.services.crud.impl;
 
 import com.example.restapi.entites.Settings;
+import com.example.restapi.exceptions.ResourceNotFoundException;
 import com.example.restapi.repositories.SettingsRepository;
 import com.example.restapi.services.crud.CRUDSettingsService;
 import lombok.RequiredArgsConstructor;
@@ -20,6 +21,9 @@ public class CRUDSettingsServiceImpl implements CRUDSettingsService {
 
     @Override
     public Settings getById(Long id) {
+        if (!settingsRepository.existsById(id)) {
+            throw new ResourceNotFoundException("Resource is not available");
+        }
         return settingsRepository.findById(id).get();
     }
 

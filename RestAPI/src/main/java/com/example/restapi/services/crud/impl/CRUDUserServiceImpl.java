@@ -2,6 +2,7 @@ package com.example.restapi.services.crud.impl;
 
 import com.example.restapi.dtos.TelegramUserDTO;
 import com.example.restapi.entites.TelegramUser;
+import com.example.restapi.exceptions.ResourceNotFoundException;
 import com.example.restapi.repositories.TelegramUserRepository;
 import com.example.restapi.services.crud.CRUDUserService;
 import lombok.RequiredArgsConstructor;
@@ -21,6 +22,9 @@ public class CRUDUserServiceImpl implements CRUDUserService {
 
     @Override
     public TelegramUser getById(Long id) {
+        if (!telegramUserRepo.existsById(id)) {
+            throw new ResourceNotFoundException("Resource is not available");
+        }
         return telegramUserRepo.findById(id).get();
     }
 
