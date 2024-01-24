@@ -33,12 +33,16 @@ public interface ItemRepository extends CrudRepository<Item, Long> {
     @Modifying
     @Query("update Item set itemName = :itemName," +
             " description = :description, expirationDate = :expirationDate," +
-            " placementDate = :placementDate" +
+            " placementDate = :placementDate, bidPrice = :bidPrice, " +
+            "startPrice = :startPrice, expired = :expired" +
             " where id = :id")
     void updateItem(@Param("itemName") String itemName,
                     @Param("description") String description,
                     @Param("expirationDate") Date expirationDate,
                     @Param("placementDate") Date placementDate,
+                    @Param("bidPrice") Integer bidPrice,
+                    @Param("startPrice") Integer startPrice,
+                    @Param("expired") Boolean expired,
                     @Param("id") Long id);
 
     List<Item> findByUserUsername(String username);

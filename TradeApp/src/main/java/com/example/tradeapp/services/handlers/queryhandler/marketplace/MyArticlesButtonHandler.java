@@ -31,8 +31,6 @@ public class MyArticlesButtonHandler implements QueryHandler {
 
     private final ItemClient itemClient;
 
-    private final SettingsComponent settingsComponent;
-
     private final UserComponent userComponent;
 
     @Override
@@ -40,7 +38,6 @@ public class MyArticlesButtonHandler implements QueryHandler {
         if (session.getHandler().equals("market")) {
             String text = "";
             String username = userComponent.getUsernameFromQuery(update);
-            Settings settings = settingsComponent.getSettingsByUsername(username);
             List<Items> items = itemClient.getAllItemsByUser(username);
             List<String> rows = new ArrayList<>(List.of("➕ Створити оголошення"));
             if (items.isEmpty()) {

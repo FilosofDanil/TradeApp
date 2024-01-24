@@ -31,6 +31,7 @@ public class CRUDItemServiceImpl implements CRUDItemService {
     @Override
     public Item create(Item item) {
         item.setBidPrice(0);
+        item.setExpired(false);
         return itemRepo.save(item);
     }
 
@@ -40,9 +41,9 @@ public class CRUDItemServiceImpl implements CRUDItemService {
             itemRepo.save(item);
         } else {
             itemRepo.updateItem(item.getItemName(),
-                    item.getDescription(),
-                    item.getExpirationDate(),
-                    item.getPlacementDate(), id);
+                    item.getDescription(), item.getExpirationDate(),
+                    item.getPlacementDate(), item.getBidPrice(),
+                    item.getStartPrice(), item.getExpired(), id);
         }
     }
 

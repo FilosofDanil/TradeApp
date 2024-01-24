@@ -4,9 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15cf0a42-af7b-46a0-abe5-ecc36fbe6d04" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/controller/TelegramController.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/controller/TelegramController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/commandhandlers/impl/HelpCommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/commandhandlers/impl/HelpCommandHandler.java" afterDir="false" />
+    <list default="true" id="15cf0a42-af7b-46a0-abe5-ecc36fbe6d04" name="Changes" comment="Added &quot;expired&quot; field in entity &quot;Item&quot;">
+      <change afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/scheduleservice/ScheduleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/RestApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/RestApiApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/repositories/ItemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/repositories/ItemRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/crud/impl/CRUDItemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/crud/impl/CRUDItemServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/queryhandler/marketplace/HistoryButtonHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/queryhandler/marketplace/HistoryButtonHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/queryhandler/marketplace/MyArticlesButtonHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/queryhandler/marketplace/MyArticlesButtonHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/queryhandler/marketplace/MyBidsButtonHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/queryhandler/marketplace/MyBidsButtonHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled/src/pdf/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled/untitled.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +106,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.TradeApplication">
+  <component name="RunManager" selected="Spring Boot.RestApiApplication (1)">
     <configuration name="RestApiApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="RestAPI" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.restapi.RestApiApplication" />
@@ -172,28 +185,8 @@
       <workItem from="1705854228034" duration="4210000" />
       <workItem from="1705952389508" duration="2245000" />
       <workItem from="1706007069745" duration="4277000" />
-      <workItem from="1706030275900" duration="3472000" />
-    </task>
-    <task id="LOCAL-00011" summary="Defined empty controllers. Added all required dependencies in pom.xml">
-      <created>1703188439488</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1703188439488</updated>
-    </task>
-    <task id="LOCAL-00012" summary="created and mapped entities">
-      <created>1705170748129</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1705170748129</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Trade app changed Directory">
-      <created>1705171631494</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1705171631494</updated>
+      <workItem from="1706030275900" duration="3859000" />
+      <workItem from="1706116796932" duration="6777000" />
     </task>
     <task id="LOCAL-00014" summary="Created DTOs">
       <created>1705171653191</created>
@@ -517,7 +510,28 @@
       <option name="project" value="LOCAL" />
       <updated>1706034114698</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="Added Help command handler">
+      <created>1706035888414</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1706035888415</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Added &quot;expired&quot; field in entity &quot;Item&quot;">
+      <created>1706117485204</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1706117485205</updated>
+    </task>
+    <task id="LOCAL-00062" summary="Exception handling in Telegram">
+      <created>1706120359712</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1706120359712</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -528,9 +542,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/TradeApp" />
     </ignored-roots>
-    <MESSAGE value="Created components for all text data required in placing items in service" />
-    <MESSAGE value="Created components for all text data required in placing items on marketplace" />
-    <MESSAGE value="Minor fixes. Added DateParser interface" />
     <MESSAGE value="Added PhotoHandler interface. Created 1st PhotoHandler implementation which responds on photos if it didn't need. Minor fixes. Added photo handling in State Service" />
     <MESSAGE value="Implemented photo input stream" />
     <MESSAGE value="Added API endpoints for ItemTypes resource" />
@@ -553,6 +564,9 @@
     <MESSAGE value="Created custom exception" />
     <MESSAGE value="exception handlers" />
     <MESSAGE value="RabbitMQ integration" />
-    <option name="LAST_COMMIT_MESSAGE" value="RabbitMQ integration" />
+    <MESSAGE value="Added Help command handler" />
+    <MESSAGE value="Added &quot;expired&quot; field in entity &quot;Item&quot;" />
+    <MESSAGE value="Exception handling in Telegram" />
+    <option name="LAST_COMMIT_MESSAGE" value="Exception handling in Telegram" />
   </component>
 </project>
