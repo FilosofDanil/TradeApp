@@ -41,6 +41,9 @@ public class Item {
     @Column(name = "expiration_date", nullable = false)
     private Date expirationDate;
 
+    @Column(name = "expired", nullable = false)
+    private Boolean expired;
+
     @ManyToOne(optional = false)
     @JoinColumn(name = "item_type", referencedColumnName = "id", nullable = false)
     private ItemType itemType;
