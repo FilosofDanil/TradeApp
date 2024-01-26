@@ -80,22 +80,28 @@ public class SearchArticleTextHandler implements TextHandler {
             sessionService.updateSession(chatId, session);
             return;
         }
-        List<Long> itemIds = Arrays.stream(data.get("itemList")
-                        .split(" "))
-                .map(Long::parseLong)
-                .toList();
-        Integer currentId = getCurrentId(data);
-        Items item = itemClient.getItemById(itemIds.get(currentId));
-        currentId++;
-        data.put("currentId", currentId.toString());
-        session.setUserData(data);
-        List<String> rows = List.of("\uD83D\uDC4D\uD83C\uDFFB", "\uD83D\uDC4E\uD83C\uDFFB");
-        photoMessageSender.sendMessage(photoMessageDirector
-                .buildPhotoMessage(chatId, item, rows));
-        if (itemIds.size() <= currentId) {
-            session.setUserData(new HashMap<>(Map.of("", "", "isStarted", "true")));
+        try {
+            List<Long> itemIds = Arrays.stream(data.get("itemList")
+                            .split(" "))
+                    .map(Long::parseLong)
+                    .toList();
+            Integer currentId = getCurrentId(data);
+            Items item = itemClient.getItemById(itemIds.get(currentId));
+            currentId++;
+            data.put("currentId", currentId.toString());
+            session.setUserData(data);
+            List<String> rows = List.of("\uD83D\uDC4D\uD83C\uDFFB", "\uD83D\uDC4E\uD83C\uDFFB");
+            photoMessageSender.sendMessage(photoMessageDirector
+                    .buildPhotoMessage(chatId, item, rows));
+            if (itemIds.size() <= currentId) {
+                session.setUserData(new HashMap<>(Map.of("", "", "isStarted", "true")));
+            }
+            sessionService.updateSession(chatId, session);
+        } catch (NumberFormatException e) {
+            session.setUserData(new HashMap<>(Map.of("", "", "isStarted", "false")));
+            textMessageSender.sendMessage(messageDirector
+                    .buildTextMessage(chatId, "Нема товарів в обраній вами категорії!"));
         }
-        sessionService.updateSession(chatId, session);
     }
 
     private Integer getCurrentId(Map<String, String> data) {

@@ -6,16 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="15cf0a42-af7b-46a0-abe5-ecc36fbe6d04" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/dtos/SettingsDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/dtos/SettingsDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/repositories/SettingsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/repositories/SettingsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/scheduleservice/ScheduleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/scheduleservice/ScheduleService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RestAPI/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/components/impl/SettingsComponentImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/components/impl/SettingsComponentImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/entities/models/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/entities/models/Settings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleDescriptionTextHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleDescriptionTextHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleTextHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleTextHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/search/SearchArticleTextHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/search/SearchArticleTextHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/settings/SettingsTextHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/settings/SettingsTextHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/statemanager/impl/StateServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/statemanager/impl/StateServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,14 +187,7 @@
       <workItem from="1706116796932" duration="7035000" />
       <workItem from="1706178293345" duration="2182000" />
       <workItem from="1706205140390" duration="99000" />
-      <workItem from="1706284312090" duration="4812000" />
-    </task>
-    <task id="LOCAL-00015" summary="Created repositories">
-      <created>1705171681518</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1705171681518</updated>
+      <workItem from="1706284312090" duration="5441000" />
     </task>
     <task id="LOCAL-00016" summary="Created mappers">
       <created>1705171700993</created>
@@ -537,7 +525,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706125985381</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="Fixed bug with updating settings. Updated query for selecting settings by username.">
+      <created>1706289227662</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1706289227663</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -548,7 +543,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/TradeApp" />
     </ignored-roots>
-    <MESSAGE value="Implemented photo input stream" />
     <MESSAGE value="Added API endpoints for ItemTypes resource" />
     <MESSAGE value="Added ItemType client. Added text handling in AddArticlePhotoHandler, in order to make ease of finishing photo adding process." />
     <MESSAGE value="ItemFormer" />
@@ -573,6 +567,7 @@
     <MESSAGE value="Added &quot;expired&quot; field in entity &quot;Item&quot;" />
     <MESSAGE value="Exception handling in Telegram" />
     <MESSAGE value="Added scheduled tasks for item, which checking expiration date and mark rows &quot;expired&quot; if needed. Minor changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added scheduled tasks for item, which checking expiration date and mark rows &quot;expired&quot; if needed. Minor changes" />
+    <MESSAGE value="Fixed bug with updating settings. Updated query for selecting settings by username." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug with updating settings. Updated query for selecting settings by username." />
   </component>
 </project>

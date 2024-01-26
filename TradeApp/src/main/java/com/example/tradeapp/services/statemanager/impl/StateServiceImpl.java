@@ -59,6 +59,7 @@ public class StateServiceImpl implements StateService {
         } catch (RuntimeException e){
             Handler handler = context.getBean("errorHandler", Handler.class);
             System.out.println(e.getMessage());
+            e.printStackTrace();
             handler.handle(session, update);
         }
 
