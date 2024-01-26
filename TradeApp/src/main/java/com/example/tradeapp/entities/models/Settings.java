@@ -13,6 +13,7 @@ import java.util.List;
 @NoArgsConstructor
 @Builder
 public class Settings {
+    private Long id;
     private String city;
     private Long userId;
     private List<String> categories;

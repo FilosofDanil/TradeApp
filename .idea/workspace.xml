@@ -5,9 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15cf0a42-af7b-46a0-abe5-ecc36fbe6d04" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/exceptions/ExpiredItemException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/crud/impl/CRUDBidServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/crud/impl/CRUDBidServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/dtos/SettingsDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/dtos/SettingsDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/repositories/SettingsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/repositories/SettingsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/scheduleservice/ScheduleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/scheduleservice/ScheduleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestAPI/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/components/impl/SettingsComponentImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/components/impl/SettingsComponentImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/entities/models/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/entities/models/Settings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleDescriptionTextHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleDescriptionTextHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleTextHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleTextHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/search/SearchArticleTextHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/search/SearchArticleTextHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/settings/SettingsTextHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/settings/SettingsTextHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +47,14 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/TradeAppApplication.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TradeApp/pom.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/components/impl/ItemFormerImpl.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/components/ItemFormer.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleStartPriceTextHandler.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleExpirationDateTextHandler.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleTextHandler.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TradeApp/src/main/resources/application.yml" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -94,7 +109,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.RestApiApplication (1)">
+  <component name="RunManager" selected="Spring Boot.TradeApplication">
     <configuration name="RestApiApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="RestAPI" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.restapi.RestApiApplication" />
@@ -175,6 +190,9 @@
       <workItem from="1706007069745" duration="4277000" />
       <workItem from="1706030275900" duration="3859000" />
       <workItem from="1706116796932" duration="7035000" />
+      <workItem from="1706178293345" duration="2182000" />
+      <workItem from="1706205140390" duration="99000" />
+      <workItem from="1706284312090" duration="4812000" />
     </task>
     <task id="LOCAL-00015" summary="Created repositories">
       <created>1705171681518</created>

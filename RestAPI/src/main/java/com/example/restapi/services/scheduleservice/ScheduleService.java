@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.modelmapper.internal.bytebuddy.agent.builder.AgentBuilder;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
 import java.util.List;
@@ -16,12 +17,13 @@ import java.util.List;
 public class ScheduleService {
     private final CRUDService<Item> itemService;
 
-    @Scheduled(cron = "@hourly")
-//    @Scheduled(initialDelay = 10000, fixedDelay = 10000)
+//    @Scheduled(cron = "@hourly")
+    @Scheduled(initialDelay = 10000, fixedDelay = 10000)
+    @Transactional
     public void checkData() {
         Date today = new Date();
         List<Item> items = itemService.getAll().stream()
-                .filter(item -> !item.getExpired() && item.getExpirationDate().after(today))
+                .filter(item -> !item.getExpired() && item.getExpirationDate().before(today))
                 .toList();
         items.forEach(item -> {
             item.setExpired(true);

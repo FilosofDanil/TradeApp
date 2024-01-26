@@ -38,7 +38,6 @@ public class SettingsTextHandler implements TextHandler {
         String msg = update.getMessage().getText();
         Long chatId = updateComponent.getChatIdFromUpdate(update);
         if (msg.equals("Так")) {
-            //inserting data into database
             String username = userComponent.getUsernameFromMessage(update);
             settingsComponent.saveSettings(username, session.getUserData());
             text += "Ваші налаштування збережено!";

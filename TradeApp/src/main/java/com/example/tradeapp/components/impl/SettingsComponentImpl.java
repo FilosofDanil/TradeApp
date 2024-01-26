@@ -34,7 +34,13 @@ public class SettingsComponentImpl implements SettingsComponent {
                 .city(city)
                 .categories(categories)
                 .build();
-        return settingsClient.createSettings(settings);
+        try {
+            Settings userSettings = settingsClient.getSettingsByUsername(username);
+            settingsClient.updateSettings(userSettings.getId(), settings);
+        } catch (RuntimeException e) {
+            settingsClient.createSettings(settings);
+        }
+        return settings;
     }
 
     @Override

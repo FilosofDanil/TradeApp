@@ -11,6 +11,6 @@ public interface SettingsRepository extends CrudRepository<Settings, Long> {
     List<Settings> findAll();
 
     @Query(value = "select s.id, s.city, s.user_id from public.settings s\n" +
-            "    join public.users u on u.username = :username", nativeQuery = true)
+            "    join public.users u on u.username = :username where s.user_id = u.id", nativeQuery = true)
     Settings findByUserName(@Param("username") String username);
 }
