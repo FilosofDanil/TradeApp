@@ -1,7 +1,9 @@
 package com.example.tradeapp.services.handlers.texthandlers.impl.articles;
 
 import com.example.tradeapp.builder.director.MessageDirector;
+import com.example.tradeapp.client.AttachmentClient;
 import com.example.tradeapp.client.ItemClient;
+import com.example.tradeapp.components.AttachmentComponent;
 import com.example.tradeapp.components.ChatIdFromUpdateComponent;
 import com.example.tradeapp.components.ItemFormer;
 import com.example.tradeapp.components.UserComponent;
@@ -32,6 +34,8 @@ public class AddArticleTextHandler implements TextHandler {
 
     private final ItemClient itemClient;
 
+    private final AttachmentComponent attachmentComponent;
+
     private final UserComponent userComponent;
 
     @Override
@@ -42,10 +46,9 @@ public class AddArticleTextHandler implements TextHandler {
         Long chatId = updateComponent.getChatIdFromUpdate(update);
         Map<String, String> data = session.getUserData();
         if (message.equals("\uD83D\uDC4D\uD83C\uDFFB")) {
-            Items item = itemFormer.formItem(data, username);
+//            Items item = itemFormer.formItem(data, username);
             session.setUserData(new HashMap<>(Map.of("", "")));
             session.setHandler("market");
-            itemClient.createItem(item);
             text += "Ваш товар успішно додано!";
         } else if (message.equals("\uD83D\uDC4E\uD83C\uDFFB")) {
             session.setUserData(new HashMap<>(Map.of("", "")));

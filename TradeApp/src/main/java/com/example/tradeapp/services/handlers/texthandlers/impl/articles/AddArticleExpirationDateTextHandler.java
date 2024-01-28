@@ -4,10 +4,7 @@ import com.example.tradeapp.builder.director.MessageDirector;
 import com.example.tradeapp.builder.director.PhotoMessageDirector;
 import com.example.tradeapp.client.ItemClient;
 import com.example.tradeapp.client.ItemTypeClient;
-import com.example.tradeapp.components.ChatIdFromUpdateComponent;
-import com.example.tradeapp.components.ItemFormer;
-import com.example.tradeapp.components.MessageSender;
-import com.example.tradeapp.components.UserComponent;
+import com.example.tradeapp.components.*;
 import com.example.tradeapp.components.impl.TextMessageSender;
 import com.example.tradeapp.entities.messages.impl.PhotoMessage;
 import com.example.tradeapp.entities.models.ItemType;
@@ -41,6 +38,10 @@ public class AddArticleExpirationDateTextHandler implements TextHandler {
 
     private final UserComponent userComponent;
 
+    private final ItemClient itemClient;
+
+    private final AttachmentComponent attachmentComponent;
+
     @Override
     public void handle(UserSession session, Update update) {
         String message = update.getMessage().getText();
@@ -54,8 +55,10 @@ public class AddArticleExpirationDateTextHandler implements TextHandler {
                 .buildTextMessage(chatId, "Добре! Ось ваш товар:"));
         //here send item with photo
         Items item = itemFormer.formItem(data, username);
+        Items createdItem = itemClient.createItem(item);
+        attachmentComponent.createAttachment(data, createdItem.getId());
         photoMessageSender.sendMessage(photoMessageDirector
-                .buildPhotoMessage(chatId, item));
+                .buildPhotoMessage(chatId, createdItem));
         session.setHandler("addArticle");
         sessionService.updateSession(chatId, session);
         textMessageSender.sendMessage(messageDirector

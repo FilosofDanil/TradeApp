@@ -2,8 +2,10 @@ package com.example.tradeapp.builder.director.impl;
 
 import com.example.tradeapp.builder.director.KeyboardBuilder;
 import com.example.tradeapp.builder.director.PhotoMessageDirector;
+import com.example.tradeapp.client.AttachmentClient;
 import com.example.tradeapp.client.ItemTypeClient;
 import com.example.tradeapp.entities.messages.impl.PhotoMessage;
+import com.example.tradeapp.entities.models.Attachments;
 import com.example.tradeapp.entities.models.ItemType;
 import com.example.tradeapp.entities.models.Items;
 import lombok.RequiredArgsConstructor;
@@ -15,16 +17,19 @@ import java.util.List;
 @Component
 @RequiredArgsConstructor
 public class PhotoMessageDirectorImpl implements PhotoMessageDirector {
-    private final static String LOCAL_STORAGE_PATH = "TradeApp/src/main/resources/photos/";
+    private final static String LOCAL_STORAGE_PATH = "TradeApp/src/main/resources/";
 
     private final ItemTypeClient itemTypeClient;
+
+    private final AttachmentClient attachmentClient;
 
     private final KeyboardBuilder keyboardBuilder;
 
     @Override
     public PhotoMessage buildPhotoMessage(Long chatId, Items items) {
         String caption = formCaption(items);
-        return new PhotoMessage(chatId, LOCAL_STORAGE_PATH + "file_0.jpg", caption);
+        List<Attachments> attachments = attachmentClient.getAllAttachmentsByItem(items.getId());
+        return new PhotoMessage(chatId, LOCAL_STORAGE_PATH + attachments.get(0).getItemData(), caption);
     }
 
     @Override
@@ -32,7 +37,8 @@ public class PhotoMessageDirectorImpl implements PhotoMessageDirector {
         ReplyKeyboardMarkup markup = keyboardBuilder
                 .buildReplyKeyboard(rows);
         String caption = formCaption(items);
-        return new PhotoMessage(chatId, LOCAL_STORAGE_PATH + "file_0.jpg", caption, markup);
+        List<Attachments> attachments = attachmentClient.getAllAttachmentsByItem(items.getId());
+        return new PhotoMessage(chatId, LOCAL_STORAGE_PATH + attachments.get(0).getItemData(), caption, markup);
     }
 
     private String formCaption(Items item) {
