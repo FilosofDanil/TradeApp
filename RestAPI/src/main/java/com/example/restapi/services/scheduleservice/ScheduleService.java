@@ -17,8 +17,8 @@ import java.util.List;
 public class ScheduleService {
     private final CRUDService<Item> itemService;
 
-//    @Scheduled(cron = "@hourly")
-    @Scheduled(initialDelay = 10000, fixedDelay = 10000)
+    @Scheduled(cron = "@hourly")
+//    @Scheduled(initialDelay = 10000, fixedDelay = 10000)
     @Transactional
     public void checkData() {
         Date today = new Date();

@@ -4,6 +4,7 @@ import com.example.tradeapp.builder.director.MessageDirector;
 import com.example.tradeapp.client.ItemClient;
 import com.example.tradeapp.components.ChatIdFromUpdateComponent;
 import com.example.tradeapp.components.impl.TextMessageSender;
+import com.example.tradeapp.entities.models.Items;
 import com.example.tradeapp.entities.session.UserSession;
 import com.example.tradeapp.services.handlers.texthandlers.TextHandler;
 import com.example.tradeapp.services.session.SessionService;
@@ -39,13 +40,14 @@ public class SearchArticleBidPriceHandler implements TextHandler {
                         .split(" "))
                 .map(Long::parseLong)
                 .toList();
-        int itemPrice = itemClient
-                .getItemById(itemIds.get(itemId)).getBidPrice();
+        Items item = itemClient.getItemById(itemIds.get(itemId));
+        int itemPrice = item.getStartPrice();
+        int bidPrice = item.getBidPrice();
         try {
             Integer price = checkPrice(message);
 
-            if (price <= itemPrice){
-               throw new IllegalArgumentException();
+            if (price <= itemPrice || price <= bidPrice) {
+                throw new IllegalArgumentException();
             }
             data.put("bidPrice", price.toString());
             session.setHandler("bidComment");
@@ -54,7 +56,7 @@ public class SearchArticleBidPriceHandler implements TextHandler {
         } catch (NumberFormatException e) {
             session.setHandler("bidPrice");
             text += "Неправильно введена ціна. Вкажіть ціну товару в цілому числі(в гривнях)";
-        } catch (IllegalArgumentException e){
+        } catch (IllegalArgumentException e) {
             session.setHandler("bidPrice");
             text += "Введіть будь-ласка ціну ставки, яке перевищує останню(зараз це " + itemPrice + ")";
         }
