@@ -4,19 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15cf0a42-af7b-46a0-abe5-ecc36fbe6d04" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_rabbitmq_amqp_client_5_19_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_amqp_spring_amqp_3_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_amqp_spring_rabbit_3_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_amqp_3_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_retry_spring_retry_2_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_messaging_6_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/configs/RabbitConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/dtos/MessageDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/producer/Producer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/producer/impl/ProducerImpl.java" afterDir="false" />
+    <list default="true" id="15cf0a42-af7b-46a0-abe5-ecc36fbe6d04" name="Changes" comment="Integrated RabbitMQ in RESTAPI service. Created Producer and simple MessageDTO message object, which have to be converted in JSON">
+      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/entities/messages/MessageDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/consumer/Consumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/consumer/impl/ConsumerImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestAPI/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/configs/RabbitConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/configs/RabbitConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/scheduleservice/ScheduleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/scheduleservice/ScheduleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/configs/RabbitConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/configs/RabbitConfiguration.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +105,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.RestApiApplication (1)">
+  <component name="RunManager" selected="Spring Boot.TradeApplication">
     <configuration name="RestApiApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="RestAPI" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.restapi.RestApiApplication" />
@@ -200,14 +195,7 @@
       <workItem from="1706430317561" duration="1343000" />
       <workItem from="1706456302114" duration="7795000" />
       <workItem from="1706540041049" duration="5030000" />
-      <workItem from="1706546089003" duration="1595000" />
-    </task>
-    <task id="LOCAL-00022" summary="Service layer now returns entities, instead of DTOs">
-      <created>1705235636310</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1705235636310</updated>
+      <workItem from="1706546089003" duration="5582000" />
     </task>
     <task id="LOCAL-00023" summary="Added mapping in controllers">
       <created>1705235748304</created>
@@ -545,7 +533,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706545475402</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="Integrated RabbitMQ in RESTAPI service. Created Producer and simple MessageDTO message object, which have to be converted in JSON">
+      <created>1706548079611</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1706548079612</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -556,8 +551,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/TradeApp" />
     </ignored-roots>
-    <MESSAGE value="Created KeyboardBuilder. Added PhotoMessageDirector. Added photo sending after creating. Minor fixes" />
-    <MESSAGE value="Created Searching command handler" />
     <MESSAGE value="Created SendArticles interface, which get the list of items, which will be sent to user then." />
     <MESSAGE value="Added id field in models" />
     <MESSAGE value="REST API minor fixes" />
@@ -581,6 +574,8 @@
     <MESSAGE value="Implemented file deleting" />
     <MESSAGE value="Added handling numeric values for queries" />
     <MESSAGE value="minor fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor fixes" />
+    <MESSAGE value="Integrated RabbitMQ in RESTAPI service. Created Producer and simple MessageDTO message" />
+    <MESSAGE value="Integrated RabbitMQ in RESTAPI service. Created Producer and simple MessageDTO message object, which have to be converted in JSON" />
+    <option name="LAST_COMMIT_MESSAGE" value="Integrated RabbitMQ in RESTAPI service. Created Producer and simple MessageDTO message object, which have to be converted in JSON" />
   </component>
 </project>

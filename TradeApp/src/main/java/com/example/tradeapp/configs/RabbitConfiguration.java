@@ -24,4 +24,9 @@ public class RabbitConfiguration {
     public Queue answerMessageQueue(){
         return new Queue("ANSWER_MESSAGES_QUEUE");
     }
+
+    @Bean
+    public Queue notificationsQueue(){
+        return new Queue("NOTIFICATIONS");
+    }
 }

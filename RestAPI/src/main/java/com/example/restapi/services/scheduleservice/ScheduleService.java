@@ -1,6 +1,8 @@
 package com.example.restapi.services.scheduleservice;
 
+import com.example.restapi.dtos.MessageDTO;
 import com.example.restapi.entites.Item;
+import com.example.restapi.producer.Producer;
 import com.example.restapi.services.crud.CRUDService;
 import com.example.restapi.services.itemservice.ItemService;
 import lombok.RequiredArgsConstructor;
@@ -17,8 +19,10 @@ import java.util.List;
 public class ScheduleService {
     private final CRUDService<Item> itemService;
 
-    @Scheduled(cron = "@hourly")
-//    @Scheduled(initialDelay = 10000, fixedDelay = 10000)
+    private final Producer producer;
+
+//    @Scheduled(cron = "@hourly")
+    @Scheduled(initialDelay = 10000, fixedDelay = 10000)
     @Transactional
     public void checkData() {
         Date today = new Date();
@@ -29,5 +33,6 @@ public class ScheduleService {
             item.setExpired(true);
             itemService.update(item.getId(), item);
         });
+        producer.produce("NOTIFICATIONS", new MessageDTO(891477091L,"testMessage"));
     }
 }
