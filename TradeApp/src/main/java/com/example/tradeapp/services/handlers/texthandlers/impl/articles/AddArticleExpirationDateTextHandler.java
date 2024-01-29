@@ -59,6 +59,7 @@ public class AddArticleExpirationDateTextHandler implements TextHandler {
         attachmentComponent.createAttachment(data, createdItem.getId());
         photoMessageSender.sendMessage(photoMessageDirector
                 .buildPhotoMessage(chatId, createdItem));
+        data.put("itemId", createdItem.getId().toString());
         session.setHandler("addArticle");
         sessionService.updateSession(chatId, session);
         textMessageSender.sendMessage(messageDirector

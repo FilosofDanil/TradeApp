@@ -30,11 +30,7 @@ public class AddArticleTextHandler implements TextHandler {
 
     private final ChatIdFromUpdateComponent updateComponent;
 
-    private final ItemFormer itemFormer;
-
     private final ItemClient itemClient;
-
-    private final AttachmentComponent attachmentComponent;
 
     private final UserComponent userComponent;
 
@@ -42,15 +38,14 @@ public class AddArticleTextHandler implements TextHandler {
     public void handle(UserSession session, Update update) {
         String text = "";
         String message = update.getMessage().getText();
-        String username = userComponent.getUsernameFromMessage(update);
         Long chatId = updateComponent.getChatIdFromUpdate(update);
         Map<String, String> data = session.getUserData();
         if (message.equals("\uD83D\uDC4D\uD83C\uDFFB")) {
-//            Items item = itemFormer.formItem(data, username);
             session.setUserData(new HashMap<>(Map.of("", "")));
             session.setHandler("market");
             text += "Ваш товар успішно додано!";
         } else if (message.equals("\uD83D\uDC4E\uD83C\uDFFB")) {
+            itemClient.deleteItem(Long.parseLong(data.get("itemId")));
             session.setUserData(new HashMap<>(Map.of("", "")));
             session.setHandler("market");
             text += "Назад до маркетплейсу...";
