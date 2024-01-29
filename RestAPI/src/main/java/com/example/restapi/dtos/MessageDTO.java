@@ -8,4 +8,6 @@ import lombok.Data;
 public class MessageDTO {
     private Long chatId;
     private String message;
+    private String handler;
+    private Long itemId;
 }

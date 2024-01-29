@@ -32,7 +32,7 @@ public class ScheduleService {
         items.forEach(item -> {
             item.setExpired(true);
             itemService.update(item.getId(), item);
+            producer.produce("NOTIFICATIONS", new MessageDTO(item.getUser().getChatId(), "Один з ваших товарів завершив свій термін продажу! Ви можете подовжити термін прийшому ставок, або вжу обрати покупця, для цього натисніть на лайк знизу для подальших дій ","expiredArticleHandler", item.getId()));
         });
-        producer.produce("NOTIFICATIONS", new MessageDTO(891477091L,"testMessage"));
     }
 }

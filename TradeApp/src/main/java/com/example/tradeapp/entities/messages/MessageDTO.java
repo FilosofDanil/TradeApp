@@ -15,4 +15,8 @@ public class MessageDTO {
     private Long chatId;
     @JsonProperty("message")
     private String message;
+    @JsonProperty("handler")
+    private String handler;
+    @JsonProperty("itemId")
+    private String itemId;
 }
