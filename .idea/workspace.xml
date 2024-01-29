@@ -5,11 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15cf0a42-af7b-46a0-abe5-ecc36fbe6d04" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/components/FileDeleter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/components/impl/FileDeleterImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/queryhandler/articles/ShowArticleQueryHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RestAPI/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleTextHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleTextHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/builder/director/MessageDirector.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/builder/director/MessageDirector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/builder/director/impl/MessageDirectorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/builder/director/impl/MessageDirectorImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/queryhandler/QueryHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/queryhandler/QueryHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/queryhandler/articles/AddArticleQueryHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/queryhandler/articles/AddArticleQueryHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/queryhandler/marketplace/BackButtonHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/queryhandler/marketplace/BackButtonHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/queryhandler/marketplace/HistoryButtonHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/queryhandler/marketplace/HistoryButtonHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/queryhandler/marketplace/MyArticlesButtonHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/queryhandler/marketplace/MyArticlesButtonHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/queryhandler/marketplace/MyBidsButtonHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/queryhandler/marketplace/MyBidsButtonHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/queryhandler/marketplace/SettingsButtonHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/queryhandler/marketplace/SettingsButtonHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/queryhandler/marketplace/StartSearchingHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/queryhandler/marketplace/StartSearchingHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/statemanager/impl/StateServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/statemanager/impl/StateServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,14 +201,7 @@
       <workItem from="1706425519911" duration="21000" />
       <workItem from="1706430317561" duration="1343000" />
       <workItem from="1706456302114" duration="7795000" />
-      <workItem from="1706540041049" duration="1986000" />
-    </task>
-    <task id="LOCAL-00019" summary="Deleted custom mappers. Injected ModelMapper from library.">
-      <created>1705235069467</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1705235069467</updated>
+      <workItem from="1706540041049" duration="3222000" />
     </task>
     <task id="LOCAL-00020" summary="Changed dtos">
       <created>1705235481170</created>
@@ -537,7 +539,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706541902241</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="Implemented file deleting">
+      <created>1706542587465</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1706542587465</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -548,7 +557,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/TradeApp" />
     </ignored-roots>
-    <MESSAGE value="Date former" />
     <MESSAGE value="Created PhotoMessage model. Implemented PhotoSender" />
     <MESSAGE value="Created KeyboardBuilder. Added PhotoMessageDirector. Added photo sending after creating. Minor fixes" />
     <MESSAGE value="Created Searching command handler" />
@@ -573,6 +581,7 @@
     <MESSAGE value="extended searching process. Now if empty list of articles returned, our code is surrounded by try/catch block returns message to user, that no articles exist by users requesting data" />
     <MESSAGE value="Inserting Attachments in database" />
     <MESSAGE value="Added item deleting (when canceled by user)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added item deleting (when canceled by user)" />
+    <MESSAGE value="Implemented file deleting" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented file deleting" />
   </component>
 </project>

@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
 import java.util.List;
+import java.util.regex.Pattern;
 
 @Service
 @RequiredArgsConstructor
@@ -29,7 +30,11 @@ public class StateServiceImpl implements StateService {
             if (update.hasCallbackQuery()){
                 String query = update.getCallbackQuery().getData();
                 for(QueryHandler queryHandler: queryHandlers){
-                    if(queryHandler.getCallbackQuery().equals(query)){
+                    if(queryHandler.isNumeric() && query.matches("-?\\d+(\\.\\d+)?")){
+                        queryHandler.handle(session, update);
+                        break;
+                    }
+                    else if(queryHandler.getCallbackQuery().equals(query)){
                         queryHandler.handle(session, update);
                         break;
                     }
@@ -64,4 +69,6 @@ public class StateServiceImpl implements StateService {
         }
 
     }
+
+
 }

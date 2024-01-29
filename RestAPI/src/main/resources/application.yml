@@ -4,10 +4,10 @@ spring:
   mvc:
     pathmatch:
       matching-strategy: ANT_PATH_MATCHER
-  jpa:
-    hibernate:
-      ddl-auto: create
-    show-sql: true
+#  jpa:
+#    hibernate:
+#      ddl-auto: create
+#    show-sql: true
   datasource:
     url: jdbc:postgresql://localhost:5432/postgres
     username: postgres

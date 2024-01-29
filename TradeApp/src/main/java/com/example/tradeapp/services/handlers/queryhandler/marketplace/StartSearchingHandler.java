@@ -42,4 +42,9 @@ public class StartSearchingHandler implements QueryHandler {
     public String getCallbackQuery() {
         return query;
     }
+
+    @Override
+    public boolean isNumeric() {
+        return false;
+    }
 }

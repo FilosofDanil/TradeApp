@@ -16,7 +16,9 @@ import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Component
 @RequiredArgsConstructor
@@ -39,14 +41,14 @@ public class MyArticlesButtonHandler implements QueryHandler {
             String text = "";
             String username = userComponent.getUsernameFromQuery(update);
             List<Items> items = itemClient.getAllItemsByUser(username);
-            List<String> rows = new ArrayList<>(List.of("➕ Створити оголошення"));
+            Map<String, String> rows = new HashMap<>(Map.of("➕ Створити оголошення", "➕ Створити оголошення"));
             if (items.isEmpty()) {
                 text += "Ви поки-що не маєте виставлених товарів." +
                         "\n Щоб додати товар до продажу натисніть відповідну кнопку";
             } else {
                 text += "Ось ваші товари:";
                 for (Items item : items) {
-                    rows.add(item.getItemName());
+                    rows.put(item.getItemName(), item.getId().toString());
                 }
             }
             session.setHandler("myItems");
@@ -71,5 +73,10 @@ public class MyArticlesButtonHandler implements QueryHandler {
     @Override
     public String getCallbackQuery() {
         return query;
+    }
+
+    @Override
+    public boolean isNumeric() {
+        return false;
     }
 }
