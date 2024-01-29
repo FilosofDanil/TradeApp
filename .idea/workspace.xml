@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15cf0a42-af7b-46a0-abe5-ecc36fbe6d04" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/components/AttachmentComponent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/components/impl/AttachmentComponentImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/components/FileDeleter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/components/impl/FileDeleterImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RestAPI/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/builder/director/impl/PhotoMessageDirectorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/builder/director/impl/PhotoMessageDirectorImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleDescriptionTextHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleDescriptionTextHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleExpirationDateTextHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleExpirationDateTextHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleTextHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleTextHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -194,21 +191,8 @@
       <workItem from="1706376772278" duration="2614000" />
       <workItem from="1706425519911" duration="21000" />
       <workItem from="1706430317561" duration="1343000" />
-      <workItem from="1706456302114" duration="7484000" />
-    </task>
-    <task id="LOCAL-00017" summary="Created controllers">
-      <created>1705171712326</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1705171712326</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Message director completely implemented. Added new field into TextMessage class">
-      <created>1705173194744</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1705173194744</updated>
+      <workItem from="1706456302114" duration="7795000" />
+      <workItem from="1706540041049" duration="1986000" />
     </task>
     <task id="LOCAL-00019" summary="Deleted custom mappers. Injected ModelMapper from library.">
       <created>1705235069467</created>
@@ -539,7 +523,21 @@
       <option name="project" value="LOCAL" />
       <updated>1706290583883</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="Inserting Attachments in database">
+      <created>1706467062756</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1706467062757</updated>
+    </task>
+    <task id="LOCAL-00067" summary="Added item deleting (when canceled by user)">
+      <created>1706541902240</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1706541902241</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -550,8 +548,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/TradeApp" />
     </ignored-roots>
-    <MESSAGE value="Added ItemType client. Added text handling in AddArticlePhotoHandler, in order to make ease of finishing photo adding process." />
-    <MESSAGE value="ItemFormer" />
     <MESSAGE value="Date former" />
     <MESSAGE value="Created PhotoMessage model. Implemented PhotoSender" />
     <MESSAGE value="Created KeyboardBuilder. Added PhotoMessageDirector. Added photo sending after creating. Minor fixes" />
@@ -575,6 +571,8 @@
     <MESSAGE value="Added scheduled tasks for item, which checking expiration date and mark rows &quot;expired&quot; if needed. Minor changes" />
     <MESSAGE value="Fixed bug with updating settings. Updated query for selecting settings by username." />
     <MESSAGE value="extended searching process. Now if empty list of articles returned, our code is surrounded by try/catch block returns message to user, that no articles exist by users requesting data" />
-    <option name="LAST_COMMIT_MESSAGE" value="extended searching process. Now if empty list of articles returned, our code is surrounded by try/catch block returns message to user, that no articles exist by users requesting data" />
+    <MESSAGE value="Inserting Attachments in database" />
+    <MESSAGE value="Added item deleting (when canceled by user)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added item deleting (when canceled by user)" />
   </component>
 </project>
