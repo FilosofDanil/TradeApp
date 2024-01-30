@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15cf0a42-af7b-46a0-abe5-ecc36fbe6d04" name="Changes" comment="Integrated RabbitMQ in RESTAPI service. Created Producer and simple MessageDTO message object, which have to be converted in JSON">
-      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/entities/messages/MessageDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/consumer/Consumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/consumer/impl/ConsumerImpl.java" afterDir="false" />
+    <list default="true" id="15cf0a42-af7b-46a0-abe5-ecc36fbe6d04" name="Changes" comment="Changed messageDTO model, added new fields, for further handling of requests">
+      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/expiredItem/ExpiredItemDateHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/expiredItem/ExpiredItemExtendHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/expiredItem/ExpiredItemMenuTextHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/expiredItem/ExpiredItemShowBidsHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/expiredItem/ExpiredItemTextHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/configs/RabbitConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/configs/RabbitConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/scheduleservice/ScheduleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/scheduleservice/ScheduleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/configs/RabbitConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/configs/RabbitConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/consumer/impl/ConsumerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/consumer/impl/ConsumerImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,20 +113,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RestApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="restAPI" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.restapi.RestApiApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TradeAppApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="TradeApp" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.tradeapp.TradeAppApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TradeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="Trade" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.tradeapp.TradeAppApplication" />
@@ -135,9 +121,7 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Spring Boot.RestApiApplication" />
       <item itemvalue="Spring Boot.TradeApplication" />
-      <item itemvalue="Spring Boot.TradeAppApplication" />
       <item itemvalue="Spring Boot.RestApiApplication (1)" />
     </list>
   </component>
@@ -195,21 +179,9 @@
       <workItem from="1706430317561" duration="1343000" />
       <workItem from="1706456302114" duration="7795000" />
       <workItem from="1706540041049" duration="5030000" />
-      <workItem from="1706546089003" duration="5582000" />
-    </task>
-    <task id="LOCAL-00023" summary="Added mapping in controllers">
-      <created>1705235748304</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1705235748304</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Created empty query handlers">
-      <created>1705250114207</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1705250114207</updated>
+      <workItem from="1706546089003" duration="9949000" />
+      <workItem from="1706604246176" duration="1797000" />
+      <workItem from="1706606720907" duration="899000" />
     </task>
     <task id="LOCAL-00025" summary="Connected feign client">
       <created>1705255487058</created>
@@ -540,7 +512,21 @@
       <option name="project" value="LOCAL" />
       <updated>1706548079612</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="Implemented pushing and pulling messages from RabbitMQ. Now both RestAPI services and Java interacting by message broker.">
+      <created>1706552786624</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1706552786624</updated>
+    </task>
+    <task id="LOCAL-00073" summary="Changed messageDTO model, added new fields, for further handling of requests">
+      <created>1706558573225</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1706558573225</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -551,9 +537,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/TradeApp" />
     </ignored-roots>
-    <MESSAGE value="Created SendArticles interface, which get the list of items, which will be sent to user then." />
-    <MESSAGE value="Added id field in models" />
-    <MESSAGE value="REST API minor fixes" />
     <MESSAGE value="Fixed client endpoint. Added Text handler for searching process." />
     <MESSAGE value="Added handling of search process for query" />
     <MESSAGE value="Improved Searching process(fixed bugs, added like/dislike options)" />
@@ -576,6 +559,9 @@
     <MESSAGE value="minor fixes" />
     <MESSAGE value="Integrated RabbitMQ in RESTAPI service. Created Producer and simple MessageDTO message" />
     <MESSAGE value="Integrated RabbitMQ in RESTAPI service. Created Producer and simple MessageDTO message object, which have to be converted in JSON" />
-    <option name="LAST_COMMIT_MESSAGE" value="Integrated RabbitMQ in RESTAPI service. Created Producer and simple MessageDTO message object, which have to be converted in JSON" />
+    <MESSAGE value="Implemented pushing and pulling messages from RabbitMQ. Now both RestAPI services and Java interacting by message brocker." />
+    <MESSAGE value="Implemented pushing and pulling messages from RabbitMQ. Now both RestAPI services and Java interacting by message broker." />
+    <MESSAGE value="Changed messageDTO model, added new fields, for further handling of requests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed messageDTO model, added new fields, for further handling of requests" />
   </component>
 </project>

@@ -10,6 +10,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Map;
 
 @Service
@@ -24,11 +25,14 @@ public class ConsumerImpl implements Consumer {
     @Override
     @RabbitListener(queues = "NOTIFICATIONS")
     public void consume(MessageDTO messageDTO) {
-        UserSession session = sessionService.getSession(messageDTO.getChatId());
+        Long chatId = messageDTO.getChatId();
+        UserSession session = sessionService.getSession(chatId);
         Map<String, String> data = session.getUserData();
         data.put("itemId", messageDTO.getItemId());
         session.setHandler(messageDTO.getHandler());
+        List<String> rows = List.of("\uD83D\uDC4D\uD83C\uDFFB");
+        sessionService.updateSession(chatId, session);
         textMessageSender.sendMessage(messageDirector
-                .buildTextMessage(messageDTO.getChatId(), messageDTO.getMessage()));
+                .buildTextMessageWithReplyKeyboard(chatId, messageDTO.getMessage(), rows));
     }
 }
