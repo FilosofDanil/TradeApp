@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15cf0a42-af7b-46a0-abe5-ecc36fbe6d04" name="Changes" comment="Changed messageDTO model, added new fields, for further handling of requests">
-      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/expiredItem/ExpiredItemDateHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/expiredItem/ExpiredItemExtendHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/expiredItem/ExpiredItemMenuTextHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/expiredItem/ExpiredItemShowBidsHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/expiredItem/ExpiredItemTextHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/components/BidListFormer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/components/impl/BidListFormerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/ConfirmDeletingTextHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/ItemDateHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/ItemExtendHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/ItemMenuTextHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/consumer/impl/ConsumerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/consumer/impl/ConsumerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/expiredItem/ExpiredItemTextHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/expiredItem/ExpiredItemTextHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,14 +182,8 @@
       <workItem from="1706540041049" duration="5030000" />
       <workItem from="1706546089003" duration="9949000" />
       <workItem from="1706604246176" duration="1797000" />
-      <workItem from="1706606720907" duration="899000" />
-    </task>
-    <task id="LOCAL-00025" summary="Connected feign client">
-      <created>1705255487058</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1705255487058</updated>
+      <workItem from="1706606720907" duration="6953000" />
+      <workItem from="1706630299567" duration="2520000" />
     </task>
     <task id="LOCAL-00026" summary="Implemented clients">
       <created>1705256175224</created>
@@ -526,7 +521,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706558573225</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="Implemented consuming messages from broker and re-sending it to user in Telegram Bot.">
+      <created>1706607826215</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1706607826215</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -537,8 +539,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/TradeApp" />
     </ignored-roots>
-    <MESSAGE value="Fixed client endpoint. Added Text handler for searching process." />
-    <MESSAGE value="Added handling of search process for query" />
     <MESSAGE value="Improved Searching process(fixed bugs, added like/dislike options)" />
     <MESSAGE value="Added bid handling. Minor fixes" />
     <MESSAGE value="Implemented bidding" />
@@ -562,6 +562,8 @@
     <MESSAGE value="Implemented pushing and pulling messages from RabbitMQ. Now both RestAPI services and Java interacting by message brocker." />
     <MESSAGE value="Implemented pushing and pulling messages from RabbitMQ. Now both RestAPI services and Java interacting by message broker." />
     <MESSAGE value="Changed messageDTO model, added new fields, for further handling of requests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed messageDTO model, added new fields, for further handling of requests" />
+    <MESSAGE value="Implemented cosuming messages from broker and re-sending it to user in Telegram Bot." />
+    <MESSAGE value="Implemented consuming messages from broker and re-sending it to user in Telegram Bot." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented consuming messages from broker and re-sending it to user in Telegram Bot." />
   </component>
 </project>
