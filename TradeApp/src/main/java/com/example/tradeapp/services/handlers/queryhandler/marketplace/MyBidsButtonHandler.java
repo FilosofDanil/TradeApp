@@ -3,6 +3,7 @@ package com.example.tradeapp.services.handlers.queryhandler.marketplace;
 import com.example.tradeapp.builder.director.MessageDirector;
 import com.example.tradeapp.client.BidClient;
 import com.example.tradeapp.client.UserClient;
+import com.example.tradeapp.components.BidListFormer;
 import com.example.tradeapp.components.MessageSender;
 import com.example.tradeapp.components.UserComponent;
 import com.example.tradeapp.entities.messages.impl.TextMessage;
@@ -36,6 +37,8 @@ public class MyBidsButtonHandler implements QueryHandler {
 
     private final BidClient bidClient;
 
+    private final BidListFormer bidListFormerComponent;
+
     @Override
     public void handle(UserSession session, Update update) {
         if (session.getHandler().equals("market")) {
@@ -47,7 +50,8 @@ public class MyBidsButtonHandler implements QueryHandler {
             if (bids.isEmpty()) {
                 text += "Ви поки-що не маєте ставок.";
             } else {
-                text += "Ось ваші ставки:";
+                text += "Ось ваші ставки(Вибирайте ставки в залежності елементів):";
+                List<Items> items = bidListFormerComponent.getAllRelatedItems(username);
                 //TODO Print all bids, depends on user
             }
             session.setHandler("myBids");

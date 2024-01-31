@@ -22,4 +22,9 @@ public class ItemServiceImpl implements ItemService {
     public List<Item> getAllByUser(String username) {
         return itemRepo.findByUserUsername(username);
     }
+
+    @Override
+    public List<Item> getAllByUserHavingBids(String username) {
+        return itemRepo.getItemsByUserHavingBids(username);
+    }
 }

@@ -42,6 +42,13 @@ public class ItemController {
                 .toList());
     }
 
+    @GetMapping("/user/bids/{username}")
+    public ResponseEntity<List<ItemDTO>> getAllItemsByUserHavingBids(@PathVariable String username) {
+        return ResponseEntity.ok(itemService.getAllByUserHavingBids(username).stream()
+                .map(this::toDto)
+                .toList());
+    }
+
     @GetMapping("/name/{name}")
     public ResponseEntity<List<ItemDTO>> getItemByName(@PathVariable String name) {
         return ResponseEntity.ok(itemService.getAllByName(name).stream()

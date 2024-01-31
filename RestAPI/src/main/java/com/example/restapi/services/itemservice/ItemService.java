@@ -9,4 +9,6 @@ public interface ItemService {
     List<Item> getAllByName(String name);
 
     List<Item> getAllByUser(String username);
+
+    List<Item> getAllByUserHavingBids(String username);
 }

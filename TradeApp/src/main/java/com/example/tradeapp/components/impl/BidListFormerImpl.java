@@ -1,9 +1,11 @@
 package com.example.tradeapp.components.impl;
 
 import com.example.tradeapp.client.BidClient;
+import com.example.tradeapp.client.ItemClient;
 import com.example.tradeapp.client.UserClient;
 import com.example.tradeapp.components.BidListFormer;
 import com.example.tradeapp.entities.models.Bids;
+import com.example.tradeapp.entities.models.Items;
 import com.example.tradeapp.entities.models.Users;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
@@ -17,6 +19,8 @@ public class BidListFormerImpl implements BidListFormer {
     private final BidClient bidClient;
 
     private final UserClient userClient;
+
+    private final ItemClient itemClient;
 
     @Override
     public List<String> fromResponseBidList(Long itemId) {
@@ -33,5 +37,11 @@ public class BidListFormerImpl implements BidListFormer {
             resultList.add(stringBuilder.toString());
         }
         return resultList;
+    }
+
+    @Override
+    public List<Items> getAllRelatedItems(String username) {
+        List<Items> items = itemClient.getAllItemsByUserHavingBids(username);
+        return items;
     }
 }
