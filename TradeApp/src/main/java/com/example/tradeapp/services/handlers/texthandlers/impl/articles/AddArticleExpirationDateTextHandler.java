@@ -16,6 +16,9 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -48,6 +51,16 @@ public class AddArticleExpirationDateTextHandler implements TextHandler {
         String username = userComponent.getUsernameFromMessage(update);
         Long chatId = updateComponent.getChatIdFromUpdate(update);
         Map<String, String> data = session.getUserData();
+        try {
+            SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
+            formatter.parse(message);
+        } catch (ParseException e){
+            sessionService.updateSession(chatId, session);
+            session.setHandler("articleAddDate");
+            textMessageSender.sendMessage(messageDirector
+                    .buildTextMessage(chatId, "Введіть дату заново!"));
+            return;
+        }
         data.put("articleDate", message);
         List<String> rows = List.of("\uD83D\uDC4D\uD83C\uDFFB", "\uD83D\uDC4E\uD83C\uDFFB");
         sessionService.updateSession(chatId, session);

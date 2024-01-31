@@ -7,6 +7,7 @@ import com.example.restapi.repositories.ItemRepository;
 import com.example.restapi.services.crud.CRUDItemService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -36,6 +37,7 @@ public class CRUDItemServiceImpl implements CRUDItemService {
     }
 
     @Override
+    @Transactional
     public void update(Long id, Item item) {
         if (!itemRepo.existsById(id)) {
             itemRepo.save(item);

@@ -29,7 +29,6 @@ public class ItemMenuTextHandler implements TextHandler {
         String text = "";
         String message = update.getMessage().getText();
         Long chatId = updateComponent.getChatIdFromUpdate(update);
-        Map<String, String> data = session.getUserData();
         if (message.equals("Подовжити термін продажу")) {
             text += "Добре! Тепер введіть будь-ласка нову дату експірації до якої бажаєте продати товар" +
                     "\nБудьте уважні із форматом вводу дати, вводьте її наступним чином: dd-mm-yyyy";
