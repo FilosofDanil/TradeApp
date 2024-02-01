@@ -41,7 +41,12 @@ public class ItemMenuTextHandler implements TextHandler {
             text += "Ось всі наявні ставки, згідно вашого товару: \n";
             Long itemId = Long.parseLong(data.get("itemId"));
             text += bidListFormer.fromResponseBidList(itemId);
+            List<String> rows = List.of("Обрати ставку з найбільшою ціною", "Повернутись до маркетплейсу");
             session.setHandler("showBids");
+            sessionService.updateSession(chatId, session);
+            textMessageSender.sendMessage(messageDirector
+                    .buildTextMessageWithReplyKeyboard(chatId, text, rows));
+            return;
         } else if (message.equals("Видалити товар")) {
             text += "Ви впевнені, що хочете видалити обраний товар?";
             List<String> rows = List.of("Так", "Ні");

@@ -46,10 +46,11 @@ public class ShowBidsQueryHandler implements QueryHandler {
         data.put("itemId", itemId.toString());
         Users user = userClient.getUserByUsername(userComponent.getUsernameFromQuery(update));
         String returnMsg = bidListFormer.fromResponseBidList(itemId, user.getId());
-        textMessageSender.sendMessage(messageDirector
-                .buildTextMessage(chatId, "Ось ваші ставки за обраним товаром:\n" + returnMsg));
+        List<String> rows = List.of("Скасувати ставки для обраного товару", "Повернутись до маркетплейсу");
         session.setHandler("bidMenu");
         sessionService.updateSession(chatId, session);
+        textMessageSender.sendMessage(messageDirector
+                .buildTextMessageWithReplyKeyboard(chatId, "Ось ваші ставки за обраним товаром:\n" + returnMsg, rows));
     }
 
     @Override
