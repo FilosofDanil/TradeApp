@@ -1,13 +1,15 @@
 package com.example.tradeapp.services.handlers.queryhandler.articles;
 
 import com.example.tradeapp.builder.director.MessageDirector;
-import com.example.tradeapp.builder.director.PhotoMessageDirector;
+import com.example.tradeapp.client.BidClient;
 import com.example.tradeapp.client.ItemClient;
+import com.example.tradeapp.client.UserClient;
+import com.example.tradeapp.components.BidListFormer;
 import com.example.tradeapp.components.ChatIdFromUpdateComponent;
-import com.example.tradeapp.components.MessageSender;
+import com.example.tradeapp.components.UserComponent;
 import com.example.tradeapp.components.impl.TextMessageSender;
-import com.example.tradeapp.entities.messages.impl.PhotoMessage;
-import com.example.tradeapp.entities.models.Items;
+import com.example.tradeapp.entities.models.Bids;
+import com.example.tradeapp.entities.models.Users;
 import com.example.tradeapp.entities.session.UserSession;
 import com.example.tradeapp.services.handlers.queryhandler.QueryHandler;
 import com.example.tradeapp.services.session.SessionService;
@@ -18,9 +20,9 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import java.util.List;
 import java.util.Map;
 
-@Component("myItems")
+@Component("myBids")
 @RequiredArgsConstructor
-public class ShowArticleQueryHandler implements QueryHandler {
+public class ShowBidsQueryHandler implements QueryHandler {
     private final TextMessageSender textMessageSender;
 
     private final MessageDirector messageDirector;
@@ -29,11 +31,11 @@ public class ShowArticleQueryHandler implements QueryHandler {
 
     private final ChatIdFromUpdateComponent updateComponent;
 
-    private final ItemClient itemClient;
+    private final UserComponent userComponent;
 
-    private final MessageSender<PhotoMessage> photoMessageSender;
+    private final BidListFormer bidListFormer;
 
-    private final PhotoMessageDirector photoMessageDirector;
+    private final UserClient userClient;
 
     @Override
     public void handle(UserSession session, Update update) {
@@ -42,14 +44,11 @@ public class ShowArticleQueryHandler implements QueryHandler {
         Long itemId = Long.parseLong(message);
         Map<String, String> data = session.getUserData();
         data.put("itemId", itemId.toString());
-        session.setUserData(data);
-        Items item = itemClient.getItemById(itemId);
-        List<String> rows = List.of("Подовжити термін продажу", "Переглянути список охочих купити товар", "Видалити товар");
+        Users user = userClient.getUserByUsername(userComponent.getUsernameFromQuery(update));
+        String returnMsg = bidListFormer.fromResponseBidList(itemId, user.getId());
         textMessageSender.sendMessage(messageDirector
-                .buildTextMessage(chatId, "Ось ваш товар:"));
-        photoMessageSender.sendMessage(photoMessageDirector
-                .buildPhotoMessage(chatId, item, rows));
-        session.setHandler("itemMenu");
+                .buildTextMessage(chatId, "Ось ваші ставки за обраним товаром:\n" + returnMsg));
+        session.setHandler("bidMenu");
         sessionService.updateSession(chatId, session);
     }
 

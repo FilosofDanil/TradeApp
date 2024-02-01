@@ -31,8 +31,10 @@ public class StateServiceImpl implements StateService {
                 String query = update.getCallbackQuery().getData();
                 for(QueryHandler queryHandler: queryHandlers){
                     if(queryHandler.isNumeric() && query.matches("-?\\d+(\\.\\d+)?")){
-                        queryHandler.handle(session, update);
-                        break;
+                        if(context.getBean(session.getHandler(), QueryHandler.class).equals(queryHandler)){
+                            queryHandler.handle(session, update);
+                            break;
+                        }
                     }
                     else if(queryHandler.getCallbackQuery().equals(query)){
                         queryHandler.handle(session, update);

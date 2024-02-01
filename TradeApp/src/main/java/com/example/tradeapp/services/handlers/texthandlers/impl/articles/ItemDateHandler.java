@@ -30,8 +30,6 @@ public class ItemDateHandler implements TextHandler {
 
     private final ItemClient itemClient;
 
-
-
     @Override
     public void handle(UserSession session, Update update) {
         Long chatId = updateComponent.getChatIdFromUpdate(update);

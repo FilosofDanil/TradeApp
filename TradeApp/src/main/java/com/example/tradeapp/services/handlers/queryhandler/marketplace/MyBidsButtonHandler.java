@@ -18,7 +18,9 @@ import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Component
 @RequiredArgsConstructor
@@ -46,13 +48,19 @@ public class MyBidsButtonHandler implements QueryHandler {
             String username = userComponent.getUsernameFromQuery(update);
             Users user = userClient.getUserByUsername(username);
             List<Bids> bids = bidClient.getAllBidsByUser(user.getId());
-            List<String> rows = new ArrayList<>(List.of("Управляти ставками"));
+            Map<String, String> rows = new HashMap<>();
             if (bids.isEmpty()) {
                 text += "Ви поки-що не маєте ставок.";
+                textMessageMessageSender.sendMessage(messageDirector
+                        .buildTextMessage(update.getMessage().getChatId(), text));
+                return;
             } else {
+                //TODO Print all bids, depends on user
                 text += "Ось ваші ставки(Вибирайте ставки в залежності елементів):";
                 List<Items> items = bidListFormerComponent.getAllRelatedItems(username);
-                //TODO Print all bids, depends on user
+                for (Items item : items) {
+                    rows.put(item.getItemName(), item.getId().toString());
+                }
             }
             session.setHandler("myBids");
             sessionService.updateSession(update.getCallbackQuery().getMessage().getChatId(), session);
