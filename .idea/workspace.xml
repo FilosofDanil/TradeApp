@@ -5,9 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15cf0a42-af7b-46a0-abe5-ecc36fbe6d04" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/RestAPI/src/test/java/com/example/restapi/TestData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RestAPI/src/test/java/com/example/restapi/controllers/AttachmentControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RestAPI/src/test/java/com/example/restapi/controllers/BidControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RestAPI/src/test/java/com/example/restapi/controllers/ItemControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RestAPI/src/test/java/com/example/restapi/controllers/ItemTypeControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RestAPI/src/test/java/com/example/restapi/controllers/SettingsControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RestAPI/src/test/java/com/example/restapi/controllers/UserControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/queryhandler/articles/ShowBidsQueryHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/queryhandler/articles/ShowBidsQueryHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/ItemMenuTextHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/ItemMenuTextHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/controllers/ItemTypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/controllers/ItemTypeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/dtos/AttachmentDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/dtos/AttachmentDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/entites/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/entites/Settings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/entites/TelegramUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/entites/TelegramUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/crud/impl/CRUDUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/crud/impl/CRUDUserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/userservice/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/userservice/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestAPI/src/test/java/com/example/restapi/RestApiApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +30,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -39,6 +52,11 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleTextHandler.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/expiredItem/ExpiredItemTextHandler.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleStartPriceTextHandler.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/ItemDateHandler.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/settings/SettingsTextHandler.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TradeApp/pom.xml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/TradeAppApplication.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TradeApp/src/main/resources/application.yml" root0="FORCE_HIGHLIGHTING" />
@@ -47,11 +65,6 @@
     <setting file="file://$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/components/ItemFormer.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/queryhandler/articles/ShowArticleQueryHandler.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/components/impl/ItemFormerImpl.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/ItemDateHandler.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleTextHandler.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/expiredItem/ExpiredItemTextHandler.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleStartPriceTextHandler.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/settings/SettingsTextHandler.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -88,6 +101,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="jdk.selected.JAVA_MODULE" value="17" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/RestAPI" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -99,6 +114,16 @@
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.example.restapi.controllers" />
+      <recent name="com.example.restapi.services.itemservice.impl" />
+      <recent name="com.example.restapi.services.bidservice.impl" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -106,7 +131,86 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.TradeApplication">
+  <component name="RunManager" selected="JUnit.AttachmentControllerTest.deleteAttachment">
+    <configuration name="AttachmentControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RestAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.restapi.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.restapi.controllers" />
+      <option name="MAIN_CLASS_NAME" value="com.example.restapi.controllers.AttachmentControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AttachmentControllerTest.createAttachmentList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RestAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.restapi.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.restapi.controllers" />
+      <option name="MAIN_CLASS_NAME" value="com.example.restapi.controllers.AttachmentControllerTest" />
+      <option name="METHOD_NAME" value="createAttachmentList" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AttachmentControllerTest.deleteAttachment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RestAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.restapi.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.restapi.controllers" />
+      <option name="MAIN_CLASS_NAME" value="com.example.restapi.controllers.AttachmentControllerTest" />
+      <option name="METHOD_NAME" value="deleteAttachment" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AttachmentControllerTest.updateAttachment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RestAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.restapi.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.restapi.controllers" />
+      <option name="MAIN_CLASS_NAME" value="com.example.restapi.controllers.AttachmentControllerTest" />
+      <option name="METHOD_NAME" value="updateAttachment" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BidControllerTest.deleteBid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RestAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.restapi.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.restapi.controllers" />
+      <option name="MAIN_CLASS_NAME" value="com.example.restapi.controllers.BidControllerTest" />
+      <option name="METHOD_NAME" value="deleteBid" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RestApiApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="RestAPI" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.restapi.RestApiApplication" />
@@ -124,7 +228,21 @@
     <list>
       <item itemvalue="Spring Boot.TradeApplication" />
       <item itemvalue="Spring Boot.RestApiApplication (1)" />
+      <item itemvalue="JUnit.AttachmentControllerTest" />
+      <item itemvalue="JUnit.AttachmentControllerTest.createAttachmentList" />
+      <item itemvalue="JUnit.AttachmentControllerTest.updateAttachment" />
+      <item itemvalue="JUnit.AttachmentControllerTest.deleteAttachment" />
+      <item itemvalue="JUnit.BidControllerTest.deleteBid" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AttachmentControllerTest.deleteAttachment" />
+        <item itemvalue="JUnit.BidControllerTest.deleteBid" />
+        <item itemvalue="JUnit.AttachmentControllerTest" />
+        <item itemvalue="JUnit.AttachmentControllerTest.updateAttachment" />
+        <item itemvalue="JUnit.AttachmentControllerTest.createAttachmentList" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -189,14 +307,23 @@
       <workItem from="1706696062099" duration="12268000" />
       <workItem from="1706729482327" duration="1356000" />
       <workItem from="1706770587005" duration="3105000" />
-      <workItem from="1706781123135" duration="9343000" />
-    </task>
-    <task id="LOCAL-00029" summary="Implemented user savage after the conversation started">
-      <created>1705325391859</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1705325391859</updated>
+      <workItem from="1706781123135" duration="9964000" />
+      <workItem from="1706805545159" duration="10164000" />
+      <workItem from="1706880861239" duration="4345000" />
+      <workItem from="1706892385058" duration="925000" />
+      <workItem from="1706901345077" duration="2898000" />
+      <workItem from="1706958314445" duration="683000" />
+      <workItem from="1706974556774" duration="8037000" />
+      <workItem from="1707026116177" duration="6079000" />
+      <workItem from="1707038139285" duration="967000" />
+      <workItem from="1707061349992" duration="9959000" />
+      <workItem from="1707125402460" duration="836000" />
+      <workItem from="1707147052326" duration="1613000" />
+      <workItem from="1707155486940" duration="1000" />
+      <workItem from="1707156604615" duration="648000" />
+      <workItem from="1707226477325" duration="493000" />
+      <workItem from="1707312102636" duration="1062000" />
+      <workItem from="1707370336975" duration="6484000" />
     </task>
     <task id="LOCAL-00030" summary="Added Categories static class">
       <created>1705328192186</created>
@@ -534,7 +661,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706794707043</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="minor bug fix">
+      <created>1706795377287</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1706795377287</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -545,7 +679,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/TradeApp" />
     </ignored-roots>
-    <MESSAGE value="Minor fixes" />
     <MESSAGE value="Created custom exception" />
     <MESSAGE value="exception handlers" />
     <MESSAGE value="RabbitMQ integration" />
@@ -570,6 +703,14 @@
     <MESSAGE value="Created bid former List. Created menu for managing your own items. Implemented deleting component for an item. Minor fixes." />
     <MESSAGE value="Implemented date extending. Minor fixes." />
     <MESSAGE value="Formatted bid list which returns to user, if the relevant called. Also added handler for managing bids. Extended bid DTO model(added id field). Minor fixes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Formatted bid list which returns to user, if the relevant called. Also added handler for managing bids. Extended bid DTO model(added id field). Minor fixes." />
+    <MESSAGE value="minor bug fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor bug fix" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="com.example.restapi.repositories.TelegramUserRepository$MockitoMock$PM07zwtu" memberName="mockitoInterceptor" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

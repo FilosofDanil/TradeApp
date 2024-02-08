@@ -15,6 +15,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class AttachmentDTO {
+    @JsonProperty("id")
+    private Long id;
+
     @JsonProperty("itemType")
     private String itemType;
 

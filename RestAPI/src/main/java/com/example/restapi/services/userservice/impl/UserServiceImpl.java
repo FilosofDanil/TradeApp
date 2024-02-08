@@ -30,7 +30,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Boolean checkByUsername(String username) {
-        return userRepo.findByTgName(username).isPresent();
+        return userRepo.findByUsername(username).isPresent();
     }
 
     @Override

@@ -5,6 +5,7 @@ import com.example.restapi.entites.TelegramUser;
 import com.example.restapi.exceptions.ResourceNotFoundException;
 import com.example.restapi.repositories.TelegramUserRepository;
 import com.example.restapi.services.crud.CRUDUserService;
+import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
