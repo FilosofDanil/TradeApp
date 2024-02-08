@@ -1,20 +1,24 @@
 package com.example.tradeapp.services.handlers.texthandlers.impl.articles;
 
 import com.example.tradeapp.builder.director.MessageDirector;
+import com.example.tradeapp.client.AttachmentClient;
 import com.example.tradeapp.client.ItemClient;
-import com.example.tradeapp.components.ChatIdFromUpdateComponent;
-import com.example.tradeapp.components.ItemFormer;
-import com.example.tradeapp.components.UserComponent;
+import com.example.tradeapp.components.*;
 import com.example.tradeapp.components.impl.TextMessageSender;
+import com.example.tradeapp.entities.models.Attachments;
 import com.example.tradeapp.entities.models.Items;
 import com.example.tradeapp.entities.session.UserSession;
 import com.example.tradeapp.services.handlers.texthandlers.TextHandler;
 import com.example.tradeapp.services.session.SessionService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
+
+import java.io.File;
+
 import org.telegram.telegrambots.meta.api.objects.Update;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Component("addArticle")
@@ -28,26 +32,27 @@ public class AddArticleTextHandler implements TextHandler {
 
     private final ChatIdFromUpdateComponent updateComponent;
 
-    private final ItemFormer itemFormer;
-
     private final ItemClient itemClient;
 
-    private final UserComponent userComponent;
+    private final AttachmentComponent attachmentComponent;
+
+    private final FileDeleter fileDeleter;
 
     @Override
     public void handle(UserSession session, Update update) {
         String text = "";
         String message = update.getMessage().getText();
-        String username = userComponent.getUsernameFromMessage(update);
         Long chatId = updateComponent.getChatIdFromUpdate(update);
         Map<String, String> data = session.getUserData();
         if (message.equals("\uD83D\uDC4D\uD83C\uDFFB")) {
-            Items item = itemFormer.formItem(data, username);
             session.setUserData(new HashMap<>(Map.of("", "")));
             session.setHandler("market");
-            itemClient.createItem(item);
             text += "Ваш товар успішно додано!";
         } else if (message.equals("\uD83D\uDC4E\uD83C\uDFFB")) {
+            Long itemId = Long.parseLong(data.get("itemId"));
+            attachmentComponent.getAllAttachments(itemId)
+                    .forEach(fileDeleter::deleteFile);
+            itemClient.deleteItem(itemId);
             session.setUserData(new HashMap<>(Map.of("", "")));
             session.setHandler("market");
             text += "Назад до маркетплейсу...";

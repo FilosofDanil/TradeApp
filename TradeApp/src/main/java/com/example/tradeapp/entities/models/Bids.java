@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class Bids {
+    private Long id;
     private Integer bidPrice;
     private String comment;
     private Long userId;

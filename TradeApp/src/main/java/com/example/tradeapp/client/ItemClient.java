@@ -14,6 +14,9 @@ public interface ItemClient {
     @GetMapping("/{id}")
     Items getItemById(@PathVariable Long id);
 
+    @GetMapping("/user/bids/{username}")
+    List<Items> getAllItemsByUserHavingBids(@PathVariable String username);
+
     @GetMapping("/user/{username}")
     List<Items> getAllItemsByUser(@PathVariable String username);
 

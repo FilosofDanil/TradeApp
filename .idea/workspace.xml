@@ -5,9 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15cf0a42-af7b-46a0-abe5-ecc36fbe6d04" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/RestAPI/src/test/java/com/example/restapi/TestData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RestAPI/src/test/java/com/example/restapi/controllers/AttachmentControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RestAPI/src/test/java/com/example/restapi/controllers/BidControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RestAPI/src/test/java/com/example/restapi/controllers/ItemControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RestAPI/src/test/java/com/example/restapi/controllers/ItemTypeControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RestAPI/src/test/java/com/example/restapi/controllers/SettingsControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RestAPI/src/test/java/com/example/restapi/controllers/UserControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/crud/impl/CRUDItemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/crud/impl/CRUDItemServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/search/SearchArticleBidPriceHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/search/SearchArticleBidPriceHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/controllers/ItemTypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/controllers/ItemTypeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/dtos/AttachmentDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/dtos/AttachmentDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/entites/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/entites/Settings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/entites/TelegramUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/entites/TelegramUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/crud/impl/CRUDUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/crud/impl/CRUDUserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/userservice/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/src/main/java/com/example/restapi/services/userservice/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestAPI/src/test/java/com/example/restapi/RestApiApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +30,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -39,7 +52,19 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleTextHandler.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/expiredItem/ExpiredItemTextHandler.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleStartPriceTextHandler.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/ItemDateHandler.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/settings/SettingsTextHandler.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TradeApp/pom.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/TradeAppApplication.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TradeApp/src/main/resources/application.yml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/ConfirmDeletingTextHandler.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/texthandlers/impl/articles/AddArticleExpirationDateTextHandler.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/components/ItemFormer.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/services/handlers/queryhandler/articles/ShowArticleQueryHandler.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TradeApp/src/main/java/com/example/tradeapp/components/impl/ItemFormerImpl.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -74,7 +99,10 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="jdk.selected.JAVA_MODULE" value="17" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/RestAPI" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -86,6 +114,16 @@
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.example.restapi.controllers" />
+      <recent name="com.example.restapi.services.itemservice.impl" />
+      <recent name="com.example.restapi.services.bidservice.impl" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -93,24 +131,89 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.TradeApplication">
+  <component name="RunManager" selected="JUnit.AttachmentControllerTest.deleteAttachment">
+    <configuration name="AttachmentControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RestAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.restapi.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.restapi.controllers" />
+      <option name="MAIN_CLASS_NAME" value="com.example.restapi.controllers.AttachmentControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AttachmentControllerTest.createAttachmentList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RestAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.restapi.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.restapi.controllers" />
+      <option name="MAIN_CLASS_NAME" value="com.example.restapi.controllers.AttachmentControllerTest" />
+      <option name="METHOD_NAME" value="createAttachmentList" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AttachmentControllerTest.deleteAttachment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RestAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.restapi.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.restapi.controllers" />
+      <option name="MAIN_CLASS_NAME" value="com.example.restapi.controllers.AttachmentControllerTest" />
+      <option name="METHOD_NAME" value="deleteAttachment" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AttachmentControllerTest.updateAttachment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RestAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.restapi.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.restapi.controllers" />
+      <option name="MAIN_CLASS_NAME" value="com.example.restapi.controllers.AttachmentControllerTest" />
+      <option name="METHOD_NAME" value="updateAttachment" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BidControllerTest.deleteBid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RestAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.restapi.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.restapi.controllers" />
+      <option name="MAIN_CLASS_NAME" value="com.example.restapi.controllers.BidControllerTest" />
+      <option name="METHOD_NAME" value="deleteBid" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RestApiApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="RestAPI" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.restapi.RestApiApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RestApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="restAPI" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.restapi.RestApiApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TradeAppApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="TradeApp" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.tradeapp.TradeAppApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -123,11 +226,23 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Spring Boot.RestApiApplication" />
       <item itemvalue="Spring Boot.TradeApplication" />
-      <item itemvalue="Spring Boot.TradeAppApplication" />
       <item itemvalue="Spring Boot.RestApiApplication (1)" />
+      <item itemvalue="JUnit.AttachmentControllerTest" />
+      <item itemvalue="JUnit.AttachmentControllerTest.createAttachmentList" />
+      <item itemvalue="JUnit.AttachmentControllerTest.updateAttachment" />
+      <item itemvalue="JUnit.AttachmentControllerTest.deleteAttachment" />
+      <item itemvalue="JUnit.BidControllerTest.deleteBid" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AttachmentControllerTest.deleteAttachment" />
+        <item itemvalue="JUnit.BidControllerTest.deleteBid" />
+        <item itemvalue="JUnit.AttachmentControllerTest" />
+        <item itemvalue="JUnit.AttachmentControllerTest.updateAttachment" />
+        <item itemvalue="JUnit.AttachmentControllerTest.createAttachmentList" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -169,168 +284,46 @@
       <workItem from="1705493931266" duration="1226000" />
       <workItem from="1705582055540" duration="17748000" />
       <workItem from="1705658615156" duration="18341000" />
-      <workItem from="1705854228034" duration="3730000" />
-    </task>
-    <task id="LOCAL-00007" summary="Added TextHandler interface.">
-      <created>1703100110696</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1703100110696</updated>
-    </task>
-    <task id="LOCAL-00008" summary="added support text handler">
-      <created>1703143909266</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1703143909266</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Created Rest template. TradeApp moved in other directory">
-      <created>1703144000080</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1703144000080</updated>
-    </task>
-    <task id="LOCAL-00010" summary="RestTemplate">
-      <created>1703144029284</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1703144029284</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Defined empty controllers. Added all required dependencies in pom.xml">
-      <created>1703188439488</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1703188439488</updated>
-    </task>
-    <task id="LOCAL-00012" summary="created and mapped entities">
-      <created>1705170748129</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1705170748129</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Trade app changed Directory">
-      <created>1705171631494</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1705171631494</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Created DTOs">
-      <created>1705171653191</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1705171653191</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Created repositories">
-      <created>1705171681518</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1705171681518</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Created mappers">
-      <created>1705171700993</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1705171700993</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Created controllers">
-      <created>1705171712326</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1705171712326</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Message director completely implemented. Added new field into TextMessage class">
-      <created>1705173194744</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1705173194744</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Deleted custom mappers. Injected ModelMapper from library.">
-      <created>1705235069467</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1705235069467</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Changed dtos">
-      <created>1705235481170</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1705235481170</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Changed entities">
-      <created>1705235589904</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1705235589904</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Service layer now returns entities, instead of DTOs">
-      <created>1705235636310</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1705235636310</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Added mapping in controllers">
-      <created>1705235748304</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1705235748304</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Created empty query handlers">
-      <created>1705250114207</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1705250114207</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Connected feign client">
-      <created>1705255487058</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1705255487058</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Implemented clients">
-      <created>1705256175224</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1705256175224</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Extended UserService in REST API. Added new methods for user existing checkout">
-      <created>1705324475150</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1705324475150</updated>
-    </task>
-    <task id="LOCAL-00028" summary="Added new methods in client">
-      <created>1705324552839</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1705324552839</updated>
-    </task>
-    <task id="LOCAL-00029" summary="Implemented user savage after the conversation started">
-      <created>1705325391859</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1705325391859</updated>
+      <workItem from="1705854228034" duration="4210000" />
+      <workItem from="1705952389508" duration="2245000" />
+      <workItem from="1706007069745" duration="4277000" />
+      <workItem from="1706030275900" duration="3859000" />
+      <workItem from="1706116796932" duration="7035000" />
+      <workItem from="1706178293345" duration="2182000" />
+      <workItem from="1706205140390" duration="99000" />
+      <workItem from="1706284312090" duration="8433000" />
+      <workItem from="1706376177310" duration="15000" />
+      <workItem from="1706376772278" duration="2614000" />
+      <workItem from="1706425519911" duration="21000" />
+      <workItem from="1706430317561" duration="1343000" />
+      <workItem from="1706456302114" duration="7795000" />
+      <workItem from="1706540041049" duration="5030000" />
+      <workItem from="1706546089003" duration="9949000" />
+      <workItem from="1706604246176" duration="1797000" />
+      <workItem from="1706606720907" duration="6953000" />
+      <workItem from="1706630299567" duration="2655000" />
+      <workItem from="1706639655684" duration="10000" />
+      <workItem from="1706642870911" duration="2010000" />
+      <workItem from="1706696062099" duration="12268000" />
+      <workItem from="1706729482327" duration="1356000" />
+      <workItem from="1706770587005" duration="3105000" />
+      <workItem from="1706781123135" duration="9964000" />
+      <workItem from="1706805545159" duration="10164000" />
+      <workItem from="1706880861239" duration="4345000" />
+      <workItem from="1706892385058" duration="925000" />
+      <workItem from="1706901345077" duration="2898000" />
+      <workItem from="1706958314445" duration="683000" />
+      <workItem from="1706974556774" duration="8037000" />
+      <workItem from="1707026116177" duration="6079000" />
+      <workItem from="1707038139285" duration="967000" />
+      <workItem from="1707061349992" duration="9959000" />
+      <workItem from="1707125402460" duration="836000" />
+      <workItem from="1707147052326" duration="1613000" />
+      <workItem from="1707155486940" duration="1000" />
+      <workItem from="1707156604615" duration="648000" />
+      <workItem from="1707226477325" duration="493000" />
+      <workItem from="1707312102636" duration="1062000" />
+      <workItem from="1707370336975" duration="6484000" />
     </task>
     <task id="LOCAL-00030" summary="Added Categories static class">
       <created>1705328192186</created>
@@ -514,7 +507,168 @@
       <option name="project" value="LOCAL" />
       <updated>1705857551737</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="minor fixes">
+      <created>1705858170383</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1705858170383</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Created custom exception">
+      <created>1705954030943</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1705954030943</updated>
+    </task>
+    <task id="LOCAL-00058" summary="exception handlers">
+      <created>1706008569054</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1706008569055</updated>
+    </task>
+    <task id="LOCAL-00059" summary="RabbitMQ integration">
+      <created>1706034114697</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1706034114698</updated>
+    </task>
+    <task id="LOCAL-00060" summary="Added Help command handler">
+      <created>1706035888414</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1706035888415</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Added &quot;expired&quot; field in entity &quot;Item&quot;">
+      <created>1706117485204</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1706117485205</updated>
+    </task>
+    <task id="LOCAL-00062" summary="Exception handling in Telegram">
+      <created>1706120359712</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1706120359712</updated>
+    </task>
+    <task id="LOCAL-00063" summary="Added scheduled tasks for item, which checking expiration date and mark rows &quot;expired&quot; if needed. Minor changes">
+      <created>1706125985381</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1706125985381</updated>
+    </task>
+    <task id="LOCAL-00064" summary="Fixed bug with updating settings. Updated query for selecting settings by username.">
+      <created>1706289227662</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1706289227663</updated>
+    </task>
+    <task id="LOCAL-00065" summary="extended searching process. Now if empty list of articles returned, our code is surrounded by try/catch block returns message to user, that no articles exist by users requesting data">
+      <created>1706290583883</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1706290583883</updated>
+    </task>
+    <task id="LOCAL-00066" summary="Inserting Attachments in database">
+      <created>1706467062756</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1706467062757</updated>
+    </task>
+    <task id="LOCAL-00067" summary="Added item deleting (when canceled by user)">
+      <created>1706541902240</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1706541902241</updated>
+    </task>
+    <task id="LOCAL-00068" summary="Implemented file deleting">
+      <created>1706542587465</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1706542587465</updated>
+    </task>
+    <task id="LOCAL-00069" summary="Added handling numeric values for queries">
+      <created>1706543962484</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1706543962484</updated>
+    </task>
+    <task id="LOCAL-00070" summary="minor fixes">
+      <created>1706545475402</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1706545475402</updated>
+    </task>
+    <task id="LOCAL-00071" summary="Integrated RabbitMQ in RESTAPI service. Created Producer and simple MessageDTO message object, which have to be converted in JSON">
+      <created>1706548079611</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1706548079612</updated>
+    </task>
+    <task id="LOCAL-00072" summary="Implemented pushing and pulling messages from RabbitMQ. Now both RestAPI services and Java interacting by message broker.">
+      <created>1706552786624</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1706552786624</updated>
+    </task>
+    <task id="LOCAL-00073" summary="Changed messageDTO model, added new fields, for further handling of requests">
+      <created>1706558573225</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1706558573225</updated>
+    </task>
+    <task id="LOCAL-00074" summary="Implemented consuming messages from broker and re-sending it to user in Telegram Bot.">
+      <created>1706607826215</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1706607826215</updated>
+    </task>
+    <task id="LOCAL-00075" summary="Created bid former List. Created menu for managing your own items. Implemented deleting component for an item. Minor fixes.">
+      <created>1706633761100</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1706633761100</updated>
+    </task>
+    <task id="LOCAL-00076" summary="Implemented date extending. Minor fixes.">
+      <created>1706720451676</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1706720451678</updated>
+    </task>
+    <task id="LOCAL-00077" summary="Formatted bid list which returns to user, if the relevant called. Also added handler for managing bids. Extended bid DTO model(added id field). Minor fixes.">
+      <created>1706794707043</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1706794707043</updated>
+    </task>
+    <task id="LOCAL-00078" summary="minor bug fix">
+      <created>1706795377287</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1706795377287</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -525,31 +679,38 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/TradeApp" />
     </ignored-roots>
-    <MESSAGE value="Minor fixes(naming refactor). Added independent bean for getting chatId from updtae" />
-    <MESSAGE value="Minor fixes(naming refactor). Added independent bean for getting chatId from update" />
-    <MESSAGE value="Minor fix" />
-    <MESSAGE value="Added handler for adding article button" />
-    <MESSAGE value="Created components for all text data required in placing items in service" />
-    <MESSAGE value="Created components for all text data required in placing items on marketplace" />
-    <MESSAGE value="Minor fixes. Added DateParser interface" />
-    <MESSAGE value="Added PhotoHandler interface. Created 1st PhotoHandler implementation which responds on photos if it didn't need. Minor fixes. Added photo handling in State Service" />
-    <MESSAGE value="Implemented photo input stream" />
-    <MESSAGE value="Added API endpoints for ItemTypes resource" />
-    <MESSAGE value="Added ItemType client. Added text handling in AddArticlePhotoHandler, in order to make ease of finishing photo adding process." />
-    <MESSAGE value="ItemFormer" />
-    <MESSAGE value="Date former" />
-    <MESSAGE value="Created PhotoMessage model. Implemented PhotoSender" />
-    <MESSAGE value="Created KeyboardBuilder. Added PhotoMessageDirector. Added photo sending after creating. Minor fixes" />
-    <MESSAGE value="Created Searching command handler" />
-    <MESSAGE value="Created SendArticles interface, which get the list of items, which will be sent to user then." />
-    <MESSAGE value="Added id field in models" />
-    <MESSAGE value="REST API minor fixes" />
-    <MESSAGE value="Fixed client endpoint. Added Text handler for searching process." />
-    <MESSAGE value="Added handling of search process for query" />
-    <MESSAGE value="Improved Searching process(fixed bugs, added like/dislike options)" />
-    <MESSAGE value="Added bid handling. Minor fixes" />
-    <MESSAGE value="Implemented bidding" />
-    <MESSAGE value="Minor fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor fixes" />
+    <MESSAGE value="Created custom exception" />
+    <MESSAGE value="exception handlers" />
+    <MESSAGE value="RabbitMQ integration" />
+    <MESSAGE value="Added Help command handler" />
+    <MESSAGE value="Added &quot;expired&quot; field in entity &quot;Item&quot;" />
+    <MESSAGE value="Exception handling in Telegram" />
+    <MESSAGE value="Added scheduled tasks for item, which checking expiration date and mark rows &quot;expired&quot; if needed. Minor changes" />
+    <MESSAGE value="Fixed bug with updating settings. Updated query for selecting settings by username." />
+    <MESSAGE value="extended searching process. Now if empty list of articles returned, our code is surrounded by try/catch block returns message to user, that no articles exist by users requesting data" />
+    <MESSAGE value="Inserting Attachments in database" />
+    <MESSAGE value="Added item deleting (when canceled by user)" />
+    <MESSAGE value="Implemented file deleting" />
+    <MESSAGE value="Added handling numeric values for queries" />
+    <MESSAGE value="minor fixes" />
+    <MESSAGE value="Integrated RabbitMQ in RESTAPI service. Created Producer and simple MessageDTO message" />
+    <MESSAGE value="Integrated RabbitMQ in RESTAPI service. Created Producer and simple MessageDTO message object, which have to be converted in JSON" />
+    <MESSAGE value="Implemented pushing and pulling messages from RabbitMQ. Now both RestAPI services and Java interacting by message brocker." />
+    <MESSAGE value="Implemented pushing and pulling messages from RabbitMQ. Now both RestAPI services and Java interacting by message broker." />
+    <MESSAGE value="Changed messageDTO model, added new fields, for further handling of requests" />
+    <MESSAGE value="Implemented cosuming messages from broker and re-sending it to user in Telegram Bot." />
+    <MESSAGE value="Implemented consuming messages from broker and re-sending it to user in Telegram Bot." />
+    <MESSAGE value="Created bid former List. Created menu for managing your own items. Implemented deleting component for an item. Minor fixes." />
+    <MESSAGE value="Implemented date extending. Minor fixes." />
+    <MESSAGE value="Formatted bid list which returns to user, if the relevant called. Also added handler for managing bids. Extended bid DTO model(added id field). Minor fixes." />
+    <MESSAGE value="minor bug fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor bug fix" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="com.example.restapi.repositories.TelegramUserRepository$MockitoMock$PM07zwtu" memberName="mockitoInterceptor" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

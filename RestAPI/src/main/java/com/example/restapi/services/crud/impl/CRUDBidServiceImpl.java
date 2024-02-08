@@ -3,6 +3,8 @@ package com.example.restapi.services.crud.impl;
 import com.example.restapi.dtos.BidDTO;
 import com.example.restapi.entites.Bid;
 import com.example.restapi.entites.Item;
+import com.example.restapi.exceptions.ExpiredItemException;
+import com.example.restapi.exceptions.ResourceNotFoundException;
 import com.example.restapi.repositories.BidRepository;
 import com.example.restapi.repositories.ItemRepository;
 import com.example.restapi.services.crud.CRUDBidService;
@@ -25,12 +27,18 @@ public class CRUDBidServiceImpl implements CRUDBidService {
 
     @Override
     public Bid getById(Long id) {
+        if (!bidRepo.existsById(id)) {
+            throw new ResourceNotFoundException("Resource is not available");
+        }
         return bidRepo.findById(id).get();
     }
 
     @Override
     public Bid create(Bid bid) {
         Item item = itemRepository.findById(bid.getItem().getId()).get();
+        if(item.getExpired()){
+            throw new ExpiredItemException("Cannot create new bid, if item has expired.");
+        }
         item.setBidPrice(bid.getBidPrice());
         itemRepository.save(item);
         return bidRepo.save(bid);

@@ -34,7 +34,7 @@ public class AddArticleDescriptionTextHandler implements TextHandler {
             session.setHandler("addArticlePrice");
             data.put("articleDescription", message);
             session.setUserData(data);
-            text += "Добре! Далі введіть ціну вашого товару!";
+            text += "Добре! Далі введіть ціну вашого товару (в гривнях)!";
         } else {
             session.setHandler("addArticleDescription");
             text += "Опис закороткий! Введіть ще раз";

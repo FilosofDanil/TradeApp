@@ -24,7 +24,7 @@ public class HistoryButtonHandler implements QueryHandler {
     @Override
     public void handle(UserSession session, Update update) {
         if (session.getHandler().equals("market")){
-
+            //TODO Print list of all transactions, with pagination
         } else {
             String text = "Не актуально. Натисніть /marketplace";
             textMessageMessageSender.sendMessage(messageDirector
@@ -35,5 +35,10 @@ public class HistoryButtonHandler implements QueryHandler {
     @Override
     public String getCallbackQuery() {
         return query;
+    }
+
+    @Override
+    public boolean isNumeric() {
+        return false;
     }
 }

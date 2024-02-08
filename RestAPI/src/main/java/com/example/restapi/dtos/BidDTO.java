@@ -16,6 +16,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class BidDTO {
+    @JsonProperty("id")
+    private Long id;
+
     @JsonProperty("bidPrice")
     private Integer bidPrice;
 

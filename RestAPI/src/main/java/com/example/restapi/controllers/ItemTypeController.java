@@ -39,13 +39,13 @@ public class ItemTypeController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<HttpStatus> updateBid(@RequestBody ItemTypeDTO item, @PathVariable Long id) {
+    public ResponseEntity<HttpStatus> updateItemType(@RequestBody ItemTypeDTO item, @PathVariable Long id) {
         crudService.update(id, toEntity(item));
         return ResponseEntity.ok(HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<HttpStatus> deleteBid(@PathVariable Long id) {
+    public ResponseEntity<HttpStatus> deleteItemType(@PathVariable Long id) {
         crudService.delete(id);
         return ResponseEntity.ok(HttpStatus.OK);
     }

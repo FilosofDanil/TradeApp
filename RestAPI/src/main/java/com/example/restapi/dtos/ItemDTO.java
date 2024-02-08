@@ -45,6 +45,9 @@ public class ItemDTO {
     @JsonProperty("expirationDate")
     private Date expirationDate;
 
+    @JsonProperty("expired")
+    private Boolean expired;
+
 //    @JsonProperty("bids")
 //    private List<BidDTO> bids;
 //

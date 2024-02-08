@@ -2,6 +2,7 @@ package com.example.tradeapp.controller;
 
 import com.example.tradeapp.configs.TelegramBotConfiguration;
 import com.example.tradeapp.entities.session.UserSession;
+import com.example.tradeapp.services.producer.Producer;
 import com.example.tradeapp.services.session.SessionService;
 import com.example.tradeapp.services.statemanager.StateService;
 import com.example.tradeapp.services.userdata.UserService;
@@ -22,6 +23,8 @@ public class TelegramController extends TelegramLongPollingBot {
 
     private final UserService userService;
 
+    private final Producer producer;
+
     @Override
     public String getBotUsername() {
         return telegramBotConfiguration.getName();
@@ -35,7 +38,7 @@ public class TelegramController extends TelegramLongPollingBot {
     @Override
     public void onUpdateReceived(Update update) {
         Message message;
-        if (update.hasCallbackQuery()){
+        if (update.hasCallbackQuery()) {
             message = update.getCallbackQuery().getMessage();
         } else {
             message = update.getMessage();

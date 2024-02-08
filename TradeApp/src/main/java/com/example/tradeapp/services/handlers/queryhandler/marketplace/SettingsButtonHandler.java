@@ -48,4 +48,9 @@ public class SettingsButtonHandler implements QueryHandler {
     public String getCallbackQuery() {
         return query;
     }
+
+    @Override
+    public boolean isNumeric() {
+        return false;
+    }
 }

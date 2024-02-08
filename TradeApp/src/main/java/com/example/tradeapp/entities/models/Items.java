@@ -22,4 +22,5 @@ public class Items {
     private Long itemTypeId;
     private Date placementDate;
     private Date expirationDate;
+    private Boolean expired;
 }

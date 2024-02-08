@@ -5,6 +5,7 @@ import com.example.restapi.entites.Item;
 import com.example.restapi.entites.ItemType;
 import com.example.restapi.entites.Settings;
 import com.example.restapi.entites.TelegramUser;
+import com.example.restapi.exceptions.ResourceNotFoundException;
 import com.example.restapi.repositories.ItemTypeRepository;
 import com.example.restapi.repositories.SettingsRepository;
 import com.example.restapi.repositories.TelegramUserRepository;
@@ -28,6 +29,9 @@ public class SettingsServiceImpl implements SettingsService {
 
     @Override
     public Settings getByUsername(String username) {
+        if(settingsRepo.findByUserName(username) == null){
+            throw new ResourceNotFoundException("Resource is not available");
+        }
         return settingsRepo.findByUserName(username);
     }
 

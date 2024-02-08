@@ -10,6 +10,7 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.Keyboard
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @Component
 public class MessageDirectorImpl implements MessageDirector {
@@ -38,10 +39,29 @@ public class MessageDirectorImpl implements MessageDirector {
     @Override
     public TextMessage buildTextMessageWithInlineKeyboard(Long chatId, String text, List<String> rows) {
         List<List<InlineKeyboardButton>> rowsInline = new ArrayList<>();
-        rows.forEach(row ->{
+        rows.forEach(row -> {
             List<InlineKeyboardButton> rowInline = new ArrayList<>();
             InlineKeyboardButton button = new InlineKeyboardButton();
             button.setCallbackData(row);
+            button.setText(row);
+            rowInline.add(button);
+            rowsInline.add(rowInline);
+        });
+        InlineKeyboardMarkup inlineKeyboardMarkup = InlineKeyboardMarkup.builder()
+                .keyboard(rowsInline)
+                .build();
+
+        return new TextMessage(chatId, text, inlineKeyboardMarkup);
+    }
+
+    @Override
+    public TextMessage buildTextMessageWithInlineKeyboard(Long chatId, String text, Map<String, String> rows) {
+        List<List<InlineKeyboardButton>> rowsInline = new ArrayList<>();
+        rows.keySet().forEach(row -> {
+            List<InlineKeyboardButton> rowInline = new ArrayList<>();
+            InlineKeyboardButton button = new InlineKeyboardButton();
+            button.setCallbackData(row);
+            button.setCallbackData(rows.get(row));
             button.setText(row);
             rowInline.add(button);
             rowsInline.add(rowInline);

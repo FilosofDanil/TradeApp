@@ -15,6 +15,9 @@ import java.util.Set;
 @NoArgsConstructor
 @Builder
 public class SettingsDTO {
+    @JsonProperty("id")
+    private Long id;
+
     @JsonProperty("city")
     private String city;
 

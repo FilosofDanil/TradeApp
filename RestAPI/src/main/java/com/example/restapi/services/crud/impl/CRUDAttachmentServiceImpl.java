@@ -2,6 +2,7 @@ package com.example.restapi.services.crud.impl;
 
 import com.example.restapi.dtos.AttachmentDTO;
 import com.example.restapi.entites.Attachment;
+import com.example.restapi.exceptions.ResourceNotFoundException;
 import com.example.restapi.repositories.AttachmentRepository;
 import com.example.restapi.services.crud.CRUDAttachmentService;
 import lombok.RequiredArgsConstructor;
@@ -21,6 +22,9 @@ public class CRUDAttachmentServiceImpl implements CRUDAttachmentService {
 
     @Override
     public Attachment getById(Long id) {
+        if (!attachmentRepo.existsById(id)) {
+            throw new ResourceNotFoundException("Resource is not available");
+        }
         return attachmentRepo.findById(id).get();
     }
 

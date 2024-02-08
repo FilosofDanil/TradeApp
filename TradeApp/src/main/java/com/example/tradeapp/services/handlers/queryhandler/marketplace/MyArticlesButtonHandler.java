@@ -16,7 +16,9 @@ import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Component
 @RequiredArgsConstructor
@@ -31,8 +33,6 @@ public class MyArticlesButtonHandler implements QueryHandler {
 
     private final ItemClient itemClient;
 
-    private final SettingsComponent settingsComponent;
-
     private final UserComponent userComponent;
 
     @Override
@@ -40,16 +40,15 @@ public class MyArticlesButtonHandler implements QueryHandler {
         if (session.getHandler().equals("market")) {
             String text = "";
             String username = userComponent.getUsernameFromQuery(update);
-            Settings settings = settingsComponent.getSettingsByUsername(username);
             List<Items> items = itemClient.getAllItemsByUser(username);
-            List<String> rows = new ArrayList<>(List.of("➕ Створити оголошення"));
+            Map<String, String> rows = new HashMap<>(Map.of("➕ Створити оголошення", "➕ Створити оголошення"));
             if (items.isEmpty()) {
                 text += "Ви поки-що не маєте виставлених товарів." +
                         "\n Щоб додати товар до продажу натисніть відповідну кнопку";
             } else {
                 text += "Ось ваші товари:";
                 for (Items item : items) {
-                    rows.add(item.getItemName());
+                    rows.put(item.getItemName(), item.getId().toString());
                 }
             }
             session.setHandler("myItems");
@@ -74,5 +73,10 @@ public class MyArticlesButtonHandler implements QueryHandler {
     @Override
     public String getCallbackQuery() {
         return query;
+    }
+
+    @Override
+    public boolean isNumeric() {
+        return false;
     }
 }

@@ -2,6 +2,7 @@ package com.example.restapi.services.crud.impl;
 
 import com.example.restapi.entites.ItemType;
 import com.example.restapi.entites.Settings;
+import com.example.restapi.exceptions.ResourceNotFoundException;
 import com.example.restapi.repositories.ItemTypeRepository;
 import com.example.restapi.services.crud.CRUDItemTypeService;
 import com.example.restapi.services.crud.CRUDService;
@@ -22,6 +23,9 @@ public class CRUDItemTypeServiceImpl implements CRUDItemTypeService {
 
     @Override
     public ItemType getById(Long id) {
+        if (!itemTypeRepo.existsById(id)) {
+            throw new ResourceNotFoundException("Resource is not available");
+        }
         return itemTypeRepo.findById(id).get();
     }
 
